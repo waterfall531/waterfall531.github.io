@@ -13,10 +13,10 @@
     
     <item>
       <title>GitHub &#43; Hugo</title>
-      <link>https://waterfall531.github.io/posts/my-first-post/</link>
+      <link>https://waterfall531.github.io/posts/hugo&#43;guthub/</link>
       <pubDate>Tue, 18 Aug 2020 16:31:11 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/my-first-post/</guid>
+      <guid>https://waterfall531.github.io/posts/hugo&#43;guthub/</guid>
       <description>setting github page change to /docs
 add publishdir = &amp;lsquo;docs&amp;rsquo; to config.toml
 then hugo -d output to docs and it can be push to git and also auto commit github page</description>
