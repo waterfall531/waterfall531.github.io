@@ -1,0 +1,4 @@
+baseURL = "https://waterfall531.github.io/"
+languageCode = "zh-tw"
+title = "Randy's Blog"
+theme = "m10c"
