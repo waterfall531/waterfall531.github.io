@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Leetcode 1470 Shuffle_the_Array // Randy&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 1470 Shuffle_the_Array"/>
+<meta name="twitter:description" content="#1470. Shuffle the Array
+ Given the array nums consisting of 2n elements in the form [x1,x2,&hellip;,xn,y1,y2,&hellip;,yn].
+  Return the array in the form [x1,y1,x2,y2,&hellip;,xn,yn].
+ 首先
+ 1 &lt;= n &lt;= 500
+nums.length == 2n
+1 &lt;= nums[i] &lt;= 10^3
+ 2n 一定等於長度
+也就是說
+可以藉由循序 先插入 &lt; n 的 再處理 &gt;= n的
+class Solution { /** * @param Integer[] $nums * @param Integer $n * @return Integer[] */ function shuffle($nums, $n) { $list = []; foreach($nums as $index =&gt; $num){ if ($index &lt; $n){ $newIndex = $index * 2; }else{ $newIndex = ($index - $n) * 2 &#43; 1; } $list[$newIndex] = $num; } ksort($list); return $list; } } 可這樣的做法問題在於 還要處理 array sort 又多花一點時間"/>
+
+    <meta property="og:title" content="Leetcode 1470 Shuffle_the_Array" />
+<meta property="og:description" content="#1470. Shuffle the Array
+ Given the array nums consisting of 2n elements in the form [x1,x2,&hellip;,xn,y1,y2,&hellip;,yn].
+  Return the array in the form [x1,y1,x2,y2,&hellip;,xn,yn].
+ 首先
+ 1 &lt;= n &lt;= 500
+nums.length == 2n
+1 &lt;= nums[i] &lt;= 10^3
+ 2n 一定等於長度
+也就是說
+可以藉由循序 先插入 &lt; n 的 再處理 &gt;= n的
+class Solution { /** * @param Integer[] $nums * @param Integer $n * @return Integer[] */ function shuffle($nums, $n) { $list = []; foreach($nums as $index =&gt; $num){ if ($index &lt; $n){ $newIndex = $index * 2; }else{ $newIndex = ($index - $n) * 2 &#43; 1; } $list[$newIndex] = $num; } ksort($list); return $list; } } 可這樣的做法問題在於 還要處理 array sort 又多花一點時間" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1470-shuffle_the_array/" />
+<meta property="article:published_time" content="2020-09-01T16:43:16+08:00" />
+<meta property="article:modified_time" content="2020-09-01T16:43:16+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 1470 Shuffle_the_Array</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 1, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <p>#1470. Shuffle the Array</p>
+<blockquote>
+<p>Given the array <em>nums</em> consisting of <em>2n</em> elements in the form <em>[x1,x2,&hellip;,xn,y1,y2,&hellip;,yn]</em>.</p>
+</blockquote>
+<blockquote>
+<p>Return the array in the form <em>[x1,y1,x2,y2,&hellip;,xn,yn]</em>.</p>
+</blockquote>
+<p>首先</p>
+<blockquote>
+<p>1 &lt;= n &lt;= 500</p>
+<p>nums.length == 2n</p>
+<p>1 &lt;= nums[i] &lt;= 10^3</p>
+</blockquote>
+<p>2n 一定等於長度</p>
+<p>也就是說</p>
+<p>可以藉由循序 先插入 &lt; n 的 再處理 &gt;= n的</p>
+<pre><code>class Solution {
+
+    /**
+     * @param Integer[] $nums
+     * @param Integer $n
+     * @return Integer[]
+     */
+    function shuffle($nums, $n) {
+        $list = [];
+        foreach($nums as $index =&gt; $num){
+            if ($index &lt; $n){
+                $newIndex = $index * 2;
+            }else{
+                $newIndex = ($index - $n) * 2 + 1;
+            }
+            $list[$newIndex] = $num;
+        }
+        ksort($list);
+        return $list;
+    }
+}
+</code></pre><p>可這樣的做法問題在於 還要處理 array sort 又多花一點時間</p>
+<p>所以又有下面的做法
+直接分兩邊insert 陣列</p>
+<pre><code>class Solution {
+    /**
+     * @param Integer[] $nums
+     * @param Integer $n
+     * @return Integer[]
+     */
+    function shuffle($nums, $n) {
+        $tmp = array_chunk($nums,$n);
+        $list = [];
+        for($i = 0 ; $i &lt; $n ; $i++){
+            $list[] = $tmp[0][$i];
+            $list[] = $tmp[1][$i];
+        }
+        return $list;
+    }
+} 
+</code></pre><pre><code>class Solution {
+    /**
+     * @param Integer[] $nums
+     * @param Integer $n
+     * @return Integer[]
+     */
+    function shuffle($nums, $n) {
+        $list = [];
+        for($i = 0 ;$i &lt; $n * 2 ;$i++){
+            if ($i % 2 == 0){
+                $list[] = $nums[$i / 2];
+            }else{
+                $list[] = $nums[$n + floor($i / 2)];
+            }
+        }
+        return $list;
+    }
+}
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

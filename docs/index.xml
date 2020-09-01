@@ -6,10 +6,45 @@
     <description>Recent content on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 18 Aug 2020 17:16:02 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 01 Sep 2020 16:43:16 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 1470 Shuffle_the_Array</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1470-shuffle_the_array/</link>
+      <pubDate>Tue, 01 Sep 2020 16:43:16 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1470-shuffle_the_array/</guid>
+      <description>#1470. Shuffle the Array
+ Given the array nums consisting of 2n elements in the form [x1,x2,&amp;hellip;,xn,y1,y2,&amp;hellip;,yn].
+  Return the array in the form [x1,y1,x2,y2,&amp;hellip;,xn,yn].
+ 首先
+ 1 &amp;lt;= n &amp;lt;= 500
+nums.length == 2n
+1 &amp;lt;= nums[i] &amp;lt;= 10^3
+ 2n 一定等於長度
+也就是說
+可以藉由循序 先插入 &amp;lt; n 的 再處理 &amp;gt;= n的
+class Solution { /** * @param Integer[] $nums * @param Integer $n * @return Integer[] */ function shuffle($nums, $n) { $list = []; foreach($nums as $index =&amp;gt; $num){ if ($index &amp;lt; $n){ $newIndex = $index * 2; }else{ $newIndex = ($index - $n) * 2 + 1; } $list[$newIndex] = $num; } ksort($list); return $list; } } 可這樣的做法問題在於 還要處理 array sort 又多花一點時間</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1480</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1480/</link>
+      <pubDate>Tue, 01 Sep 2020 16:36:33 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1480/</guid>
+      <description>#1480. Running Sum of 1d Array
+ Given an array nums.
+  We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+  Return the running sum of nums.
+ 這是道簡單的題目 第一個想法是 foreach 就好 但要略過 index = 0 或是去判斷
+判斷的所需秒數 12ms
+` class Solution {
+/** * @param Integer[] $nums * @return Integer[] */ function runningSum($nums) { $ans = []; foreach($nums as $index =&amp;gt; $num){ if($index === 0){ $ans[$index] = $num; }else{ $ans[$index] = $ans[$index - 1] + $num; } } return $ans; }  } `</description>
+    </item>
     
     <item>
       <title>Mysql Alter Column</title>
