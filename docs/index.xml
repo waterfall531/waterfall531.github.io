@@ -6,10 +6,21 @@
     <description>Recent content on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 03 Sep 2020 17:00:16 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 17:30:44 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 1431</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</link>
+      <pubDate>Thu, 03 Sep 2020 17:30:44 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</guid>
+      <description>Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
+  For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
+ ##v0 test 1000 times with 0.28ms</description>
+    </item>
     
     <item>
       <title>Leetcode 1528</title>

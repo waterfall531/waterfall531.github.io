@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Leetcode 1431 // Randy&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 1431"/>
+<meta name="twitter:description" content="Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
+  For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
+ ##v0 test 1000 times with 0.28ms"/>
+
+    <meta property="og:title" content="Leetcode 1431" />
+<meta property="og:description" content="Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
+  For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
+ ##v0 test 1000 times with 0.28ms" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/" />
+<meta property="article:published_time" content="2020-09-03T17:30:44+08:00" />
+<meta property="article:modified_time" content="2020-09-03T17:30:44+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 1431</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 3, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <blockquote>
+<p>Given the array <em>candies</em> and the integer <em>extraCandies</em>, where <em>candies[i]</em> represents the number of candies that the <strong>ith</strong> kid has.</p>
+</blockquote>
+<blockquote>
+<p>For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the <strong>greatest</strong> number of candies among them. Notice that multiple kids can have the <strong>greatest</strong> number of candies.</p>
+</blockquote>
+<p>##v0
+test 1000 times with 0.28ms</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Solution
+{
+
+    /**
+     * @param Integer[] $candies
+     * @param Integer $extraCandies
+     * @return Boolean[]
+     */
+    function kidsWithCandies($candies, $extraCandies)
+    {
+        $max    = max($candies);
+        $result = [];
+        foreach ($candies as $candy) {
+            if ($candy + $extraCandies &gt;= $max) {
+                $result[] = true;
+            } else {
+                $result[] = false;
+            }
+        }
+        return $result;
+    }
+}
+</code></pre></div><p>##v1
+test 1000 times with 0.257ms
+true to 1
+false to 2</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Solution
+{
+
+    /**
+     * @param Integer[] $candies
+     * @param Integer $extraCandies
+     * @return Boolean[]
+     */
+    function kidsWithCandies($candies, $extraCandies)
+    {
+        $max    = max($candies);
+        $result = [];
+        foreach ($candies as $candy) {
+            if ($candy + $extraCandies &gt;= $max) {
+                $result[] = 1;
+            } else {
+                $result[] = 0;
+            }
+        }
+        return $result;
+    }
+}
+</code></pre></div><p>##v2
+test 1000times with 0.253ms
+add ()</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SolutionC
+{
+
+    /**
+     * @param Integer[] $candies
+     * @param Integer $extraCandies
+     * @return Boolean[]
+     */
+    function kidsWithCandies($candies, $extraCandies)
+    {
+        $max    = max($candies);
+        $result = [];
+        foreach ($candies as $candy) {
+            if (($candy + $extraCandies) &gt;= $max) {
+                $result[] = 1;
+            } else {
+                $result[] = 0;
+            }
+        }
+        return $result;
+    }
+}
+</code></pre></div><table>
+<thead>
+<tr>
+<th>version</th>
+<th>time</th>
+<th>desc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0</td>
+<td>0.27ms</td>
+<td>origin</td>
+</tr>
+<tr>
+<td>v1</td>
+<td>0.257ms</td>
+<td>replace true and false</td>
+</tr>
+<tr>
+<td>v2</td>
+<td>0.253ms</td>
+<td>add ()</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
