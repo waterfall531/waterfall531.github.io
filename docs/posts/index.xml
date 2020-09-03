@@ -6,10 +6,36 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 01 Sep 2020 16:43:16 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 17:00:16 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 1528</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1528._shuffle_string/</link>
+      <pubDate>Thu, 03 Sep 2020 17:00:16 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1528._shuffle_string/</guid>
+      <description> Given a string s and an integer array indices of the same length.
+  The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+  Return the shuffled string.
+ v1
+class Solution { function restoreString($s, $indices) { $list = []; foreach ($indices as $index=&amp;gt;$item){ $list[$item] = $s[$index]; } ksort($list); return join(&amp;#39;&amp;#39;,$list); } } v2
+class Solution { /** * @param String $s * @param Integer[] $indices * @return array */ function restoreString($s, $indices) { $list = &amp;#39;&amp;#39;; foreach ($indices as $index=&amp;gt;$item){ $list[$item] = $s[$index]; } return $list; } } </description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1512. Number of Good Pairs</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</link>
+      <pubDate>Thu, 03 Sep 2020 16:56:51 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</guid>
+      <description> Given an array of integers nums.
+  A pair (i,j) is called good if nums[i] == nums[j] and i &amp;lt; j.
+  Return the number of good pairs.
+ class Solution { /** * @param Integer[] $nums * @return Integer */ function numIdenticalPairs($nums) { $ans = 0; for($i = 0; $i &amp;lt; count($nums) - 1 ; $i++){ for($j = $i+1 ; $j &amp;lt; count($nums);$j++){ if ($nums[$i] === $nums[$j]){ $ans++; } } } return $ans; } } </description>
+    </item>
     
     <item>
       <title>Leetcode 1470 Shuffle_the_Array</title>
