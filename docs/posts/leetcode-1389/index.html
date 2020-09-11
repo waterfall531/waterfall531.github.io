@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Leetcode 1389 // Randy&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 1389"/>
+<meta name="twitter:description" content="Given two arrays of integers nums and index. Your task is to create target array under the following rules:
+  Initially target array is empty. From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array. Repeat the previous step until there are no elements to read in nums and index.   Return the target array.
+  It is guaranteed that the insertion operations will be valid."/>
+
+    <meta property="og:title" content="Leetcode 1389" />
+<meta property="og:description" content="Given two arrays of integers nums and index. Your task is to create target array under the following rules:
+  Initially target array is empty. From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array. Repeat the previous step until there are no elements to read in nums and index.   Return the target array.
+  It is guaranteed that the insertion operations will be valid." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1389/" />
+<meta property="article:published_time" content="2020-09-11T16:51:59+08:00" />
+<meta property="article:modified_time" content="2020-09-11T16:51:59+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 1389</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Sep 11, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <blockquote>
+<p>Given two arrays of integers <code>nums</code> and <code>index</code>. Your task is to create target array under the following rules:</p>
+</blockquote>
+<ul>
+<li>Initially target array is empty.</li>
+<li>From left to right read nums[i] and index[i], insert at index <code>index[i]</code> the value <code>nums[i]</code> in target array.</li>
+<li>Repeat the previous step until there are no elements to read in nums and index.</li>
+</ul>
+<blockquote>
+<p>Return the target array.</p>
+</blockquote>
+<blockquote>
+<p>It is guaranteed that the insertion operations will be valid.</p>
+</blockquote>
+<p>##v0
+原本想法是 分成兩塊</p>
+<p>a + nums[i] + b</p>
+<ul>
+<li>a = list[0] &hellip; list[i-1]</li>
+<li>b = list[i] &hellip; list[count(list)]</li>
+</ul>
+<p>所以往分割陣列查</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Solution {
+
+    /**
+     * @param Integer[] $nums
+     * @param Integer[] $index
+     * @return Integer[]
+     */
+    function createTargetArray($nums, $index) {
+        $list = [];
+        for ($i = 0 ;$i &lt; <span style="color:#f92672">count</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">nums</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#960050;background-color:#1e0010">;</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">++){</span>
+            <span style="color:#a6e22e">array_splice</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">list</span><span style="color:#960050;background-color:#1e0010">,$</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">[$</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">],</span><span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">,[$</span><span style="color:#a6e22e">nums</span><span style="color:#960050;background-color:#1e0010">[$</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">]]);</span>
+        <span style="color:#960050;background-color:#1e0010">}</span>
+        <span style="color:#a6e22e">return</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">list</span><span style="color:#960050;background-color:#1e0010">;</span>
+    <span style="color:#960050;background-color:#1e0010">}</span>
+<span style="color:#960050;background-color:#1e0010">}</span>
+</code></pre></div><p>##ex0
+結果發現有趣的用法</p>
+<p>###offset
+offset &gt;= 0</p>
+<p>用法是取offset的個數</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
+array_splice($a,2);
+array(2) {
+    [0]=&gt;
+  int(0)
+  [1]=&gt;
+  int(1)
+}
+</code></pre></div><p>offset &lt; 0</p>
+<p>用法是倒回來不取的個數</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
+array_splice($a,2);
+array(8) {
+  [0]=&gt;
+  int(0)
+  [1]=&gt;
+  int(1)
+  [2]=&gt;
+  int(2)
+  [3]=&gt;
+  int(3)
+  [4]=&gt;
+  int(4)
+  [5]=&gt;
+  int(5)
+  [6]=&gt;
+  int(6)
+  [7]=&gt;
+  int(7)
+}
+
+</code></pre></div><p>###length</p>
+<p>length &gt;= 0</p>
+<p>是掠過幾個不取</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
+array_splice($a,2,3);
+array(7) {
+  [0]=&gt;
+  int(0)
+  [1]=&gt;
+  int(1)
+  [2]=&gt;
+  int(5)
+  [3]=&gt;
+  int(6)
+  [4]=&gt;
+  int(7)
+  [5]=&gt;
+  int(8)
+  [6]=&gt;
+  int(9)
+}
+</code></pre></div><p><code>2,3,4被略過了</code></p>
+<p>length &lt; 0</p>
+<p>是只取 前 offset + 後 |length|</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
+array_splice($a,2,-3);
+array(5) {
+  [0]=&gt;
+  int(0)
+  [1]=&gt;
+  int(1)
+  [2]=&gt;
+  int(7)
+  [3]=&gt;
+  int(8)
+  [4]=&gt;
+  int(9)
+}
+</code></pre></div><p>###replacement</p>
+<p>是插入在 offset 跟 length 中間的
+所以可以看到</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
+array_splice($a,2,0,[&#39;a&#39;]);
+array(11) {
+  [0]=&gt;
+  int(0)
+  [1]=&gt;
+  int(1)
+  [2]=&gt;
+  string(1) &#34;a&#34;
+  [3]=&gt;
+  int(2)
+  [4]=&gt;
+  int(3)
+  [5]=&gt;
+  int(4)
+  [6]=&gt;
+  int(5)
+  [7]=&gt;
+  int(6)
+  [8]=&gt;
+  int(7)
+  [9]=&gt;
+  int(8)
+  [10]=&gt;
+  int(9)
+}
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

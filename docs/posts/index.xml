@@ -6,10 +6,52 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 03 Sep 2020 17:30:44 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Sep 2020 17:13:49 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 1221</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1221/</link>
+      <pubDate>Fri, 11 Sep 2020 17:13:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1221/</guid>
+      <description>Balanced strings are those who have equal quantity of &amp;lsquo;L&amp;rsquo; and &amp;lsquo;R&amp;rsquo; characters.
+  Given a balanced string s split it in the maximum amount of balanced strings.
+  Return the maximum amount of splitted balanced strings.
+ Input: s = &amp;ldquo;RLRRLLRLRL&amp;rdquo;
+Output: 4
+Explanation: s can be split into &amp;ldquo;RL&amp;rdquo;, &amp;ldquo;RRLL&amp;rdquo;, &amp;ldquo;RL&amp;rdquo;, &amp;ldquo;RL&amp;rdquo;,each substring contains same number of &amp;lsquo;L&amp;rsquo; and &amp;lsquo;R&amp;rsquo;.
+##v0</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1389</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1389/</link>
+      <pubDate>Fri, 11 Sep 2020 16:51:59 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1389/</guid>
+      <description>Given two arrays of integers nums and index. Your task is to create target array under the following rules:
+  Initially target array is empty. From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array. Repeat the previous step until there are no elements to read in nums and index.   Return the target array.
+  It is guaranteed that the insertion operations will be valid.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1486. XOR Operation in an Array</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1486/</link>
+      <pubDate>Mon, 07 Sep 2020 11:55:57 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1486/</guid>
+      <description>Given an integer n and an integer start.
+  Define an array nums where nums[i] = start + 2*i (0-indexed) and n == nums.length.
+  Return the bitwise XOR of all elements of nums.
+ ##v0 $tmpNum算出當下的n
+再算$tmp
+^ 是運算 xor
+xor 是邏輯 xor
+class Solution { /** * @param Integer $n * @param Integer $start * @return Integer */ function xorOperation($n, $start) { $tmp = $start; for($i = 1 ; $i &amp;lt; $n ; $i++){ $tmpNum = $start + 2 * $i; $tmp = $tmp ^ $tmpNum; } return $tmp; } } #v1</description>
+    </item>
     
     <item>
       <title>Leetcode 1431</title>
