@@ -6,10 +6,32 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 11 Sep 2020 17:13:49 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Dec 2020 17:35:25 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 1603</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1603/</link>
+      <pubDate>Mon, 07 Dec 2020 17:35:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1603/</guid>
+      <description>Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.
+ Implement the ParkingSystem class:
+ ParkingSystem(int big, int medium, int small) Initializes object of the ParkingSystem class. The number of slots for each parking space are given as part of the constructor. bool addCar(int carType) Checks whether there is a parking space of carType for the car that wants to get into the parking lot.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1672.Richest Customer Wealth</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1672/</link>
+      <pubDate>Mon, 07 Dec 2020 17:06:52 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1672/</guid>
+      <description>You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+A customer&amp;rsquo;s wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+ v0 class Solution { /** * @param Integer[][] $accounts * @return Integer */ function maximumWealth($accounts) { $max = 0; foreach ($accounts as $list) { $tmpSum = array_sum($list); $max = $max &amp;gt; $tmpSum ?</description>
+    </item>
     
     <item>
       <title>Leetcode 1221</title>
@@ -43,10 +65,8 @@ Explanation: s can be split into &amp;ldquo;RL&amp;rdquo;, &amp;ldquo;RRLL&amp;r
       <pubDate>Mon, 07 Sep 2020 11:55:57 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/leetcode-1486/</guid>
-      <description>Given an integer n and an integer start.
-  Define an array nums where nums[i] = start + 2*i (0-indexed) and n == nums.length.
-  Return the bitwise XOR of all elements of nums.
- ##v0 $tmpNum算出當下的n
+      <description>Given an integer n and an integer start. Define an array nums where nums[i] = start + 2*i (0-indexed) and n == nums.length. Return the bitwise XOR of all elements of nums.
+ v0 $tmpNum算出當下的n
 再算$tmp
 ^ 是運算 xor
 xor 是邏輯 xor

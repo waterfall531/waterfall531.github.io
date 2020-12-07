@@ -12,20 +12,16 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Leetcode 1486. XOR Operation in an Array"/>
-<meta name="twitter:description" content="Given an integer n and an integer start.
-  Define an array nums where nums[i] = start &#43; 2*i (0-indexed) and n == nums.length.
-  Return the bitwise XOR of all elements of nums.
- ##v0 $tmpNum算出當下的n
+<meta name="twitter:description" content="Given an integer n and an integer start. Define an array nums where nums[i] = start &#43; 2*i (0-indexed) and n == nums.length. Return the bitwise XOR of all elements of nums.
+ v0 $tmpNum算出當下的n
 再算$tmp
 ^ 是運算 xor
 xor 是邏輯 xor
 class Solution { /** * @param Integer $n * @param Integer $start * @return Integer */ function xorOperation($n, $start) { $tmp = $start; for($i = 1 ; $i &lt; $n ; $i&#43;&#43;){ $tmpNum = $start &#43; 2 * $i; $tmp = $tmp ^ $tmpNum; } return $tmp; } } #v1"/>
 
     <meta property="og:title" content="Leetcode 1486. XOR Operation in an Array" />
-<meta property="og:description" content="Given an integer n and an integer start.
-  Define an array nums where nums[i] = start &#43; 2*i (0-indexed) and n == nums.length.
-  Return the bitwise XOR of all elements of nums.
- ##v0 $tmpNum算出當下的n
+<meta property="og:description" content="Given an integer n and an integer start. Define an array nums where nums[i] = start &#43; 2*i (0-indexed) and n == nums.length. Return the bitwise XOR of all elements of nums.
+ v0 $tmpNum算出當下的n
 再算$tmp
 ^ 是運算 xor
 xor 是邏輯 xor
@@ -69,16 +65,12 @@ class Solution { /** * @param Integer $n * @param Integer $start * @return Integ
     </header>
     <div class="post-content">
       <blockquote>
-<p>Given an integer <em>n</em> and an integer <em>start</em>.</p>
+<p>Given an integer <em>n</em> and an integer <em>start</em>.
+Define an array <code>nums</code> where <code>nums[i] = start + 2*i</code> (0-indexed) and <code>n == nums.length</code>.
+Return the bitwise XOR of all elements of <code>nums</code>.</p>
 </blockquote>
-<blockquote>
-<p>Define an array <code>nums</code> where <code>nums[i] = start + 2*i</code> (0-indexed) and <code>n == nums.length</code>.</p>
-</blockquote>
-<blockquote>
-<p>Return the bitwise XOR of all elements of <code>nums</code>.</p>
-</blockquote>
-<p>##v0
-$tmpNum算出當下的n</p>
+<h2 id="v0">v0</h2>
+<p>$tmpNum算出當下的n</p>
 <p>再算$tmp</p>
 <p>^ 是運算 xor</p>
 <p>xor 是邏輯 xor</p>
