@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Leetcode 1603 // Randy&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 1603"/>
+<meta name="twitter:description" content="Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.
+ Implement the ParkingSystem class:
+ ParkingSystem(int big, int medium, int small) Initializes object of the ParkingSystem class. The number of slots for each parking space are given as part of the constructor. bool addCar(int carType) Checks whether there is a parking space of carType for the car that wants to get into the parking lot."/>
+
+    <meta property="og:title" content="Leetcode 1603" />
+<meta property="og:description" content="Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.
+ Implement the ParkingSystem class:
+ ParkingSystem(int big, int medium, int small) Initializes object of the ParkingSystem class. The number of slots for each parking space are given as part of the constructor. bool addCar(int carType) Checks whether there is a parking space of carType for the car that wants to get into the parking lot." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1603/" />
+<meta property="article:published_time" content="2020-12-07T17:35:25+08:00" />
+<meta property="article:modified_time" content="2020-12-07T17:35:25+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 1603</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 7, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <blockquote>
+<p>Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.</p>
+</blockquote>
+<p>Implement the <em>ParkingSystem</em> class:</p>
+<ul>
+<li><em>ParkingSystem(int big, int medium, int small)</em> Initializes object of the <em>ParkingSystem</em> class. The number of slots for each parking space are given as part of the constructor.</li>
+<li><em>bool addCar(int carType)</em> Checks whether there is a parking space of <em>carType</em> for the car that wants to get into the parking lot. <em>carType</em> can be of three kinds: big, medium, or small, which are represented by <em>1</em>, <em>2</em>, and <em>3</em> respectively. <em>A car can only park in a parking space of its</em> carType. If there is no space available, return false, else park the car in that size space and return true.</li>
+</ul>
+<h2 id="v0">v0</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class ParkingSystem
+{
+    private $maxCount;
+
+    /**
+     * @param Integer $big
+     * @param Integer $medium
+     * @param Integer $small
+     */
+    function __construct($big, $medium, $small)
+    {
+        $this-&gt;maxCount = [$big, $medium, $small];
+    }
+
+    /**
+     * @param Integer $carType
+     * @return Boolean
+     */
+    function addCar($carType)
+    {
+        if ($this-&gt;maxCount[$carType - 1] &gt; 0) {
+            $this-&gt;maxCount[$carType - 1]--;
+            return true;
+        }
+        return false;
+    }
+}
+</code></pre></div><h2 id="v05">V0.5</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class ParkingSystem
+{
+    private $maxCount;
+
+    /**
+     * @param Integer $big
+     * @param Integer $medium
+     * @param Integer $small
+     */
+    function __construct($big, $medium, $small)
+    {
+        $this-&gt;maxCount = [$big, $medium, $small];
+    }
+
+    /**
+     * @param Integer $carType
+     * @return Boolean
+     */
+    function addCar($carType)
+    {
+        return $this-&gt;maxCount[--$carType]-- &gt; 0
+    }
+}
+</code></pre></div><ol>
+<li>return 可以略過if</li>
+<li>$carType - 1 可以優化成&ndash;$carType</li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
