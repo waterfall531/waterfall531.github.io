@@ -12,22 +12,22 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Leetcode 1221"/>
-<meta name="twitter:description" content="Balanced strings are those who have equal quantity of &lsquo;L&rsquo; and &lsquo;R&rsquo; characters.
-  Given a balanced string s split it in the maximum amount of balanced strings.
-  Return the maximum amount of splitted balanced strings.
+<meta name="twitter:description" content=" Balanced strings are those who have equal quantity of &lsquo;L&rsquo; and &lsquo;R&rsquo; characters.
+Given a balanced string s split it in the maximum amount of balanced strings.
+Return the maximum amount of splitted balanced strings.
  Input: s = &ldquo;RLRRLLRLRL&rdquo;
 Output: 4
 Explanation: s can be split into &ldquo;RL&rdquo;, &ldquo;RRLL&rdquo;, &ldquo;RL&rdquo;, &ldquo;RL&rdquo;,each substring contains same number of &lsquo;L&rsquo; and &lsquo;R&rsquo;.
-##v0"/>
+v0 class Solution { /** * @param String $s * @return Integer */ function balancedStringSplit($s) { $start = &#39;&#39;; $tmp = 0; $tmpCount = 0; for ($i = 0, $iMax = strlen($s); $i &lt; $iMax; $i&#43;&#43;) { if ($start === &#39;&#39;) { $start = $s[$i]; $tmpCount&#43;&#43;; }else{ if ($s[$i] === $start) { $tmpCount&#43;&#43;; } else { $tmpCount--; } } if ($tmpCount === 0) { $tmp&#43;&#43;; $start = &#39;&#39;; } } return $tmp; } } "/>
 
     <meta property="og:title" content="Leetcode 1221" />
-<meta property="og:description" content="Balanced strings are those who have equal quantity of &lsquo;L&rsquo; and &lsquo;R&rsquo; characters.
-  Given a balanced string s split it in the maximum amount of balanced strings.
-  Return the maximum amount of splitted balanced strings.
+<meta property="og:description" content=" Balanced strings are those who have equal quantity of &lsquo;L&rsquo; and &lsquo;R&rsquo; characters.
+Given a balanced string s split it in the maximum amount of balanced strings.
+Return the maximum amount of splitted balanced strings.
  Input: s = &ldquo;RLRRLLRLRL&rdquo;
 Output: 4
 Explanation: s can be split into &ldquo;RL&rdquo;, &ldquo;RRLL&rdquo;, &ldquo;RL&rdquo;, &ldquo;RL&rdquo;,each substring contains same number of &lsquo;L&rsquo; and &lsquo;R&rsquo;.
-##v0" />
+v0 class Solution { /** * @param String $s * @return Integer */ function balancedStringSplit($s) { $start = &#39;&#39;; $tmp = 0; $tmpCount = 0; for ($i = 0, $iMax = strlen($s); $i &lt; $iMax; $i&#43;&#43;) { if ($start === &#39;&#39;) { $start = $s[$i]; $tmpCount&#43;&#43;; }else{ if ($s[$i] === $start) { $tmpCount&#43;&#43;; } else { $tmpCount--; } } if ($tmpCount === 0) { $tmp&#43;&#43;; $start = &#39;&#39;; } } return $tmp; } } " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1221/" />
 <meta property="article:published_time" content="2020-09-11T17:13:49+08:00" />
@@ -68,18 +68,45 @@ Explanation: s can be split into &ldquo;RL&rdquo;, &ldquo;RRLL&rdquo;, &ldquo;RL
     <div class="post-content">
       <blockquote>
 <p>Balanced strings are those who have equal quantity of &lsquo;L&rsquo; and &lsquo;R&rsquo; characters.</p>
-</blockquote>
-<blockquote>
 <p>Given a balanced string <code>s</code> split it in the maximum amount of balanced strings.</p>
-</blockquote>
-<blockquote>
 <p>Return the maximum amount of splitted balanced strings.</p>
 </blockquote>
 <p>Input: s = &ldquo;RLRRLLRLRL&rdquo;</p>
 <p>Output: 4</p>
 <p>Explanation: s can be split into &ldquo;RL&rdquo;, &ldquo;RRLL&rdquo;, &ldquo;RL&rdquo;, &ldquo;RL&rdquo;,each substring contains same number of &lsquo;L&rsquo; and &lsquo;R&rsquo;.</p>
-<p>##v0</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<h2 id="v0">v0</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Solution
+{
+
+    /**
+     * @param String $s
+     * @return Integer
+     */
+    function balancedStringSplit($s)
+    {
+        $start    = &#39;&#39;;
+        $tmp      = 0;
+        $tmpCount = 0;
+        for ($i = 0, $iMax = strlen($s); $i <span style="color:#960050;background-color:#1e0010">&lt;</span> $iMax; $i++) {
+            if ($start === &#39;&#39;) {
+                $start = $s[$i];
+                $tmpCount++;
+            }else{
+                if ($s[$i] === $start) {
+                    $tmpCount++;
+                } else {
+                    $tmpCount--;
+                }
+            }
+
+            if ($tmpCount === 0) {
+                $tmp++;
+                $start = &#39;&#39;;
+            }
+        }
+        return $tmp;
+    }
+}
 </code></pre></div>
     </div>
     <div class="post-footer">
