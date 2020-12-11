@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Leetcode 1476. Subrectangle Queries // Randy&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Leetcode 1476. Subrectangle Queries"/>
+<meta name="twitter:description" content="Implement the class SubrectangleQueries which receives a rows x cols rectangle as a matrix of integers in the constructor and supports two methods:
+   updateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
+ Updates all values with newValue in the subrectangle whose upper left coordinate is (row1,col1) and bottom right coordinate is (row2,col2).    getValue(int row, int col)
+ Returns the current value of the coordinate (row,col) from the rectangle."/>
+
+    <meta property="og:title" content="Leetcode 1476. Subrectangle Queries" />
+<meta property="og:description" content="Implement the class SubrectangleQueries which receives a rows x cols rectangle as a matrix of integers in the constructor and supports two methods:
+   updateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
+ Updates all values with newValue in the subrectangle whose upper left coordinate is (row1,col1) and bottom right coordinate is (row2,col2).    getValue(int row, int col)
+ Returns the current value of the coordinate (row,col) from the rectangle." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1476/" />
+<meta property="article:published_time" content="2020-12-10T16:58:52+08:00" />
+<meta property="article:modified_time" content="2020-12-10T16:58:52+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Leetcode 1476. Subrectangle Queries</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Dec 10, 2020
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <blockquote>
+<p>Implement the class SubrectangleQueries which receives a rows x cols rectangle as a matrix of integers in the constructor and supports two methods:</p>
+</blockquote>
+<ol>
+<li>
+<p><em>updateSubrectangle</em>(int row1, int col1, int row2, int col2, int newValue)</p>
+<ul>
+<li>Updates all values with newValue in the subrectangle whose upper left coordinate is (row1,col1) and bottom right coordinate is (row2,col2).</li>
+</ul>
+</li>
+<li>
+<p><em>getValue</em>(int row, int col)</p>
+<ul>
+<li>Returns the current value of the coordinate (row,col) from the rectangle.</li>
+</ul>
+</li>
+</ol>
+<h2 id="v0">v0</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SubrectangleQueries
+{
+    private $list;
+
+    /**
+     * @param Integer[][] $rectangle
+     */
+    function __construct($rectangle)
+    {
+        $this-&gt;list = $rectangle;
+    }
+
+    /**
+     * @param Integer $row1
+     * @param Integer $col1
+     * @param Integer $row2
+     * @param Integer $col2
+     * @param Integer $newValue
+     * @return NULL
+     */
+    function updateSubrectangle($row1, $col1, $row2, $col2, $newValue)
+    {
+        for ($i = $row1; $i <span style="color:#960050;background-color:#1e0010">&lt;</span>= $row2; $i++) {
+            for ($j = $col1; $j <span style="color:#960050;background-color:#1e0010">&lt;</span>= $col2; $j++) {
+                $this-&gt;list[$i][$j] = $newValue;
+            }
+        }
+    }
+
+    /**
+     * @param Integer $row
+     * @param Integer $col
+     * @return Integer
+     */
+    function getValue($row, $col)
+    {
+        return $this-&gt;list[$row][$col];
+    }
+
+    function getList()
+    {
+        var_dump($this-&gt;list);
+        echo &#39;&lt;/<span style="color:#f92672">br</span>&gt;&#39;;
+    }
+}
+</code></pre></div><h2 id="leetcode">LeetCode</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class SubrectangleQueries
+{
+    private $list;
+    private $history;
+
+    /**
+     * @param Integer[][] $rectangle
+     */
+    function __construct($rectangle)
+    {
+        $this-&gt;list = $rectangle;
+    }
+
+    /**
+     * @param Integer $row1
+     * @param Integer $col1
+     * @param Integer $row2
+     * @param Integer $col2
+     * @param Integer $newValue
+     * @return NULL
+     */
+    function updateSubrectangle($row1, $col1, $row2, $col2, $newValue)
+    {
+        $this-&gt;history[] = func_get_args();
+    }
+
+    /**
+     * @param Integer $row
+     * @param Integer $col
+     * @return Integer
+     */
+    function getValue($row, $col)
+    {
+        $a = array_reverse($this-&gt;history);
+        foreach ($a as $value) {
+            if ($value[0] <span style="color:#960050;background-color:#1e0010">&lt;</span>= $row <span style="color:#960050;background-color:#1e0010">&amp;&amp;</span>
+                $value[2] &gt;= $row <span style="color:#960050;background-color:#1e0010">&amp;&amp;</span>
+                $value[1] <span style="color:#960050;background-color:#1e0010">&lt;</span>= $col <span style="color:#960050;background-color:#1e0010">&amp;&amp;</span>
+                $value[3] &gt;= $col) {
+                return $value[4];
+            }
+        }
+
+        return $this-&gt;list[$row][$col];
+    }
+}
+</code></pre></div><h2 id="後記">後記</h2>
+<ul>
+<li>leetcode版的優點在於
+getValue的次數較少時
+才能發揮優勢</li>
+<li>反之則是v0的較快</li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
