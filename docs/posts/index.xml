@@ -6,10 +6,21 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 11 Dec 2020 18:18:19 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 14 Dec 2020 17:28:44 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Leetcode 1673 Widest Vertical Area Between Two Points Containing No Points</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1673/</link>
+      <pubDate>Mon, 14 Dec 2020 17:28:44 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1673/</guid>
+      <description>題目  Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such that no points are inside the area.
+A vertical area is an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The widest vertical area is the one with the maximum width.
+Note that points on the edge of a vertical area are not considered included in the area.</description>
+    </item>
     
     <item>
       <title>Leetcode 1282 Group the People Given the Group Size They Belong To</title>
