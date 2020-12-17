@@ -6,18 +6,20 @@
     <description>Recent content on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 16 Dec 2020 11:06:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 17 Dec 2020 14:50:21 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>New</title>
-      <link>https://waterfall531.github.io/posts/new/</link>
-      <pubDate>Wed, 16 Dec 2020 11:06:21 +0800</pubDate>
+      <title>interview_1217</title>
+      <link>https://waterfall531.github.io/posts/interview1217/</link>
+      <pubDate>Thu, 17 Dec 2020 14:50:21 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/new/</guid>
-      <description></description>
+      <guid>https://waterfall531.github.io/posts/interview1217/</guid>
+      <description>面試 寫出純api  不需要介面 只需要收傳參
+  userLogin 帳號/手機號 + 密碼 &amp;gt; token userRegister 帳號/手機號 + 密碼 + email &amp;gt; token userMessage token + 訊息 userReply token + 訊息ID + 訊息  演算法  一維陣列 n元素 轉n維陣列 並設置值
+ class Solution { function toArray($list, $value = &amp;#39;value&amp;#39;) { $list = array_reverse($list); return $this-&amp;gt;add($list, $value); } function add(&amp;amp;$list, $setValue = &amp;#39;value&amp;#39;) { if (empty($list)) { return $setValue; } $value = array_pop($list); $output[$value] = $this-&amp;gt;add($list, $setValue); return $output; } } 後記  當下怎樣想怎樣怪</description>
     </item>
     
     <item>
