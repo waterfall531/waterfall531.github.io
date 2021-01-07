@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 06 Jan 2021 11:05:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jan 2021 17:59:39 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1315_Sum of Nodes with Even-Valued Grandparent</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1315/</link>
+      <pubDate>Wed, 06 Jan 2021 17:59:39 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1315/</guid>
+      <description>Given a binary tree, return the sum of values of nodes with even-valued grandparent. (A grandparent of a node is the parent of its parent, if it exists.)
+If there are no nodes with an even-valued grandparent, return 0.
+ 翻譯 祖節點是偶數 則當前節點++
+class TreeNode { public $val = null; public $left = null; public $right = null; function __construct($val = 0, $left = null, $right = null) { $this-&amp;gt;val = $val; $this-&amp;gt;left = $left; $this-&amp;gt;right = $right; } } class Solution { /** * @param TreeNode $root * @return Integer */ public function sumEvenGrandparent($root) { $sum = 0; if (!</description>
+    </item>
     
     <item>
       <title>1689_Partitioning Into Minimum Number Of Deci-Binary Numbers</title>

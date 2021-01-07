@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>1315_Sum of Nodes with Even-Valued Grandparent // Randy&#39;s Blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="John Doe" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="1315_Sum of Nodes with Even-Valued Grandparent"/>
+<meta name="twitter:description" content="Given a binary tree, return the sum of values of nodes with even-valued grandparent. (A grandparent of a node is the parent of its parent, if it exists.)
+If there are no nodes with an even-valued grandparent, return 0.
+ 翻譯 祖節點是偶數 則當前節點&#43;&#43;
+class TreeNode { public $val = null; public $left = null; public $right = null; function __construct($val = 0, $left = null, $right = null) { $this-&gt;val = $val; $this-&gt;left = $left; $this-&gt;right = $right; } } class Solution { /** * @param TreeNode $root * @return Integer */ public function sumEvenGrandparent($root) { $sum = 0; if (!"/>
+
+    <meta property="og:title" content="1315_Sum of Nodes with Even-Valued Grandparent" />
+<meta property="og:description" content="Given a binary tree, return the sum of values of nodes with even-valued grandparent. (A grandparent of a node is the parent of its parent, if it exists.)
+If there are no nodes with an even-valued grandparent, return 0.
+ 翻譯 祖節點是偶數 則當前節點&#43;&#43;
+class TreeNode { public $val = null; public $left = null; public $right = null; function __construct($val = 0, $left = null, $right = null) { $this-&gt;val = $val; $this-&gt;left = $left; $this-&gt;right = $right; } } class Solution { /** * @param TreeNode $root * @return Integer */ public function sumEvenGrandparent($root) { $sum = 0; if (!" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1315/" />
+<meta property="article:published_time" content="2021-01-06T17:59:39+08:00" />
+<meta property="article:modified_time" content="2021-01-06T17:59:39+08:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <div class="app-header-social">
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">1315_Sum of Nodes with Even-Valued Grandparent</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jan 6, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          2 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      <blockquote>
+<p>Given a binary tree, return the sum of values of nodes with even-valued grandparent.  (A grandparent of a node is the parent of its parent, if it exists.)</p>
+<p>If there are no nodes with an even-valued grandparent, return 0.</p>
+</blockquote>
+<h2 id="翻譯">翻譯</h2>
+<p>祖節點是偶數 則當前節點++</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class TreeNode
+{
+    public $val = null;
+    public $left = null;
+    public $right = null;
+
+    function __construct($val = 0, $left = null, $right = null)
+    {
+        $this-&gt;val   = $val;
+        $this-&gt;left  = $left;
+        $this-&gt;right = $right;
+    }
+}
+
+class Solution
+{
+
+    /**
+     * @param TreeNode $root
+     * @return Integer
+     */
+    public function sumEvenGrandparent($root)
+    {
+        $sum = 0;
+        if (!is_null($root)) {
+            if (!is_null($root-&gt;left)) {
+                if ($root-&gt;val % 2 === 0) {
+                    $sum += $this-&gt;deep2L($root-&gt;left);
+                }
+
+                $sum += $this-&gt;sumEvenGrandparent($root-&gt;left);
+            }
+
+            if (!is_null($root-&gt;right)) {
+                if ($root-&gt;val % 2 === 0) {
+                    $sum += $this-&gt;deep2L($root-&gt;right);
+                }
+
+                $sum += $this-&gt;sumEvenGrandparent($root-&gt;right);
+            }
+        }
+        return $sum;
+    }
+
+    /**
+     * @param TreeNode $root
+     * @return Integer
+     */
+    public function deep2L($root)
+    {
+        if (is_null($root)) {
+            return 0;
+        }
+        if (is_null($root-&gt;left)) {
+            $tmp = 0;
+        } else {
+            $tmp = $root-&gt;left-&gt;val;
+        }
+
+        if (is_null($root-&gt;right)) {
+            $tmp += 0;
+        } else {
+            $tmp += $root-&gt;right-&gt;val;
+        }
+
+        return $tmp;
+    }
+}
+</code></pre></div><h2 id="檢討">檢討</h2>
+<p>該做法記憶體並不會吃比較少
+且輪詢多次((()))</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Solution
+{
+    private $sum = 0;
+    
+    public function sumEvenGrandparent(TreeNode $root): int
+    {
+        $this-&gt;printValues($root, null, null);
+        
+        return $this-&gt;sum;
+    }
+    
+    private function printValues(TreeNode $root, ?TreeNode $parent, ?TreeNode $grandParentNode): void
+    {
+        if ($root) {            
+            if ($grandParentNode <span style="color:#960050;background-color:#1e0010">&amp;&amp;</span> $grandParentNode-&gt;val % 2 === 0) {
+                $this-&gt;sum += $root-&gt;val;
+            }
+            
+            if ($root-&gt;left) {
+                $this-&gt;printValues($root-&gt;left, $root, $parent);
+            }
+
+            if ($root-&gt;right) {
+                $this-&gt;printValues($root-&gt;right, $root, $parent);
+            }
+        }
+    }
+}
+</code></pre></div>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
