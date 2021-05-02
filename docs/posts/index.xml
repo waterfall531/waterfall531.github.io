@@ -13,10 +13,10 @@
     
     <item>
       <title>f776: 方形數字</title>
-      <link>https://waterfall531.github.io/posts/new/</link>
+      <link>https://waterfall531.github.io/posts/f776/</link>
       <pubDate>Sun, 02 May 2021 23:30:20 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/new/</guid>
+      <guid>https://waterfall531.github.io/posts/f776/</guid>
       <description>原點在左下角。
   x 方向左而右由 1 ~ N, y 方向下而上由 1 ~ N 的一個方形數字。
   請算出每組 （x1, y1）to（x2, y2）的數字合計。
