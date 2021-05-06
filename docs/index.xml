@@ -6,10 +6,26 @@
     <description>Recent content on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sun, 02 May 2021 23:30:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 07 May 2021 00:49:47 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Selenium / ChromeDrive / PHP base / Html CSS selector</title>
+      <link>https://waterfall531.github.io/posts/new/</link>
+      <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/new/</guid>
+      <description>Selenium   有多版本
+ Python NodeJs Java Php    Selenium 需要 Browser 支援
+ Chrome Firefox    而中間需要 Driver 控制
+ Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
+  Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
+ 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
+ Mac/Linux  .</description>
+    </item>
     
     <item>
       <title>f776: 方形數字</title>
