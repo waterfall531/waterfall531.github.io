@@ -6,17 +6,28 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 07 May 2021 00:49:47 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 08 May 2021 12:03:59 +0800</lastBuildDate>
     
 	<atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Interview#0508</title>
+      <link>https://waterfall531.github.io/posts/interview#0508/</link>
+      <pubDate>Sat, 08 May 2021 12:03:59 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview#0508/</guid>
+      <description>問題 1.[static](https://jaceju.net/php-static/) 2.Mongo vs Mysql 3.設計模式(單例)  Static static 會把變數存起來
+function getCount() { static $count = 0; $count ++; return $count; } for ($i = 0; $i &amp;lt; 10; $i ++) { echo getCount(), &amp;#34;\n&amp;#34;; } /* output: 1 2 3 4 5 6 7 8 9 10 */ ex
+function fibV2($n) { static $result = array(); if (!isset($result[$n])) { if ($n &amp;lt;= 2) { $result[$n] = 1; } else { $result[$n] = fibV2($n - 2) + fibV2($n - 1); } } return $result[$n]; } $result 會存所以不會遞迴下去太多次 O(n)?</description>
+    </item>
+    
+    <item>
       <title>Selenium / ChromeDrive / PHP base / Html CSS selector</title>
-      <link>https://waterfall531.github.io/posts/new/</link>
+      <link>https://waterfall531.github.io/posts/selenium/</link>
       <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/new/</guid>
+      <guid>https://waterfall531.github.io/posts/selenium/</guid>
       <description>Selenium   有多版本
  Python NodeJs Java Php    Selenium 需要 Browser 支援
  Chrome Firefox    而中間需要 Driver 控制
