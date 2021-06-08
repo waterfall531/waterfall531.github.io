@@ -6,10 +6,24 @@
     <description>Recent content on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 08 May 2021 12:03:59 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 08 Jun 2021 17:52:54 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev Ssh</title>
+      <link>https://waterfall531.github.io/posts/dev-ssh/</link>
+      <pubDate>Tue, 08 Jun 2021 17:52:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-ssh/</guid>
+      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshf_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload </description>
+    </item>
     
-	<atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Dev Svn</title>
+      <link>https://waterfall531.github.io/posts/dev-svn/</link>
+      <pubDate>Tue, 08 Jun 2021 17:30:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-svn/</guid>
+      <description>install sudo yum install subversion create repo cd /var; mkdir svn; sudo svnadmin create /var/svn/{$name} conf svnserve.conf anon-access = none / write / read auth-access = write / read / none password-db = passwd authz-db = authz realm = {$repoName} passwd [users] account = password authz [groups] #群組 = 帳號1,帳號2 admin = account tmp = tmp1,test2 [{$repoName}:/] @admin = rw [{$repoName}:/] $tmp = r service sudo svnserve -dr /var/svn #check ps aux|grep svnserve #firewall sudo firewall-cmd --permanent -add-port=3690/tcp sudo firewall-cmd --reload ## sudo systemctl enable svnserve.</description>
+    </item>
     
     <item>
       <title>Interview#0508</title>
@@ -141,7 +155,7 @@ Return a list of groups such that each person i is in a group of size groupSizes
       <pubDate>Mon, 07 Dec 2020 17:06:52 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/leetcode-1672/</guid>
-      <description>You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the i​​​​​​​​​​​th​​​​ customer has in the j​​​​​​​​​​​th​​​​ bank. Return the wealth that the richest customer has.
+      <description>You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the *i​​​​​​​​​​​th*​​​​ customer has in the *j​​​​​​​​​​​th*​​​​ bank. Return the wealth that the richest customer has.
 A customer&amp;rsquo;s wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
  v0 class Solution { /** * @param Integer[][] $accounts * @return Integer */ function maximumWealth($accounts) { $max = 0; foreach ($accounts as $list) { $tmpSum = array_sum($list); $max = $max &amp;gt; $tmpSum ?</description>
     </item>
