@@ -63,7 +63,13 @@ ps aux|grep svnserve
 sudo firewall-cmd --permanent -add-port=3690/tcp
 sudo firewall-cmd --reload
 
-##
+#123
 sudo systemctl enable svnserve.service
 sudo systemctl start svnserve.service
+```
+
+## use
+
+```
+svn co svn://192.168.199.224/demo
 ```
