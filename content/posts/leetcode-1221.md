@@ -2,6 +2,9 @@
 title: "Leetcode 1221"
 date: 2020-09-11T17:13:49+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Balanced strings are those who have equal quantity of 'L' and 'R' characters.

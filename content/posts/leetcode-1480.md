@@ -2,6 +2,9 @@
 title: "Leetcode 1480"
 date: 2020-09-01T16:36:33+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 #1480. Running Sum of 1d Array

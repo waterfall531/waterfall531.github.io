@@ -2,6 +2,9 @@
 title: "Leetcode 1389"
 date: 2020-09-11T16:51:59+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Given two arrays of integers `nums` and `index`. Your task is to create target array under the following rules:

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Redis on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/series/redis/</link>
+    <description>Recent content in Redis on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 09 Jun 2021 10:17:51 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/redis/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev Redis</title>
+      <link>https://waterfall531.github.io/posts/dev-redis/</link>
+      <pubDate>Wed, 09 Jun 2021 10:17:51 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-redis/</guid>
+      <description>install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup  RDB  依據時間/key值變化數量去做快照
+AOF  依據每單位時間做的log
+優點  RDB 還原快 數據量小 AOF 時間節點多
+淘汰   有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
+  無設定時間 *. 依據使用量 *.</description>
+    </item>
+    
+  </channel>
+</rss>

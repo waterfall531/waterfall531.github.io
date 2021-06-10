@@ -2,6 +2,9 @@
 title: "Leetcode 1603"
 date: 2020-12-07T17:35:25+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.

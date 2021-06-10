@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ssh on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/series/ssh/</link>
+    <description>Recent content in Ssh on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 08 Jun 2021 17:52:54 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev Ssh</title>
+      <link>https://waterfall531.github.io/posts/dev-ssh/</link>
+      <pubDate>Tue, 08 Jun 2021 17:52:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-ssh/</guid>
+      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshf_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload </description>
+    </item>
+    
+  </channel>
+</rss>

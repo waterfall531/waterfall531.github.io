@@ -2,6 +2,9 @@
 title: "Mysql Alter Column"
 date: 2020-08-18T17:16:02+08:00
 draft: true
+tags: ["Mysql"]
+series: ["Optimization"]
+categories: ["AlterColumn"]
 ---
 
 前情提要

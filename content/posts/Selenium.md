@@ -2,6 +2,9 @@
 title: "Selenium / ChromeDrive / PHP base / Html CSS selector"
 date: 2021-05-07T00:49:47+08:00
 draft: true
+tags: ["crawler"]
+series: ["Selenium"]
+categories: ["init"]
 ---
 
 ## Selenium

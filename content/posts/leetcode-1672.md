@@ -2,6 +2,9 @@
 title: "Leetcode 1672.Richest Customer Wealth"
 date: 2020-12-07T17:06:52+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >You are given an *m x n* integer grid *accounts* where *accounts[i][j]* is the amount of money the *i​​​​​​​​​​​<sup>th</sup>*​​​​ customer has in the *j<sup>​​​​​​​​​​​th</sup>*​​​​ bank. Return the wealth that the richest customer has.

@@ -2,6 +2,9 @@
 title: "Leetcode 1431"
 date: 2020-09-03T17:30:44+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Given the array *candies* and the integer *extraCandies*, where *candies[i]* represents the number of candies that the **ith** kid has.

@@ -2,6 +2,9 @@
 title: "Leetcode 1476. Subrectangle Queries"
 date: 2020-12-10T16:58:52+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Implement the class SubrectangleQueries which receives a rows x cols rectangle as a matrix of integers in the constructor and supports two methods:

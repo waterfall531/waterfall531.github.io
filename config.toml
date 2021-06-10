@@ -3,3 +3,32 @@ languageCode = "zh-tw"
 title = "Randy's Blog"
 theme = "m10c"
 publishdir = "docs"
+paginate = 8
+
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
+
+[params]
+    author = "Randy"
+    description = "Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein \r\n 頭貼為貓貓蟲咖波"
+    avatar = "avatar.png"
+    favicon = "favicon.png"
+
+    [[params.social]]
+        icon = "github"
+        name = "Github"
+        url = "https://github.com/waterfall531"
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+  category = "categories"

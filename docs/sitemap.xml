@@ -2,7 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://waterfall531.github.io/categories/</loc>
+    <lastmod>2021-06-10T11:55:15+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/posts/dev-nginx/</loc>
+    <lastmod>2021-06-10T11:55:15+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/devops/</loc>
+    <lastmod>2021-06-10T11:55:15+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/categories/init/</loc>
+    <lastmod>2021-06-10T11:55:15+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/nginx/</loc>
     <lastmod>2021-06-10T11:55:15+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/</loc>
@@ -11,34 +23,85 @@
     <loc>https://waterfall531.github.io/</loc>
     <lastmod>2021-06-10T11:55:15+08:00</lastmod>
   </url><url>
+    <loc>https://waterfall531.github.io/series/</loc>
+    <lastmod>2021-06-10T11:55:15+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/</loc>
+    <lastmod>2021-06-10T11:55:15+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/posts/dev-mysql-5-6/</loc>
+    <lastmod>2021-06-09T11:34:06+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/mariadb/</loc>
     <lastmod>2021-06-09T11:34:06+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/dev-redis/</loc>
     <lastmod>2021-06-09T10:17:51+08:00</lastmod>
   </url><url>
+    <loc>https://waterfall531.github.io/series/redis/</loc>
+    <lastmod>2021-06-09T10:17:51+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/posts/dev-ssh/</loc>
+    <lastmod>2021-06-08T17:52:54+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/ssh/</loc>
     <lastmod>2021-06-08T17:52:54+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/dev-svn/</loc>
     <lastmod>2021-06-08T17:30:54+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/interview#0508/</loc>
+    <loc>https://waterfall531.github.io/series/svn/</loc>
+    <lastmod>2021-06-08T17:30:54+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/categories/0508/</loc>
     <lastmod>2021-05-08T12:03:59+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/2021/</loc>
+    <lastmod>2021-05-08T12:03:59+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/interview/</loc>
+    <lastmod>2021-05-08T12:03:59+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/interview-0508/</loc>
+    <lastmod>2021-05-08T12:03:59+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/crawler/</loc>
+    <lastmod>2021-05-07T00:49:47+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/selenium/</loc>
+    <lastmod>2021-05-07T00:49:47+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/selenium/</loc>
     <lastmod>2021-05-07T00:49:47+08:00</lastmod>
   </url><url>
+    <loc>https://waterfall531.github.io/tags/algorithm/</loc>
+    <lastmod>2021-05-02T23:30:20+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/posts/f776/</loc>
+    <lastmod>2021-05-02T23:30:20+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/fb/</loc>
+    <lastmod>2021-05-02T23:30:20+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/categories/solve/</loc>
     <lastmod>2021-05-02T23:30:20+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1315/</loc>
     <lastmod>2021-01-06T17:59:39+08:00</lastmod>
   </url><url>
+    <loc>https://waterfall531.github.io/series/leetcode/</loc>
+    <lastmod>2021-01-06T17:59:39+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1689/</loc>
     <lastmod>2021-01-06T11:05:03+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/interview1217/</loc>
+    <loc>https://waterfall531.github.io/categories/1217/</loc>
+    <lastmod>2020-12-17T14:50:21+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/2020/</loc>
+    <lastmod>2020-12-17T14:50:21+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/interview-1217/</loc>
     <lastmod>2020-12-17T14:50:21+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1673/</loc>
@@ -74,26 +137,37 @@
     <loc>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</loc>
     <lastmod>2020-09-03T17:30:44+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/leetcode-1528._shuffle_string/</loc>
+    <loc>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</loc>
     <lastmod>2020-09-03T17:00:16+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</loc>
     <lastmod>2020-09-03T16:56:51+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/leetcode-1470-shuffle_the_array/</loc>
+    <loc>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</loc>
     <lastmod>2020-09-01T16:43:16+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1480/</loc>
     <lastmod>2020-09-01T16:36:33+08:00</lastmod>
   </url><url>
+    <loc>https://waterfall531.github.io/categories/altercolumn/</loc>
+    <lastmod>2020-08-18T17:16:02+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/mysql/</loc>
+    <lastmod>2020-08-18T17:16:02+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/posts/mysql-alter-column/</loc>
     <lastmod>2020-08-18T17:16:02+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/hugo&#43;guthub/</loc>
+    <loc>https://waterfall531.github.io/series/optimization/</loc>
+    <lastmod>2020-08-18T17:16:02+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/hugo-github/</loc>
     <lastmod>2020-08-18T16:31:11+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/categories/</loc>
+    <loc>https://waterfall531.github.io/tags/hugo/</loc>
+    <lastmod>2020-08-18T16:31:11+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/tags/</loc>
+    <loc>https://waterfall531.github.io/series/init/</loc>
+    <lastmod>2020-08-18T16:31:11+08:00</lastmod>
   </url>
 </urlset>

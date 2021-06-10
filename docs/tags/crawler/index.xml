@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>crawler on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/tags/crawler/</link>
+    <description>Recent content in crawler on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Fri, 07 May 2021 00:49:47 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/crawler/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Selenium / ChromeDrive / PHP base / Html CSS selector</title>
+      <link>https://waterfall531.github.io/posts/selenium/</link>
+      <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/selenium/</guid>
+      <description>Selenium   有多版本
+ Python NodeJs Java Php    Selenium 需要 Browser 支援
+ Chrome Firefox    而中間需要 Driver 控制
+ Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
+  Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
+ 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
+ Mac/Linux  .</description>
+    </item>
+    
+  </channel>
+</rss>

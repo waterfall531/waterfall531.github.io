@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mysql on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/tags/mysql/</link>
+    <description>Recent content in Mysql on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 18 Aug 2020 17:16:02 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/mysql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysql Alter Column</title>
+      <link>https://waterfall531.github.io/posts/mysql-alter-column/</link>
+      <pubDate>Tue, 18 Aug 2020 17:16:02 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/mysql-alter-column/</guid>
+      <description>前情提要 1400w Rows的表 不停機情況下增加欄位
+  mysql 5.6(含) 使用innoDb 可以線上改欄位格式 不鎖表
+  若為 5.6以下(不含) 可考慮使用 pt-online-schema-change
+  或考慮土法煉鋼
+ 複製表結構後產新表 移除key 複製資料 加key 停機 同步第二次 rename &amp;amp;&amp;amp; del oldTable    </description>
+    </item>
+    
+  </channel>
+</rss>

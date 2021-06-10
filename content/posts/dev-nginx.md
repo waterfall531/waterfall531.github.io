@@ -2,6 +2,9 @@
 title: "Dev Nginx"
 date: 2021-06-10T11:55:15+08:00
 draft: true
+tags: ["devops"]
+series: ["Nginx"]
+categories: ["init"]
 ---
 
 ## Nginx Install

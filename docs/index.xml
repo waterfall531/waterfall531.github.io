@@ -57,11 +57,11 @@ AOF  依據每單位時間做的log
     </item>
     
     <item>
-      <title>Interview#0508</title>
-      <link>https://waterfall531.github.io/posts/interview#0508/</link>
+      <title>Interview0508</title>
+      <link>https://waterfall531.github.io/posts/interview-0508/</link>
       <pubDate>Sat, 08 May 2021 12:03:59 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/interview#0508/</guid>
+      <guid>https://waterfall531.github.io/posts/interview-0508/</guid>
       <description>問題 1.[static](https://jaceju.net/php-static/) 2.Mongo vs Mysql 3.設計模式(單例)  Static static 會把變數存起來
 function getCount() { static $count = 0; $count ++; return $count; } for ($i = 0; $i &amp;lt; 10; $i ++) { echo getCount(), &amp;#34;\n&amp;#34;; } /* output: 1 2 3 4 5 6 7 8 9 10 */ ex
 function fibV2($n) { static $result = array(); if (!isset($result[$n])) { if ($n &amp;lt;= 2) { $result[$n] = 1; } else { $result[$n] = fibV2($n - 2) + fibV2($n - 1); } } return $result[$n]; } $result 會存所以不會遞迴下去太多次 O(n)?</description>
@@ -125,11 +125,11 @@ Given a string n that represents a positive decimal integer, return the minimum 
     </item>
     
     <item>
-      <title>interview_1217</title>
-      <link>https://waterfall531.github.io/posts/interview1217/</link>
+      <title>Interview1217</title>
+      <link>https://waterfall531.github.io/posts/interview-1217/</link>
       <pubDate>Thu, 17 Dec 2020 14:50:21 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/interview1217/</guid>
+      <guid>https://waterfall531.github.io/posts/interview-1217/</guid>
       <description>面試 寫出純api  不需要介面 只需要收傳參
   userLogin 帳號/手機號 + 密碼 &amp;gt; token userRegister 帳號/手機號 + 密碼 + email &amp;gt; token userMessage token + 訊息 userReply token + 訊息ID + 訊息  演算法  一維陣列 n元素 轉n維陣列 並設置值
  class Solution { function toArray($list, $value = &amp;#39;value&amp;#39;) { $list = array_reverse($list); return $this-&amp;gt;add($list, $value); } function add(&amp;amp;$list, $setValue = &amp;#39;value&amp;#39;) { if (empty($list)) { return $setValue; } $value = array_pop($list); $output[$value] = $this-&amp;gt;add($list, $setValue); return $output; } } 後記  當下怎樣想怎樣怪</description>
@@ -265,10 +265,10 @@ class Solution { /** * @param Integer $n * @param Integer $start * @return Integ
     
     <item>
       <title>Leetcode 1528</title>
-      <link>https://waterfall531.github.io/posts/leetcode-1528._shuffle_string/</link>
+      <link>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</link>
       <pubDate>Thu, 03 Sep 2020 17:00:16 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/leetcode-1528._shuffle_string/</guid>
+      <guid>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</guid>
       <description> Given a string s and an integer array indices of the same length.
   The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
   Return the shuffled string.
@@ -291,10 +291,10 @@ class Solution { /** * @param String $s * @param Integer[] $indices * @return ar
     
     <item>
       <title>Leetcode 1470 Shuffle_the_Array</title>
-      <link>https://waterfall531.github.io/posts/leetcode-1470-shuffle_the_array/</link>
+      <link>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</link>
       <pubDate>Tue, 01 Sep 2020 16:43:16 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/leetcode-1470-shuffle_the_array/</guid>
+      <guid>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</guid>
       <description>#1470. Shuffle the Array
  Given the array nums consisting of 2n elements in the form [x1,x2,&amp;hellip;,xn,y1,y2,&amp;hellip;,yn].
   Return the array in the form [x1,y1,x2,y2,&amp;hellip;,xn,yn].
@@ -339,10 +339,10 @@ class Solution { /** * @param Integer[] $nums * @param Integer $n * @return Inte
     
     <item>
       <title>GitHub &#43; Hugo</title>
-      <link>https://waterfall531.github.io/posts/hugo&#43;guthub/</link>
+      <link>https://waterfall531.github.io/posts/hugo-github/</link>
       <pubDate>Tue, 18 Aug 2020 16:31:11 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/hugo&#43;guthub/</guid>
+      <guid>https://waterfall531.github.io/posts/hugo-github/</guid>
       <description>setting github page change to /docs
 add publishdir = &amp;lsquo;docs&amp;rsquo; to config.toml
 then hugo -d output to docs and it can be push to git and also auto commit github page</description>

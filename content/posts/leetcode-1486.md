@@ -2,6 +2,9 @@
 title: "Leetcode 1486. XOR Operation in an Array"
 date: 2020-09-07T11:55:57+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 >Given an integer *n* and an integer *start*.
 >Define an array `nums` where `nums[i] = start + 2*i` (0-indexed) and `n == nums.length`.

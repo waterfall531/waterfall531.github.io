@@ -5,6 +5,61 @@
     <link>https://waterfall531.github.io/tags/</link>
     <description>Recent content in Tags on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language><atom:link href="https://waterfall531.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 10 Jun 2021 11:55:15 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>devops</title>
+      <link>https://waterfall531.github.io/tags/devops/</link>
+      <pubDate>Thu, 10 Jun 2021 11:55:15 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/tags/devops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>interview</title>
+      <link>https://waterfall531.github.io/tags/interview/</link>
+      <pubDate>Sat, 08 May 2021 12:03:59 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/tags/interview/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>crawler</title>
+      <link>https://waterfall531.github.io/tags/crawler/</link>
+      <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/tags/crawler/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>algorithm</title>
+      <link>https://waterfall531.github.io/tags/algorithm/</link>
+      <pubDate>Sun, 02 May 2021 23:30:20 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/tags/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mysql</title>
+      <link>https://waterfall531.github.io/tags/mysql/</link>
+      <pubDate>Tue, 18 Aug 2020 17:16:02 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://waterfall531.github.io/tags/hugo/</link>
+      <pubDate>Tue, 18 Aug 2020 16:31:11 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

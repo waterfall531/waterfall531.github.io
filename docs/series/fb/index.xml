@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fb on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/series/fb/</link>
+    <description>Recent content in Fb on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sun, 02 May 2021 23:30:20 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/fb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>f776: 方形數字</title>
+      <link>https://waterfall531.github.io/posts/f776/</link>
+      <pubDate>Sun, 02 May 2021 23:30:20 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/f776/</guid>
+      <description>原點在左下角。
+  x 方向左而右由 1 ~ N, y 方向下而上由 1 ~ N 的一個方形數字。
+  請算出每組 （x1, y1）to（x2, y2）的數字合計。
+           3 3 3   2 2 3   1 2 3    v0  一開始就想肯定有公式解
+  朝著F([x1,y1],[x2,y2])
+  去思考
+  後來發現有點難
+ v1  後來想到F(x,y)去return當下格子數字 但這樣O()會超級大 exF(7,5) =&amp;gt; F(3,2) O(20)
+ v2  後來的想法是F(n) 去算 NxN內的數字和</description>
+    </item>
+    
+  </channel>
+</rss>

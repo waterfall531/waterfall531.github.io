@@ -2,6 +2,9 @@
 title: "Leetcode 1282 Group the People Given the Group Size They Belong To"
 date: 2020-12-11T18:18:19+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.

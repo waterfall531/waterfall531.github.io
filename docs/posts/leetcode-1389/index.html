@@ -2,12 +2,13 @@
 <html lang="zh-tw">
   <head>
     <title>Leetcode 1389 // Randy&#39;s Blog</title>
+    <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="generator" content="Hugo 0.83.1" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="author" content="John Doe" />
+    <meta name="author" content="Randy" />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.88e7083eff65effb7485b6e6f38d10afbec25093a6fac42d734ce9024d3defbd.css" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
 
     
     <meta name="twitter:card" content="summary"/>
@@ -21,18 +22,34 @@
   Initially target array is empty. From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array. Repeat the previous step until there are no elements to read in nums and index.   Return the target array.
   It is guaranteed that the insertion operations will be valid." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1389/" />
-<meta property="article:published_time" content="2020-09-11T16:51:59+08:00" />
-<meta property="article:modified_time" content="2020-09-11T16:51:59+08:00" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1389/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-09-11T16:51:59&#43;08:00" />
+<meta property="article:modified_time" content="2020-09-11T16:51:59&#43;08:00" />
+<meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1315/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1689/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1673/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1282/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1476/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1603/" />
+
 
 
   </head>
   <body>
     <header class="app-header">
-      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="John Doe" /></a>
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.png" alt="Randy" /></a>
       <h1>Randy&#39;s Blog</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula turpis sit amet elit pretium.</p>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein 
+ 頭貼為貓貓蟲咖波</p>
       <div class="app-header-social">
+        
+          <a href="https://github.com/waterfall531" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
         
       </div>
     </header>
@@ -55,7 +72,15 @@
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
 </svg>
           2 min read
-        </div></div>
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://waterfall531.github.io/tags/algorithm/">algorithm</a>
+        </div>
+      </div>
     </header>
     <div class="post-content">
       <blockquote>
@@ -80,123 +105,123 @@
 <li>b = list[i] &hellip; list[count(list)]</li>
 </ul>
 <p>所以往分割陣列查</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">class Solution {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Solution</span> {
 
-    /**
-     * @param Integer[] $nums
-     * @param Integer[] $index
-     * @return Integer[]
-     */
-    function createTargetArray($nums, $index) {
-        $list = [];
-        for ($i = 0 ;$i &lt; <span style="color:#f92672">count</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">nums</span><span style="color:#960050;background-color:#1e0010">)</span> <span style="color:#960050;background-color:#1e0010">;</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">++){</span>
-            <span style="color:#a6e22e">array_splice</span><span style="color:#960050;background-color:#1e0010">($</span><span style="color:#a6e22e">list</span><span style="color:#960050;background-color:#1e0010">,$</span><span style="color:#a6e22e">index</span><span style="color:#960050;background-color:#1e0010">[$</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">],</span><span style="color:#a6e22e">0</span><span style="color:#960050;background-color:#1e0010">,[$</span><span style="color:#a6e22e">nums</span><span style="color:#960050;background-color:#1e0010">[$</span><span style="color:#a6e22e">i</span><span style="color:#960050;background-color:#1e0010">]]);</span>
-        <span style="color:#960050;background-color:#1e0010">}</span>
-        <span style="color:#a6e22e">return</span> <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#a6e22e">list</span><span style="color:#960050;background-color:#1e0010">;</span>
-    <span style="color:#960050;background-color:#1e0010">}</span>
-<span style="color:#960050;background-color:#1e0010">}</span>
+    <span style="color:#e6db74">/**
+</span><span style="color:#e6db74">     * @param Integer[] $nums
+</span><span style="color:#e6db74">     * @param Integer[] $index
+</span><span style="color:#e6db74">     * @return Integer[]
+</span><span style="color:#e6db74">     */</span>
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">createTargetArray</span>($nums, $index) {
+        $list <span style="color:#f92672">=</span> [];
+        <span style="color:#66d9ef">for</span> ($i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> ;$i <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">count</span>($nums) ; $i<span style="color:#f92672">++</span>){
+            <span style="color:#a6e22e">array_splice</span>($list,$index[$i],<span style="color:#ae81ff">0</span>,[$nums[$i]]);
+        }
+        <span style="color:#66d9ef">return</span> $list;
+    }
+}
 </code></pre></div><p>##ex0
 結果發現有趣的用法</p>
 <p>###offset
 offset &gt;= 0</p>
 <p>用法是取offset的個數</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
-array_splice($a,2);
-array(2) {
-    [0]=&gt;
-  int(0)
-  [1]=&gt;
-  int(1)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>];
+<span style="color:#a6e22e">array_splice</span>($a,<span style="color:#ae81ff">2</span>);
+<span style="color:#66d9ef">array</span>(<span style="color:#ae81ff">2</span>) {
+    [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">0</span>)
+  [<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">1</span>)
 }
 </code></pre></div><p>offset &lt; 0</p>
 <p>用法是倒回來不取的個數</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
-array_splice($a,2);
-array(8) {
-  [0]=&gt;
-  int(0)
-  [1]=&gt;
-  int(1)
-  [2]=&gt;
-  int(2)
-  [3]=&gt;
-  int(3)
-  [4]=&gt;
-  int(4)
-  [5]=&gt;
-  int(5)
-  [6]=&gt;
-  int(6)
-  [7]=&gt;
-  int(7)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>];
+<span style="color:#a6e22e">array_splice</span>($a,<span style="color:#ae81ff">2</span>);
+<span style="color:#66d9ef">array</span>(<span style="color:#ae81ff">8</span>) {
+  [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">0</span>)
+  [<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">1</span>)
+  [<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">2</span>)
+  [<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">3</span>)
+  [<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">4</span>)
+  [<span style="color:#ae81ff">5</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">5</span>)
+  [<span style="color:#ae81ff">6</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">6</span>)
+  [<span style="color:#ae81ff">7</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">7</span>)
 }
 
 </code></pre></div><p>###length</p>
 <p>length &gt;= 0</p>
 <p>是掠過幾個不取</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
-array_splice($a,2,3);
-array(7) {
-  [0]=&gt;
-  int(0)
-  [1]=&gt;
-  int(1)
-  [2]=&gt;
-  int(5)
-  [3]=&gt;
-  int(6)
-  [4]=&gt;
-  int(7)
-  [5]=&gt;
-  int(8)
-  [6]=&gt;
-  int(9)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>];
+<span style="color:#a6e22e">array_splice</span>($a,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>);
+<span style="color:#66d9ef">array</span>(<span style="color:#ae81ff">7</span>) {
+  [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">0</span>)
+  [<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">1</span>)
+  [<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">5</span>)
+  [<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">6</span>)
+  [<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">7</span>)
+  [<span style="color:#ae81ff">5</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">8</span>)
+  [<span style="color:#ae81ff">6</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">9</span>)
 }
 </code></pre></div><p><code>2,3,4被略過了</code></p>
 <p>length &lt; 0</p>
 <p>是只取 前 offset + 後 |length|</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
-array_splice($a,2,-3);
-array(5) {
-  [0]=&gt;
-  int(0)
-  [1]=&gt;
-  int(1)
-  [2]=&gt;
-  int(7)
-  [3]=&gt;
-  int(8)
-  [4]=&gt;
-  int(9)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>];
+<span style="color:#a6e22e">array_splice</span>($a,<span style="color:#ae81ff">2</span>,<span style="color:#f92672">-</span><span style="color:#ae81ff">3</span>);
+<span style="color:#66d9ef">array</span>(<span style="color:#ae81ff">5</span>) {
+  [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">0</span>)
+  [<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">1</span>)
+  [<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">7</span>)
+  [<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">8</span>)
+  [<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">9</span>)
 }
 </code></pre></div><p>###replacement</p>
 <p>是插入在 offset 跟 length 中間的
 所以可以看到</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a = [0,1,2,3,4,5,6,7,8,9];
-array_splice($a,2,0,[&#39;a&#39;]);
-array(11) {
-  [0]=&gt;
-  int(0)
-  [1]=&gt;
-  int(1)
-  [2]=&gt;
-  string(1) &#34;a&#34;
-  [3]=&gt;
-  int(2)
-  [4]=&gt;
-  int(3)
-  [5]=&gt;
-  int(4)
-  [6]=&gt;
-  int(5)
-  [7]=&gt;
-  int(6)
-  [8]=&gt;
-  int(7)
-  [9]=&gt;
-  int(8)
-  [10]=&gt;
-  int(9)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>];
+<span style="color:#a6e22e">array_splice</span>($a,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">0</span>,[<span style="color:#e6db74">&#39;a&#39;</span>]);
+<span style="color:#66d9ef">array</span>(<span style="color:#ae81ff">11</span>) {
+  [<span style="color:#ae81ff">0</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">0</span>)
+  [<span style="color:#ae81ff">1</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">1</span>)
+  [<span style="color:#ae81ff">2</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">string</span>(<span style="color:#ae81ff">1</span>) <span style="color:#e6db74">&#34;a&#34;</span>
+  [<span style="color:#ae81ff">3</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">2</span>)
+  [<span style="color:#ae81ff">4</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">3</span>)
+  [<span style="color:#ae81ff">5</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">4</span>)
+  [<span style="color:#ae81ff">6</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">5</span>)
+  [<span style="color:#ae81ff">7</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">6</span>)
+  [<span style="color:#ae81ff">8</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">7</span>)
+  [<span style="color:#ae81ff">9</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">8</span>)
+  [<span style="color:#ae81ff">10</span>]<span style="color:#f92672">=&gt;</span>
+  <span style="color:#a6e22e">int</span>(<span style="color:#ae81ff">9</span>)
 }
 </code></pre></div>
     </div>

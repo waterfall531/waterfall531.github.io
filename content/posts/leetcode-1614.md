@@ -2,6 +2,9 @@
 title: "Leetcode 1614"
 date: 2020-09-11T17:13:49+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >A string is a valid parentheses string (denoted VPS) if it meets one of the following:

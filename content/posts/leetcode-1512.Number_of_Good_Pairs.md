@@ -2,6 +2,9 @@
 title: "Leetcode 1512. Number of Good Pairs"
 date: 2020-09-03T16:56:51+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Given an array of integers *nums*.

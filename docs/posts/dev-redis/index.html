@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Dev Redis // Randy&#39;s Blog</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Randy" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Dev Redis"/>
+<meta name="twitter:description" content="install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup  RDB  依據時間/key值變化數量去做快照
+AOF  依據每單位時間做的log
+優點  RDB 還原快 數據量小 AOF 時間節點多
+淘汰   有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
+  無設定時間 *. 依據使用量 *."/>
+
+    <meta property="og:title" content="Dev Redis" />
+<meta property="og:description" content="install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup  RDB  依據時間/key值變化數量去做快照
+AOF  依據每單位時間做的log
+優點  RDB 還原快 數據量小 AOF 時間節點多
+淘汰   有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
+  無設定時間 *. 依據使用量 *." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/dev-redis/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-09T10:17:51&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-09T10:17:51&#43;08:00" />
+
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.png" alt="Randy" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein 
+ 頭貼為貓貓蟲咖波</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/waterfall531" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Dev Redis</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 9, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://waterfall531.github.io/tags/devops/">devops</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="install-redis">install redis</h2>
+<pre><code>yum install wget gcc
+wget http://download.redis.io/releases/redis-5.0.3.tar.gz
+
+tar -zxvf redis-5.0.3.tar.gz
+cd redis-5.0.3
+make install
+
+#test
+echo $?
+</code></pre><h2 id="setup">setup</h2>
+<pre><code>mkdir -p /usr/local/redis
+cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis
+-sentinel redis-server /usr/local/redis/
+cp /root/redis-5.0.3/redis.conf  /usr/local/redis/
+cp /root/redis-5.0.3/sentinel.conf  /usr/local/redis/
+
+#test
+redis-server /usr/local/redis/redis.conf
+</code></pre><h2 id="backup">backup</h2>
+<ol>
+<li>RDB</li>
+</ol>
+<p>依據時間/key值變化數量去做快照</p>
+<ol start="2">
+<li>AOF</li>
+</ol>
+<p>依據每單位時間做的log</p>
+<ol start="3">
+<li>優點</li>
+</ol>
+<p>RDB 還原快 數據量小
+AOF 時間節點多</p>
+<h2 id="淘汰">淘汰</h2>
+<ol>
+<li>
+<p>有設定時間
+*. 依據使用量
+*. 靠近過期時間
+*. 隨機</p>
+</li>
+<li>
+<p>無設定時間
+*. 依據使用量
+*. 隨機
+*. 不刪除</p>
+</li>
+</ol>
+<h2 id="主從架構">主從架構</h2>
+<ol>
+<li>
+<p>start
+server 0 掛掉
+搜尋最快的
+推舉出新master
+其他的改地址</p>
+</li>
+<li>
+<p>link
+server 0 掛掉
+1 為master
+2 複製 1
+n 複製 n-1</p>
+</li>
+</ol>
+<h2 id="ha--哨兵">ha / 哨兵</h2>
+<p>藉由ping 個節點 了解狀況
+主節點掛了
+之後選舉出新主節點
+自動替換
+原節點上線後更替回來</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

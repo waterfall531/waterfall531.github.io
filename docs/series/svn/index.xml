@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Svn on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/series/svn/</link>
+    <description>Recent content in Svn on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 08 Jun 2021 17:30:54 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/svn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dev Svn</title>
+      <link>https://waterfall531.github.io/posts/dev-svn/</link>
+      <pubDate>Tue, 08 Jun 2021 17:30:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-svn/</guid>
+      <description>install sudo yum install subversion create repo cd /var; mkdir svn; sudo svnadmin create /var/svn/{$name} conf svnserve.conf anon-access = none / write / read auth-access = write / read / none password-db = passwd authz-db = authz realm = {$repoName} passwd [users] account = password authz [groups] #群組 = 帳號1,帳號2 admin = account tmp = tmp1,test2 [{$repoName}:/] @admin = rw [{$repoName}:/] $tmp = r service sudo svnserve -dr /var/svn #check ps aux|grep svnserve #firewall sudo firewall-cmd --permanent -add-port=3690/tcp sudo firewall-cmd --reload #123 sudo systemctl enable svnserve.</description>
+    </item>
+    
+  </channel>
+</rss>

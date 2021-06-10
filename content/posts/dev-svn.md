@@ -2,6 +2,9 @@
 title: "Dev Svn"
 date: 2021-06-08T17:30:54+08:00
 draft: true
+tags: ["devops"]
+series: ["Svn"]
+categories: ["init"]
 ---
 
 ## install

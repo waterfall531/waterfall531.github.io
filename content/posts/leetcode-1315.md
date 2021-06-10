@@ -2,6 +2,9 @@
 title: "1315_Sum of Nodes with Even-Valued Grandparent"
 date: 2021-01-06T17:59:39+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 >Given a binary tree, return the sum of values of nodes with even-valued grandparent.  (A grandparent of a node is the parent of its parent, if it exists.)

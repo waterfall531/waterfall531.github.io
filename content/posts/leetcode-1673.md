@@ -2,6 +2,9 @@
 title: "Leetcode 1673 Widest Vertical Area Between Two Points Containing No Points"
 date: 2020-12-14T17:28:44+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 # 題目

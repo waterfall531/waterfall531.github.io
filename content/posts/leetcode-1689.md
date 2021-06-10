@@ -2,6 +2,9 @@
 title: "1689_Partitioning Into Minimum Number Of Deci-Binary Numbers"
 date: 2021-01-06T11:05:03+08:00
 draft: true
+tags: ["algorithm"]
+series: ["Leetcode"]
+categories: ["solve"]
 ---
 
 ## Question

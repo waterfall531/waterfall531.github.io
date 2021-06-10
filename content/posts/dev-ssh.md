@@ -2,6 +2,9 @@
 title: "Dev Ssh"
 date: 2021-06-08T17:52:54+08:00
 draft: true
+tags: ["devops"]
+series: ["Ssh"]
+categories: ["init"]
 ---
 
 ## install

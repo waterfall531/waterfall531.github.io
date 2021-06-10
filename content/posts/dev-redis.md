@@ -2,6 +2,9 @@
 title: "Dev Redis"
 date: 2021-06-09T10:17:51+08:00
 draft: true
+tags: ["devops"]
+series: ["Redis"]
+categories: ["init"]
 ---
 
 ## install redis

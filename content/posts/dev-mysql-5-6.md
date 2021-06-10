@@ -2,6 +2,9 @@
 title: "Dev Mariadb"
 date: 2021-06-09T11:34:06+08:00
 draft: true
+tags: ["devops"]
+series: ["Mariadb"]
+categories: ["init"]
 ---
 
 ## getMariadb
