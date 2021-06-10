@@ -1,0 +1,204 @@
+---
+title: "Dev Nginx"
+date: 2021-06-10T11:55:15+08:00
+draft: true
+---
+
+## Nginx Install
+
+```shell
+yum -y install gcc gcc-c++ autoconf automake make
+yum -y install zlib zlib-devel openssl openssl-devel pcre pcre-devel
+wget http://nginx.org/download/nginx-1.19.0.tar.gz
+tar xf nginx-1.19.0.tar.gz
+cd nginx-1.19.0
+
+groupadd -f nginx
+useradd -g nginx nginx
+
+./configure --user=nginx --group=nginx --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-stream --with-http_gzip_static_module --with-http_sub_module
+make && make install
+```
+
+## start
+
+```
+cd /usr/local/nginx/
+sbin/nginx -t
+
+#nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+#nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
+
+/usr/local/nginx/sbin/nginx
+ps aux | grep nginx
+```
+
+## check
+
+```
+netstat -tnlp
+
+Active Internet connections (only servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State       PID/Program name    
+tcp        0      0 0.0.0.0:80              0.0.0.0:*               LISTEN      12229/nginx: master 
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1135/sshd   
+
+```
+
+## setup
+
+```
+... #全局塊
+ 
+events { #events塊
+   ...
+}
+
+stream { # stream塊
+  ...
+}
+
+http #http塊
+{
+    ... #http全局塊
+    server #server塊
+    {
+        ... #server全局塊
+        location [PATTERN] #location塊
+        {
+            ...
+        }
+        location [PATTERN]
+        {
+            ...
+        }
+    }
+    server
+    {
+      ...
+    }
+    ... #http全局塊
+}
+
+# 1、全局塊：配置影響nginx全局的指令。一般有運行nginx服務器的用戶組，nginx進程pid存放路徑，日誌存放路徑，配置文件引入，允許生成worker process數等。
+# 
+# 2、events塊：配置影響nginx服務器或與用戶的網絡連接。有每個進程的最大連接數，選取哪種事件驅動模型處理連接請求，是否允許同時接受多個網路連接，開啟多個網絡連接序列化等。
+# 
+# 3、http塊：可以嵌套多個server，配置代理，緩存，日誌定義等絕大多數功能和第三方模塊的配置。如文件引入，mime-type定義，日誌自定義，是否使用sendfile傳輸文件，連接超時時間，單連接請求數等。
+# 
+# 4、server塊：配置虛擬主機的相關參數，一個http中可以有多個server。
+# 
+# 5、location塊：配置請求的路由，以及各種頁面的處理情況。
+
+# 定義Nginx運行的用戶和用戶組
+user nginx nginx;
+
+# 啟動進程, 通常設置成和cpu的數量相等
+worker_processes auto;
+
+# 這個指令是指當一個nginx進程打開的最多文件描述符數目，理論值應該是最多打開文件數（ulimit -n）與nginx進程數相除，但是nginx分配請求並不是那麼均勻，所以最好與ulimit -n的值保持一致。
+worker_rlimit_nofile 102400;
+
+# 這個指令是指當一個nginx進程打開的最多文件描述符數目，理論值應該是最多打開文件數（ulimit -n）與nginx進程數相除，但是nginx分配請求並不是那麼均勻，所以最好與ulimit -n的值保持一致。
+
+# 全局錯誤日誌及PID文件
+error_log /usr/local/nginx/logs/error.log;
+
+# 錯誤日誌定義等級，[ debug | info | notice | warn | error | crit ]
+pid /usr/local/nginx/nginx.pid;
+
+# 一個nginx進程打開的最多文件描述符數目，理論值應該是最多打開文件數（系統的值ulimit -n）
+worker_rlimit_nofile 65535;
+
+# 工作模式及連接數上限
+events {
+# epoll是多路復用IO(I/O Multiplexing)中的一種方式,但是僅用於linux2.6以上內核,可以大大提高nginx的性能
+    use epoll;
+    worker_connections 102400; # 單個後台worker process進程的最大並發鏈接數 （最大連接數=連接數*進程數）
+    multi_accept on; # 盡可能多的接受請求
+}
+
+#設定http服務器，利用它的反向代理功能提供負載均衡支持
+http {
+    # 設定mime類型,類型由mime.type文件定義
+    include mime.types;
+    default_type application/octet-stream;
+    # 設定日誌格式
+    access_log /usr/local/nginx/log/nginx/access.log;
+    sendfile on;
+    # sendfile 指令指定 nginx 是否調用 sendfile 函數（zero copy 方式）來輸出文件，對於普通應用必須設為 on
+    # 如果用來進行下載等應用磁盤IO重負載應用，可設置為 off，以平衡磁盤與網絡I/O處理速度，降低系統的uptime.
+    #autoindex on; # 開啟目錄列表訪問，合適下載服務器，默認關閉。
+    tcp_nopush on; # 防止網絡阻塞
+    keepalive_timeout 60;
+    # keepalive超時時間，客戶端到服務器端的連接持續有效時間,當出現對服務器的後,繼請求時,keepalive-timeout功能可避免建立或重新建立連接。
+    tcp_nodelay on; # 提高數據的實時響應性
+    
+    #開啟gzip壓縮
+    gzip on;
+    gzip_min_length 1k;
+    gzip_buffers 4 16k;
+    gzip_http_version 1.1;
+    gzip_comp_level 2; # 壓縮級別大小，最大為9，值越小，壓縮後比例越小，CPU處理更快。#值越大，消耗CPU比較高。
+    gzip_types text/plain application/x-javascript text/css application/xml;
+    gzip_vary on;
+    client_max_body_size 10m; #允許客戶端請求的最大單文件字節數
+    client_body_buffer_size 128k; #緩衝區代理緩衝用戶端請求的最大字節數，
+    proxy_connect_timeout 90; #nginx跟後端服務器連接超時時間(代理連接超時)
+    proxy_send_timeout 90; #後端服務器數據回傳時間(代理髮送超時)
+    proxy_read_timeout 90; #連接成功後，後端服務器響應時間(代理接收超時)
+    proxy_buffer_size 4k; #設置代理服務器（nginx）保存用戶頭信息的緩衝區大小
+    proxy_buffers 4 32k; #proxy_buffers緩衝區，網頁平均在32k以下的話，這樣設置
+    proxy_busy_buffers_size 64k; #高負荷下緩衝大小（proxy_buffers*2）
+
+    #設定請求緩衝
+    large_client_header_buffers 4 4k;
+    client_header_buffer_size 4k;
+    # 客戶端請求頭部的緩衝區大小，這個可以根據你的系統分頁大小來設置，一般一個請求的頭部大小不會超過1k
+    # 不過由於一般系統分頁都要大於1k，所以這裡設置為分頁大小。分頁大小可以用命令getconf PAGESIZE取得。
+    open_file_cache max=102400 inactive=20s;
+    # 這個將為打開文件指定緩存，默認是沒有啟用的，max指定緩存數量，建議和打開文件數一致，inactive是指經過多長時間文件沒被請求後刪除緩存。
+    open_file_cache_valid 30s;
+    # 這個是指多長時間檢查一次緩存的有效信息。
+    open_file_cache_min_uses 1;
+    # open_file_cache指令中的inactive參數時間內文件的最少使用次數，如果超過這個數字，文件描述符一直是在緩存中打開的，如上例，如果有一個文件在inactive
+    # 包含其它配置文件，如自定義的虛擬主機
+    include vhost/*.conf;
+}
+```
+
+## lb
+
+```
+http {
+	upstream webs {
+		server 127.0.0.1:8080 weight=1 max_fails=2 fail_timeout=30s;
+		server 127.0.0.1:8081 weight=1 max_fails=2 fail_timeout=30s;
+	}
+	
+	server {
+		listen 8080;
+		server_name localhost;
+
+		location ~ /{
+			root /data/8080/;
+			index index.html index.htm;
+		}
+	}
+	
+	server {
+		listen       80;
+		server_name  localhost;
+
+		location / {
+				root   html;
+				index  index.html index.htm;
+				proxy_set_header Host $host;
+				proxy_set_header X-Real-IP $remote_addr;
+				proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+				proxy_pass http://lb;
+			}
+		}
+}
+```
+
