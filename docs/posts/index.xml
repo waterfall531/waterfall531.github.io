@@ -6,7 +6,20 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 10 Jun 2021 11:55:15 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Jun 2021 15:13:39 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx Conf</title>
+      <link>https://waterfall531.github.io/posts/nginx-conf/</link>
+      <pubDate>Thu, 10 Jun 2021 15:13:39 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/nginx-conf/</guid>
+      <description>setDeny server { listen 443 ssl; server_name somewhere.com; if ($isDeny = 1) { return 403; } } set isDeny map $remote_addr $isApiDeny { 1.1.1.1 0; # 模擬代理 default 0; } 感覺接近 arrayMapping $remoteAddr === &amp;lsquo;1.1.1.1&amp;rsquo; 時 return 0
+所以可以快速開關並且設定黑白名單
+area 由於有時候可能要關掉地區 所以要借助 geoip
+nginx http geoip2 module
+http { ... geoip2 /etc/maxmind-country.mmdb { auto_reload 5m; $geoip2_metadata_country_build metadata build_epoch; $geoip2_data_country_code default=US source=$variable_with_ip country iso_code; $geoip2_data_country_name country names en; } geoip2 /etc/maxmind-city.mmdb { $geoip2_data_city_name default=London city names en; } .</description>
+    </item>
+    
     <item>
       <title>Dev Nginx</title>
       <link>https://waterfall531.github.io/posts/dev-nginx/</link>
