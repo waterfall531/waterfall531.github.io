@@ -13,10 +13,10 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dev Ssh"/>
-<meta name="twitter:description" content="install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshf_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload "/>
+<meta name="twitter:description" content="install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &gt;&gt; .ssh/authorized_keys&#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no "/>
 
     <meta property="og:title" content="Dev Ssh" />
-<meta property="og:description" content="install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshf_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload " />
+<meta property="og:description" content="install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &gt;&gt; .ssh/authorized_keys&#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://waterfall531.github.io/posts/dev-ssh/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-06-08T17:52:54&#43;08:00" />
@@ -85,7 +85,7 @@ yum install policycoreutils-python
 yum install vim-enhanced -y
 yum install net-tools
 </code></pre><h2 id="conf-sshd">conf sshd</h2>
-<pre><code>vim /etc/ssh/sshf_config
+<pre><code>vim /etc/ssh/sshd_config
 </code></pre><pre><code>Port 2222
 PermitRootLogin yes
 </code></pre><pre><code>semanage port -a -t ssh_port_t -p tcp 2222
@@ -93,6 +93,18 @@ systemctl restart sshd.service
 </code></pre><h2 id="firewall">firewall</h2>
 <pre><code>firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp
 firewall-cmd —-reload
+</code></pre><h2 id="ssh-key">SSH Key</h2>
+<pre><code>mkdir -p .ssh;
+exit;
+
+cat .ssh/id_rsa.pub | ssh root@192.168.183.50 'cat &gt;&gt; .ssh/authorized_keys'
+
+ssh -p 2222 root@192.168.183.50
+chmod 700 .ssh;
+chmod 640 .ssh/authorized_keys
+
+vim /etc/ssh/sshd_config
+PermitRootLogin no
 </code></pre>
     </div>
     <div class="post-footer">
