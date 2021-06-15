@@ -19,7 +19,7 @@ yum install net-tools
 ## conf sshd
 
 ```
-vim /etc/ssh/sshf_config
+vim /etc/ssh/sshd_config
 ```
 
 ```
@@ -37,4 +37,20 @@ systemctl restart sshd.service
 ```
 firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp
 firewall-cmd —-reload
+```
+
+## SSH Key
+
+```
+mkdir -p .ssh;
+exit;
+
+cat .ssh/id_rsa.pub | ssh root@192.168.183.50 'cat >> .ssh/authorized_keys'
+
+ssh -p 2222 root@192.168.183.50
+chmod 700 .ssh;
+chmod 640 .ssh/authorized_keys
+
+vim /etc/ssh/sshd_config
+PermitRootLogin no
 ```
