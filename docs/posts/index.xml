@@ -6,7 +6,23 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 10 Jun 2021 15:13:39 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 16 Jun 2021 06:21:55 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lcd Guide</title>
+      <link>https://waterfall531.github.io/posts/lcd-guide/</link>
+      <pubDate>Wed, 16 Jun 2021 06:21:55 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/lcd-guide/</guid>
+      <description>size  24&amp;quot;(29.88 * 53.69) =&amp;gt; 1604cm^2 27&amp;quot;(33.62 * 59.77) =&amp;gt; 2009cm^2 32&amp;quot;(39.84 * 70.84) =&amp;gt; 2822cm^2  挑選對應主要是 解析度 等等談 其次是桌深
+最後是小Tips 是
+24&amp;quot; * 1.25 = 27&amp;quot; 24&amp;quot; * 1.75 = 32&amp;quot;
+解析度 / DPI Apple推出的retina 標準為 2560x1440 @ 27 Apple iMac 27 2880x1800 @ 15.4 Apple Retina MacBook Pro 15&amp;quot;
+其實主要就是螢幕尺寸對應的解析度
+1.(2560^2 * 1440^2)^-2 / 27&amp;quot; =&amp;gt; 108.79 PPI
+為何要這麼高的解析度?
+主要是為了解決像素點 如果解析低、螢幕太大就會看到小點點 不想看到點點 就要拉高解析、縮小螢幕 所以可以推論出  27&amp;quot;建議2k 24&amp;quot;建議1080p 32&amp;quot;建議4k  亮度 亮度主要影響兩點 一個是低、高光源下是否會變成 PWM 調光</description>
+    </item>
+    
     <item>
       <title>Nginx Conf</title>
       <link>https://waterfall531.github.io/posts/nginx-conf/</link>

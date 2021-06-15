@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Lcd Guide // Randy&#39;s Blog</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Randy" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Lcd Guide"/>
+<meta name="twitter:description" content="size  24&quot;(29.88 * 53.69) =&gt; 1604cm^2 27&quot;(33.62 * 59.77) =&gt; 2009cm^2 32&quot;(39.84 * 70.84) =&gt; 2822cm^2  挑選對應主要是 解析度 等等談 其次是桌深
+最後是小Tips 是
+24&quot; * 1.25 = 27&quot; 24&quot; * 1.75 = 32&quot;
+解析度 / DPI Apple推出的retina 標準為 2560x1440 @ 27 Apple iMac 27 2880x1800 @ 15.4 Apple Retina MacBook Pro 15&quot;
+其實主要就是螢幕尺寸對應的解析度
+1.(2560^2 * 1440^2)^-2 / 27&quot; =&gt; 108.79 PPI
+為何要這麼高的解析度?
+主要是為了解決像素點 如果解析低、螢幕太大就會看到小點點 不想看到點點 就要拉高解析、縮小螢幕 所以可以推論出  27&quot;建議2k 24&quot;建議1080p 32&quot;建議4k  亮度 亮度主要影響兩點 一個是低、高光源下是否會變成 PWM 調光"/>
+
+    <meta property="og:title" content="Lcd Guide" />
+<meta property="og:description" content="size  24&quot;(29.88 * 53.69) =&gt; 1604cm^2 27&quot;(33.62 * 59.77) =&gt; 2009cm^2 32&quot;(39.84 * 70.84) =&gt; 2822cm^2  挑選對應主要是 解析度 等等談 其次是桌深
+最後是小Tips 是
+24&quot; * 1.25 = 27&quot; 24&quot; * 1.75 = 32&quot;
+解析度 / DPI Apple推出的retina 標準為 2560x1440 @ 27 Apple iMac 27 2880x1800 @ 15.4 Apple Retina MacBook Pro 15&quot;
+其實主要就是螢幕尺寸對應的解析度
+1.(2560^2 * 1440^2)^-2 / 27&quot; =&gt; 108.79 PPI
+為何要這麼高的解析度?
+主要是為了解決像素點 如果解析低、螢幕太大就會看到小點點 不想看到點點 就要拉高解析、縮小螢幕 所以可以推論出  27&quot;建議2k 24&quot;建議1080p 32&quot;建議4k  亮度 亮度主要影響兩點 一個是低、高光源下是否會變成 PWM 調光" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/lcd-guide/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-16T06:21:55&#43;08:00" />
+<meta property="article:modified_time" content="2021-06-16T06:21:55&#43;08:00" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.png" alt="Randy" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein 
+ 頭貼為貓貓蟲咖波</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/waterfall531" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Lcd Guide</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jun 16, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="size">size</h2>
+<ol>
+<li>24&quot;(29.88 * 53.69) =&gt; 1604cm^2</li>
+<li>27&quot;(33.62 * 59.77) =&gt; 2009cm^2</li>
+<li>32&quot;(39.84 * 70.84) =&gt; 2822cm^2</li>
+</ol>
+<p>挑選對應主要是 <code>解析度</code> 等等談
+其次是桌深</p>
+<p>最後是小Tips 是</p>
+<p>24&quot; * 1.25 = 27&quot;
+24&quot; * 1.75 = 32&quot;</p>
+<h2 id="解析度--dpi">解析度 / DPI</h2>
+<p>Apple推出的retina 標準為
+2560x1440 @ 27 Apple iMac 27
+2880x1800 @ 15.4 Apple Retina MacBook Pro 15&quot;</p>
+<p>其實主要就是螢幕尺寸對應的解析度</p>
+<p>1.(2560^2 * 1440^2)^-2 / 27&quot; =&gt; 108.79 PPI</p>
+<p>為何要這麼高的<code>解析度</code>?</p>
+<p>主要是為了解決像素點
+如果<code>解析低</code>、<code>螢幕太大</code>就會看到小點點
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/%27Map%27_on_Retina_Display.jpg" alt="image"></p>
+<p>不想看到點點
+就要拉<code>高解析</code>、<code>縮小螢幕</code>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/63/Retina_Display.jpg" alt="image"></p>
+<p>所以可以推論出
+<img src="https://latex.codecogs.com/svg.image?%5Cbg_white&amp;space;%5Cinline&amp;space;%5Ctfrac%7B%5Csqrt%7B3840%5E2&amp;space;+&amp;space;2160%5E2%7D%7D%7B32%7D" alt="32"></p>
+<ol>
+<li>27&quot;建議2k</li>
+<li>24&quot;建議1080p</li>
+<li>32&quot;建議4k</li>
+</ol>
+<h2 id="亮度">亮度</h2>
+<p>亮度主要影響兩點
+一個是<code>低</code>、<code>高</code>光源下是否會變成 PWM 調光</p>
+<p>另一點為-<a href="##HDR">HDR</a></p>
+<h2 id="pwm">PWM</h2>
+<ol>
+<li>PWM調光
+<ol>
+<li>原理是由每秒n次閃爍調光</li>
+<li>低光源下眼睛容易<code>疲勞</code></li>
+<li>便宜</li>
+</ol>
+</li>
+<li>DC調光
+<ol>
+<li>原理是直流變頻</li>
+<li>不易疲勞</li>
+<li>貴</li>
+</ol>
+</li>
+</ol>
+<p>相關認證為</p>
+<ol>
+<li>TÜV Eyesafe Display (2020/06)</li>
+<li>TÜV Flicker-free</li>
+<li>TÜV Low Blue Light
+<ol>
+<li>原理是將415~455nm的能量強度降低50%</li>
+</ol>
+</li>
+</ol>
+<p><a href="https://eyesafe.com/wp-content/uploads/2020/09/Eyesafe-Display-Requirements-2020.pdf">link</a></p>
+<h2 id="hdr">HDR</h2>
+<ol>
+<li><a href="https://vdn3.vzuu.com/HD/8c15292e-9fc6-11ea-9051-baa8aa473bfe.mp4?disable_local_cache=1&amp;auth_key=1623801874-0-0-02a1dc06532995c7f542166ca55dca94&amp;f=mp4&amp;bu=http-com&amp;expiration=1623801874&amp;v=tx">HDR Video</a></li>
+<li>要通過HDR標準才能稱得上HDR</li>
+</ol>
+<p><img src="https://pic1.zhimg.com/50/v2-02cda8de35848c2c8ac84c52f9a5eea4_hd.jpg?source=1940ef5c" alt="HDR"></p>
+<p>由上圖所知
+亮度低於400 連HDR400都稱不上</p>
+<p>但為何市面上都在宣稱自己是
+HDR 10
+HDR 400
+因為</p>
+<p>DisplayHDR 400 高於 HDR 10</p>
+<p><a href="https://www.zhihu.com/question/325302989">更多詳情</a></p>
+<h2 id="mprt">MPRT</h2>
+<h2 id="g2g">G2G</h2>
+<h2 id="input-lag">Input Lag</h2>
+<ol>
+<li>接下來3個一起提</li>
+<li>MPRT 螢幕反應時間</li>
+<li>G2G 螢幕顏色從 <code>灰色</code> 到 <code>白色</code> 到 <code>灰色</code> 時間</li>
+<li>輸入延遲</li>
+</ol>
+<p>為何要說MPRT越低越好
+因為</p>
+<blockquote>
+<p>以 60hz螢幕舉例   就是1秒鐘  顯示 60張畫面  平均每張畫面 存在0.016秒=16ms</p>
+<p>那5ms跟1ms的螢幕  最大的差別在哪裡呢?</p>
+<p>差別在於  螢幕可接受畫面訊號 的時間</p>
+<p>16毫秒中 1ms用來顯示畫面  所以我可接受訊號時間為15毫秒</p>
+<p>16毫秒鐘 5ms用來顯示畫面 所以我可接受訊號時間為11毫秒</p>
+<p><a href="https://forum.gamer.com.tw/Co.php?bsn=60030&amp;sn=2018653">link</a></p>
+</blockquote>
+<p>那g2g又為何而來?</p>
+<p>因為 MPRT 可以作弊 而 g2g不行</p>
+<ol>
+<li>MPRT 為 <code>黑</code> 到 <code>白</code> 到 <code>黑</code></li>
+<li>那就有人想到拉 <code>全開</code>、<code>全關</code>、<code>全開</code></li>
+<li>那我只要電壓(加速度)開到最大就好拉</li>
+<li>也就有了作弊的方式</li>
+<li>也就延伸出<code>g2g</code></li>
+</ol>
+<p>g2g測試方式為</p>
+<p><img src="https://i.rtings.com/assets/products/ZO4kW1zv/acer-nitro-xv272u-kvbmiiprzx/tables-max-large.jpg" alt="g2g"></p>
+<p><a href="https://zh.wikipedia.org/wiki/%E5%8F%8D%E6%87%89%E6%99%82%E9%96%93">link</a></p>
+<blockquote>
+<p>其實還有各個灰階之間的變化。</p>
+<p>以8-bit色階而言，最亮到最暗共有256個刻度</p>
+<p>0為最暗，255為最亮（最紅、最綠、或最藍）</p>
+<p>假如今日是從「灰階值為5的藍」轉成「灰階值為120的藍」</p>
+</blockquote>
+<p><a href="https://youtu.be/Amc2-HongSo">inputlag Video</a></p>
+<p>由影片得知兩款螢幕
+同時間下
+顯示的時間不盡相同
+所以也是越低越好</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
