@@ -81,6 +81,11 @@
     </div>
     
     <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+    <script>
+      Array.from(document.getElementsByClassName('language-mermaid')).forEach(el => {
+        el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`
+      })
+    </script>
   </header>
   <div class="post-content">
     <h1 id="gray-code">Gray Code</h1>
@@ -100,32 +105,14 @@
   000 === 100
   001 === 101
   001 === 011
-  010 === 011
   010 === 110
+  010 === 011
   100 === 101 
   100 === 110
   101 === 111
   011 === 111
   110 === 111
 </code></pre>
-<div class="mermaid" align=" center ">
-    
-graph TB;
-  000 === 001
-  000 === 010
-  000 === 100
-  001 === 101
-  001 === 011
-  010 === 011
-  010 === 110
-  100 === 101 
-  100 === 110
-  101 === 111
-  011 === 111
-  110 === 111
-
-</div>
-
   </div>
   <div class="post-footer">
     

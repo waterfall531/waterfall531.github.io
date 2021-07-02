@@ -99,6 +99,11 @@ class Solution { /** * @param Integer[] $nums * @param Integer $n * @return Inte
     </div>
     
     <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+    <script>
+      Array.from(document.getElementsByClassName('language-mermaid')).forEach(el => {
+        el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`
+      })
+    </script>
   </header>
   <div class="post-content">
     <p>#1470. Shuffle the Array</p>

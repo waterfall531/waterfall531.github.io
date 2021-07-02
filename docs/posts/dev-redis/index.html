@@ -87,6 +87,11 @@ AOF  依據每單位時間做的log
     </div>
     
     <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
+    <script>
+      Array.from(document.getElementsByClassName('language-mermaid')).forEach(el => {
+        el.parentElement.outerHTML = `<div class="mermaid">${el.innerText}</div>`
+      })
+    </script>
   </header>
   <div class="post-content">
     <h2 id="install-redis">install redis</h2>
