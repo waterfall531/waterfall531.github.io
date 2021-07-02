@@ -2,17 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://waterfall531.github.io/posts/lcd-guide/</loc>
-    <lastmod>2021-06-16T06:21:55+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/posts/</loc>
-    <lastmod>2021-06-16T06:21:55+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/</loc>
-    <lastmod>2021-06-16T06:21:55+08:00</lastmod>
+    <loc>https://waterfall531.github.io/tags/algorithm/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/categories/</loc>
-    <lastmod>2021-06-10T15:13:39+08:00</lastmod>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/grey_code/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/leetcode/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/categories/solve/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/</loc>
+    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/lcd-guide/</loc>
+    <lastmod>2021-06-16T06:21:55+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/categories/deny/</loc>
     <lastmod>2021-06-10T15:13:39+08:00</lastmod>
@@ -24,12 +42,6 @@
     <lastmod>2021-06-10T15:13:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/nginx-conf/</loc>
-    <lastmod>2021-06-10T15:13:39+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/series/</loc>
-    <lastmod>2021-06-10T15:13:39+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/tags/</loc>
     <lastmod>2021-06-10T15:13:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/dev-nginx/</loc>
@@ -83,22 +95,13 @@
     <loc>https://waterfall531.github.io/posts/selenium/</loc>
     <lastmod>2021-05-07T00:49:47+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/tags/algorithm/</loc>
-    <lastmod>2021-05-02T23:30:20+08:00</lastmod>
-  </url><url>
     <loc>https://waterfall531.github.io/posts/f776/</loc>
     <lastmod>2021-05-02T23:30:20+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/series/fb/</loc>
     <lastmod>2021-05-02T23:30:20+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/categories/solve/</loc>
-    <lastmod>2021-05-02T23:30:20+08:00</lastmod>
-  </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1315/</loc>
-    <lastmod>2021-01-06T17:59:39+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/series/leetcode/</loc>
     <lastmod>2021-01-06T17:59:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1689/</loc>
