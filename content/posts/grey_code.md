@@ -23,8 +23,7 @@ Given an integer `n`, return *any valid **n-bit gray code sequence***.
 
 ## solution
 
-```
-​```mermaid
+```mermaid
 graph TB;
   000 === 001
   000 === 010
@@ -38,9 +37,5 @@ graph TB;
   101 === 111
   011 === 111
   110 === 111
-​```
 ```
 
-
-
-1. 
