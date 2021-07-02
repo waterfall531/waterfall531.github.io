@@ -90,9 +90,11 @@ class Solution { /** * @param Integer $n * @param Integer $start * @return Integ
     
     <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
     <script>
-      Array.from(document.getElementsByClassName('language-mermaid')).forEach(el => {
-        el.parentElement.outerHTML = `<div class="mermaid" align="center">${el.innerText}</div>`
-      })
+      document.addEventListener("DOMContentLoaded", function () {
+        Array.from(document.getElementsByClassName('language-mermaid')).forEach(el => {
+          el.parentElement.outerHTML = `<div class="mermaid" align="center">${el.innerText}</div>`
+        })
+      });
     </script>
   </header>
   <div class="post-content">
