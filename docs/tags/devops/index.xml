@@ -6,7 +6,16 @@
     <description>Recent content in devops on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 10 Jun 2021 15:13:39 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Aug 2021 13:46:09 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Canary</title>
+      <link>https://waterfall531.github.io/posts/canary/</link>
+      <pubDate>Mon, 02 Aug 2021 13:46:09 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/canary/</guid>
+      <description>發布  金絲雀(灰度) 滾動 藍綠  金絲雀  有n台 先更新一台 確定沒問題 直到更新完n台  滾動  有n台 先更新一台 直到更新完n台  藍綠  有2n台 先移出n台 更新n台 切換到新的n台  金絲雀+藍綠  有2n台 n台更新 陸續切換到新版本  功能開關  有n台 更新 用開關切換  A/B測試  有2n台 n台Ａ n台b  </description>
+    </item>
+    
     <item>
       <title>Nginx Conf</title>
       <link>https://waterfall531.github.io/posts/nginx-conf/</link>
