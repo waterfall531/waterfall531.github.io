@@ -8,13 +8,13 @@
     <loc>https://waterfall531.github.io/categories/</loc>
     <lastmod>2021-09-23T17:50:18+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/tags/dba/</loc>
-    <lastmod>2021-09-23T17:50:18+08:00</lastmod>
-  </url><url>
     <loc>https://waterfall531.github.io/posts/get_nth_highest_salary/</loc>
     <lastmod>2021-09-23T17:50:18+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/series/mysql/</loc>
+    <loc>https://waterfall531.github.io/series/leetcode/</loc>
+    <lastmod>2021-09-23T17:50:18+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/mysql/</loc>
     <lastmod>2021-09-23T17:50:18+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/</loc>
@@ -48,9 +48,6 @@
     <lastmod>2021-07-02T15:06:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/grey_code/</loc>
-    <lastmod>2021-07-02T15:06:39+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/series/leetcode/</loc>
     <lastmod>2021-07-02T15:06:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/categories/solve/</loc>
@@ -183,9 +180,6 @@
     <lastmod>2020-09-01T16:36:33+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/categories/altercolumn/</loc>
-    <lastmod>2020-08-18T17:16:02+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/tags/mysql/</loc>
     <lastmod>2020-08-18T17:16:02+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/mysql-alter-column/</loc>

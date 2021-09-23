@@ -2,9 +2,9 @@
 title: "Get_nth_highest_salary"
 date: 2021-09-23T17:50:18+08:00
 draft: true
-tags: ["dba"]
-series: ["mysql"]
-categories: ["base"]
+tags: ["Mysql"]
+series: ["Leetcode"]
+categories: ["Base"]
 ---
 
 #  177. Nth Highest Salary

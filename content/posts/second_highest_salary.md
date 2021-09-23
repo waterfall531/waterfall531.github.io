@@ -2,9 +2,9 @@
 title: "Second_highest_salary"
 date: 2021-09-23T11:45:05+08:00
 draft: true
-tags: ["dba"]
-series: ["mysql"]
-categories: ["base"]
+tags: ["Mysql"]
+series: ["Leetcode"]
+categories: ["Base"]
 ---
 
 # Second Highest Salary
