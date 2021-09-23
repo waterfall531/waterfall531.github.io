@@ -8,23 +8,23 @@
     <language>zh-tw</language>
     <lastBuildDate>Thu, 23 Sep 2021 17:50:18 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/categories/base/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Get_nth_highest_salary</title>
+      <title>Get Nth Highest Salary</title>
       <link>https://waterfall531.github.io/posts/get_nth_highest_salary/</link>
       <pubDate>Thu, 23 Sep 2021 17:50:18 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/get_nth_highest_salary/</guid>
-      <description>177. Nth Highest Salary  Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
+      <description> Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
 The query result format is in the following example.
  CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  </description>
     </item>
     
     <item>
-      <title>Second_highest_salary</title>
+      <title>Second Highest Salary</title>
       <link>https://waterfall531.github.io/posts/second_highest_salary/</link>
       <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/second_highest_salary/</guid>
-      <description>Second Highest Salary  Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
+      <description> Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
 The query result format is in the following example.
  錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1  先去除重複排序 排rank 加null  SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1  去掉rank 後排序更快  SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &amp;lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary;  最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個)  SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary  distinct後 排序 後limit 1 offset 1 在包成select  </description>
     </item>

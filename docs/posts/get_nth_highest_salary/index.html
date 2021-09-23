@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-tw">
   <head>
-    <title>Get_nth_highest_salary // Randy&#39;s Blog</title>
+    <title>Get Nth Highest Salary // Randy&#39;s Blog</title>
     <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.83.1" />
@@ -12,13 +12,13 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Get_nth_highest_salary"/>
-<meta name="twitter:description" content="177. Nth Highest Salary  Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
+<meta name="twitter:title" content="Get Nth Highest Salary"/>
+<meta name="twitter:description" content=" Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
 The query result format is in the following example.
  CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  "/>
 
-    <meta property="og:title" content="Get_nth_highest_salary" />
-<meta property="og:description" content="177. Nth Highest Salary  Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
+    <meta property="og:title" content="Get Nth Highest Salary" />
+<meta property="og:description" content=" Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
 The query result format is in the following example.
  CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  " />
 <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@ The query result format is in the following example.
       
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">Get_nth_highest_salary</h1>
+    <h1 class="post-title">Get Nth Highest Salary</h1>
     <div class="post-meta">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -92,8 +92,7 @@ The query result format is in the following example.
     </script>
   </header>
   <div class="post-content">
-    <h1 id="177-nth-highest-salary">177. Nth Highest Salary</h1>
-<blockquote>
+    <blockquote>
 <p>Write an SQL query to report the <code>nth</code> highest salary from the <code>Employee</code> table. If there is no <code>nth</code> highest salary, the query should report <code>null</code>.</p>
 <p>The query result format is in the following example.</p>
 </blockquote>

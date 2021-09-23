@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-tw">
   <head>
-    <title>Second_highest_salary // Randy&#39;s Blog</title>
+    <title>Second Highest Salary // Randy&#39;s Blog</title>
     <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.83.1" />
@@ -12,13 +12,13 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Second_highest_salary"/>
-<meta name="twitter:description" content="Second Highest Salary  Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
+<meta name="twitter:title" content="Second Highest Salary"/>
+<meta name="twitter:description" content=" Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
 The query result format is in the following example.
  錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1  先去除重複排序 排rank 加null  SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1  去掉rank 後排序更快  SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary;  最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個)  SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary  distinct後 排序 後limit 1 offset 1 在包成select  "/>
 
-    <meta property="og:title" content="Second_highest_salary" />
-<meta property="og:description" content="Second Highest Salary  Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
+    <meta property="og:title" content="Second Highest Salary" />
+<meta property="og:description" content=" Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
 The query result format is in the following example.
  錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1  先去除重複排序 排rank 加null  SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1  去掉rank 後排序更快  SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary;  最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個)  SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary  distinct後 排序 後limit 1 offset 1 在包成select  " />
 <meta property="og:type" content="article" />
@@ -57,7 +57,7 @@ The query result format is in the following example.
       
 <article class="post">
   <header class="post-header">
-    <h1 class="post-title">Second_highest_salary</h1>
+    <h1 class="post-title">Second Highest Salary</h1>
     <div class="post-meta">
       <div>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -92,8 +92,7 @@ The query result format is in the following example.
     </script>
   </header>
   <div class="post-content">
-    <h1 id="second-highest-salary">Second Highest Salary</h1>
-<blockquote>
+    <blockquote>
 <p>Write an SQL query to report the second highest salary from the <code>Employee</code> table. If there is no second highest salary, the query should report <code>null</code>.</p>
 <p>The query result format is in the following example.</p>
 </blockquote>

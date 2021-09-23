@@ -1,13 +1,11 @@
 ---
-title: "Second_highest_salary"
+title: "Second Highest Salary"
 date: 2021-09-23T11:45:05+08:00
 draft: true
 tags: ["Mysql"]
 series: ["Leetcode"]
 categories: ["Base"]
 ---
-
-# Second Highest Salary
 
 >   Write an SQL query to report the second highest salary from the `Employee` table. If there is no second highest salary, the query should report `null`.
 >
