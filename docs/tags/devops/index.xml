@@ -6,7 +6,16 @@
     <description>Recent content in devops on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 02 Aug 2021 13:46:09 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Sep 2021 14:19:49 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux Command</title>
+      <link>https://waterfall531.github.io/posts/linux_command/</link>
+      <pubDate>Wed, 29 Sep 2021 14:19:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/linux_command/</guid>
+      <description>check  top htop df -h free -h pm2 start index.js --node-args=&amp;quot;--max-old-space-size=1024&amp;quot;  </description>
+    </item>
+    
     <item>
       <title>Canary</title>
       <link>https://waterfall531.github.io/posts/canary/</link>
