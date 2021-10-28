@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 29 Sep 2021 14:19:49 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Oct 2021 11:22:47 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Rsync</title>
+      <link>https://waterfall531.github.io/posts/rsync/</link>
+      <pubDate>Thu, 28 Oct 2021 11:22:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/rsync/</guid>
+      <description>Rsync  增量同步 rsync -avz --delete --progress &amp;quot;${SRC}&amp;quot; &amp;quot;/backup/$(hostname)&amp;quot; &amp;ndash;progress 會顯示有進行同步的檔案 &amp;ndash;delete 會刪除來源也刪除的檔案 -a  封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD   -v  verbose 模式，輸出比較詳細的訊息   -z  啟用壓縮   -r  遞迴   -t  preserve modification times 保留修改時間   -o  preserve owner   -p  preserve permissions   -g  preserve group   -l  copy symlinks as symlinks   -D  是&amp;quot;&amp;ndash;device &amp;ndash;specials&amp;quot;選項的組合，即也拷貝裝置檔案和特殊檔案。    </description>
+    </item>
+    
     <item>
       <title>Linux Command</title>
       <link>https://waterfall531.github.io/posts/linux_command/</link>
@@ -25,6 +34,15 @@
       <description> Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
 The query result format is in the following example.
  CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  </description>
+    </item>
+    
+    <item>
+      <title>Node Axios</title>
+      <link>https://waterfall531.github.io/posts/node_axios/</link>
+      <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/node_axios/</guid>
+      <description>Axios  node 那件是異步 所以要用Async / Await / Promise 處理 Async function / Await 深度介紹 axios async function 內加return await      </description>
     </item>
     
     <item>

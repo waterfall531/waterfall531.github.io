@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Base on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/series/base/</link>
+    <description>Recent content in Base on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 23 Sep 2021 11:45:05 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/base/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Node Axios</title>
+      <link>https://waterfall531.github.io/posts/node_axios/</link>
+      <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/node_axios/</guid>
+      <description>Axios  node 那件是異步 所以要用Async / Await / Promise 處理 Async function / Await 深度介紹 axios async function 內加return await      </description>
+    </item>
+    
+  </channel>
+</rss>

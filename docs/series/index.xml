@@ -6,7 +6,16 @@
     <description>Recent content in Series on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 29 Sep 2021 14:19:49 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 28 Oct 2021 11:22:47 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rsync</title>
+      <link>https://waterfall531.github.io/series/rsync/</link>
+      <pubDate>Thu, 28 Oct 2021 11:22:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/series/rsync/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>CentOs</title>
       <link>https://waterfall531.github.io/series/centos/</link>
@@ -22,6 +31,15 @@
       <pubDate>Thu, 23 Sep 2021 17:50:18 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/series/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Base</title>
+      <link>https://waterfall531.github.io/series/base/</link>
+      <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/series/base/</guid>
       <description></description>
     </item>
     
