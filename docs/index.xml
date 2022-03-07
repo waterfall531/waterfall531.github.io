@@ -5,6 +5,475 @@
     <link>https://waterfall531.github.io/</link>
     <description>Recent content on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>zh-tw</language><atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 30 Nov 2021 11:24:49 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interview 1126</title>
+      <link>https://waterfall531.github.io/posts/interview-1126/</link>
+      <pubDate>Tue, 30 Nov 2021 11:24:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview-1126/</guid>
+      <description>問題 1.兩數相加 2.數字反轉  Two Sum  簡單的給一陣列 找出陣列中能加總到對應的target數值之index
+ 問題點
+ 兩數相同時取的index  function fineComper($list,$target){ foreach($list as $index =&amp;gt; $item){ $tmpIndex = $index; $nextTarget = $target - $item; //find  $tmpList = $list; unset($tmpList[$index]); $tmpIndex2 = array_search($nextTarget, $tmpList); if ($tmpIndex2 != false) { return [$index,$tmpIndex2]; } } } $list = [2,7,11,15]; $target = 9; print_r(fineComper($list,$target)); $list = [3,2,4]; $target = 6; print_r(fineComper($list,$target)); $list = [3,3]; $target = 6; print_r(fineComper($list,$target)); Reverse Integer  簡單的給一數 反轉數字 補上千分位 補上正負</description>
+    </item>
+    
+    <item>
+      <title>Rsync</title>
+      <link>https://waterfall531.github.io/posts/rsync/</link>
+      <pubDate>Thu, 28 Oct 2021 11:22:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/rsync/</guid>
+      <description>Rsync  增量同步 rsync -avz --delete --progress &amp;quot;${SRC}&amp;quot; &amp;quot;/backup/$(hostname)&amp;quot; &amp;ndash;progress 會顯示有進行同步的檔案 &amp;ndash;delete 會刪除來源也刪除的檔案 -a  封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD   -v  verbose 模式，輸出比較詳細的訊息   -z  啟用壓縮   -r  遞迴   -t  preserve modification times 保留修改時間   -o  preserve owner   -p  preserve permissions   -g  preserve group   -l  copy symlinks as symlinks   -D  是&amp;quot;&amp;ndash;device &amp;ndash;specials&amp;quot;選項的組合，即也拷貝裝置檔案和特殊檔案。    </description>
+    </item>
+    
+    <item>
+      <title>Linux Command</title>
+      <link>https://waterfall531.github.io/posts/linux_command/</link>
+      <pubDate>Wed, 29 Sep 2021 14:19:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/linux_command/</guid>
+      <description>check  top htop df -h free -h pm2 start index.js --node-args=&amp;quot;--max-old-space-size=1024&amp;quot;  </description>
+    </item>
+    
+    <item>
+      <title>Get Nth Highest Salary</title>
+      <link>https://waterfall531.github.io/posts/get_nth_highest_salary/</link>
+      <pubDate>Thu, 23 Sep 2021 17:50:18 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/get_nth_highest_salary/</guid>
+      <description> Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
+The query result format is in the following example.
+ CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  </description>
+    </item>
+    
+    <item>
+      <title>Node Axios</title>
+      <link>https://waterfall531.github.io/posts/node_axios/</link>
+      <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/node_axios/</guid>
+      <description>Axios  node 那件是異步 所以要用Async / Await / Promise 處理 Async function / Await 深度介紹 axios async function 內加return await      </description>
+    </item>
+    
+    <item>
+      <title>Second Highest Salary</title>
+      <link>https://waterfall531.github.io/posts/second_highest_salary/</link>
+      <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/second_highest_salary/</guid>
+      <description> Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
+The query result format is in the following example.
+ 錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1  先去除重複排序 排rank 加null  SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1  去掉rank 後排序更快  SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &amp;lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary;  最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個)  SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary  distinct後 排序 後limit 1 offset 1 在包成select  </description>
+    </item>
+    
+    <item>
+      <title>Canary</title>
+      <link>https://waterfall531.github.io/posts/canary/</link>
+      <pubDate>Mon, 02 Aug 2021 13:46:09 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/canary/</guid>
+      <description>發布  金絲雀(灰度) 滾動 藍綠  金絲雀  有n台 先更新一台 確定沒問題 直到更新完n台  滾動  有n台 先更新一台 直到更新完n台  藍綠  有2n台 先移出n台 更新n台 切換到新的n台  金絲雀+藍綠  有2n台 n台更新 陸續切換到新版本  功能開關  有n台 更新 用開關切換  A/B測試  有2n台 n台Ａ n台b  </description>
+    </item>
+    
+    <item>
+      <title>Mtmr</title>
+      <link>https://waterfall531.github.io/posts/mtmr/</link>
+      <pubDate>Fri, 23 Jul 2021 00:29:01 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/mtmr/</guid>
+      <description>setting  cpu mem 亮度 spotify 音量
+ [ { &amp;#34;type&amp;#34;:&amp;#34;brightnessDown&amp;#34;, &amp;#34;width&amp;#34;:44, &amp;#34;align&amp;#34;:&amp;#34;left&amp;#34; }, { &amp;#34;type&amp;#34;:&amp;#34;brightnessUp&amp;#34;, &amp;#34;width&amp;#34;:44, &amp;#34;align&amp;#34;:&amp;#34;left&amp;#34; }, { &amp;#34;type&amp;#34;:&amp;#34;appleScriptTitledButton&amp;#34;, &amp;#34;source&amp;#34;:{ &amp;#34;inline&amp;#34;:&amp;#34;set cpu to do shell script \&amp;#34;ps axo %cpu | awk &amp;#39;{s+=$1}END{print s}&amp;#39;\&amp;#34;\rreturn cpu &amp;amp; \&amp;#34;%\&amp;#34;&amp;#34; }, &amp;#34;action&amp;#34;:&amp;#34;appleScript&amp;#34;, &amp;#34;actionAppleScript&amp;#34;:{ &amp;#34;inline&amp;#34;:&amp;#34;activate application \&amp;#34;Activity Monitor\&amp;#34;\rtell application \&amp;#34;System Events\&amp;#34;\r\ttell process \&amp;#34;Activity Monitor\&amp;#34;\r\t\ttell radio button \&amp;#34;CPU\&amp;#34; of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \&amp;#34;AXPress\&amp;#34;\r\tend tell\rend tell&amp;#34; }, &amp;#34;refreshInterval&amp;#34;:5, &amp;#34;align&amp;#34;:&amp;#34;left&amp;#34;, &amp;#34;image&amp;#34;:{ &amp;#34;base64&amp;#34;:&amp;#34;iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAA/1BMVEUAAADaACbYACfYACfjABzXACjYACfXACjYACfYACfYACfYACfdACLYACfXACjYACfVACv/AADXACjYACfYACfXACjYACfXACjaACXYACfYACfVACvYACfYACfZACbZACbYACfYACfZACb/AADYACfYACfVACrXACjVACu/AEDYACfYACfYACfXACjXACjYACfXACjYACfYACfYACfXACjYACfXACjYACfYACfZACbYACfYACfMADPYACfYACfYACfYACfYACfZACbXACjYACfYACfRAC7XACjYACfZACbWACnXACjXACjYACfTACzZACb/AADYACfYACfYACcAAAA+zneGAAAAU3RSTlMAItK+CVPjh3xUxPwPiGDQGAMtSKmN3Vk+wPQG/e26oIJBnwJCdiuAHgTmw+6BX+IgfaqLUvKOW8VKnagK+vBwYrhlc/urCznvhSyUbOEXPAFjGh/ektAAAAABYktHRACIBR1IAAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJTUUH4ggWETQWgEDcSgAAAqVJREFUWMPtl4ly2jAQhsUNNlcw5r4SICEHLSQhCQRyX73T/u//LpUlLIyxbMAznWmn/0ywo5U+27tr7ZoQuwLBUJidRKIxPhKLRtgxHAoGiLfiQIKdKFCTxjGpQmEDCSC+BiAFpNlJBsgaxyyQYQNpIPUf8AcAOzktD+iaoQJQNI5FoMAGdCCv5XZclpfKFXiqUi5Jllf1mvdyQzW96gigd4h6o+mhRp1O0x3vvwa1VSWeqrZU1Jyeogy01ggSVQsoO/i/gjq9/u6u+2LDXq2jshqLHNCgdsCVwO0NILdi0oDmuoAmoImhQDzFRPNnb36L7U43NVfc2EH2D9h5t9OePyIF5IU9uIhvkyN7iiXmQUIOj8x/lB6f0bTaQ3ZA+9iaNCH2Lpg6btsBIRJOpJl0E9ABTvof5kqEGeCjMaN/AnRMgM5XJcI2J1J1gf6S48Tb2Ae6JkAjdgmAeJ1XAOJ1Xg8wGJ6elXwAzkeGjy62BgxG3MuXnoCIkmEq8EQyAUPgajyhPxJAga9SIiRqzwMOuAbGZDrDjQRgKkpiqiPgFphM74B7d4BKy2cyy1RcBvSodUb/HiSAIl+VlEfh8cm4wvPL9nnw+gbc+kkkUVioO95etwe8PBuP8vQoBzg7UQAe5t7syZwoCaMA3AN30wlzh3MYJYkkADeYTckYuJYlkiSVBeCKZtSY/gxlqezlxEt+pdFg6zBesPXn1ih8Aj5vkAels9PhYCkPsl++kg0AQu4dyuqmugIQm+qS5Nv6N+D7wm7d1skPc4xu666Fhd6BxU6r+jub8tNaWNxK29EhsdpR/sVn7FlLm0txPdgni+JrFNd3p+K67MQtyrsp3w2G7xbHd5Plv83z3Wj6b3V9N9ssFv7afaa//ZPn3wD4/vje8PP/N7TebS0hgZhEAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE4LTA4LTIyVDE3OjUyOjIyKzAyOjAwc2qUYAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOC0wOC0yMlQxNzo1MjoyMiswMjowMAI3LNwAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwaAAAAAElFTkSuQmCC&amp;#34; } }, { &amp;#34;type&amp;#34;:&amp;#34;appleScriptTitledButton&amp;#34;, &amp;#34;source&amp;#34;:{ &amp;#34;inline&amp;#34;:&amp;#34;set mem to do shell script \&amp;#34;ps -A -o %mem | awk &amp;#39;{s+=$1}END{print s}&amp;#39;\&amp;#34;\rreturn mem &amp;amp; \&amp;#34;%\&amp;#34;&amp;#34; }, &amp;#34;action&amp;#34;:&amp;#34;appleScript&amp;#34;, &amp;#34;actionAppleScript&amp;#34;:{ &amp;#34;inline&amp;#34;:&amp;#34;activate application \&amp;#34;Activity Monitor\&amp;#34;\rtell application \&amp;#34;System Events\&amp;#34;\r\ttell process \&amp;#34;Activity Monitor\&amp;#34;\r\t\ttell radio button \&amp;#34;CPU\&amp;#34; of radio group 1 of group 2 of toolbar 1 of window 1 to perform action \&amp;#34;AXPress\&amp;#34;\r\tend tell\rend tell&amp;#34; }, &amp;#34;refreshInterval&amp;#34;:5, &amp;#34;align&amp;#34;:&amp;#34;left&amp;#34;, &amp;#34;image&amp;#34;:{ &amp;#34;base64&amp;#34;:&amp;#34;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&amp;#34; } }, { &amp;#34;type&amp;#34;:&amp;#34;appleScriptTitledButton&amp;#34;, &amp;#34;source&amp;#34;:{ &amp;#34;inline&amp;#34;:&amp;#34;if application \&amp;#34;Spotify\&amp;#34; is running then\rtell application \&amp;#34;Spotify\&amp;#34;\rif player state is playing then\rreturn (get artist of current track) &amp;amp; \&amp;#34; – \&amp;#34; &amp;amp; (get name of current track)\relse\rreturn \&amp;#34;\&amp;#34;\rend if\rend tell\rend if\rreturn \&amp;#34;\&amp;#34;\r&amp;#34; }, &amp;#34;action&amp;#34;:&amp;#34;appleScript&amp;#34;, &amp;#34;actionAppleScript&amp;#34;:{ &amp;#34;inline&amp;#34;:&amp;#34;if application \&amp;#34;Spotify\&amp;#34; is running then\rtell application \&amp;#34;Spotify\&amp;#34;\rif player state is playing then\rnext track\rend if\rend tell\rend if\r&amp;#34; }, &amp;#34;refreshInterval&amp;#34;:1, &amp;#34;image&amp;#34;:{ &amp;#34;base64&amp;#34;:&amp;#34;iVBORw0KGgoAAAANSUhEUgAAAEAAAABABAMAAABYR2ztAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURUdwTB3WXx3UXh3VXx7XYBkXFRpVLRyURmIaeAQAAAAEdFJOUwDDO3fSqUUkAAABbklEQVRIx61VbW6DMAztoAeYNA7ApB6gkzhAWS24wIAL0HABaK6/pHFNEhy8TXu/kPzkPD/8cTj8K7KPAqB+K5NhQPCUrABCXe7HOUYYZxgVRLiG8RfY4DUgFFtC7cffAfZTFBwBdhWEKfgEq4ocEjgj4ZQifO6/QG9kkETp1dDeVWfRKx3XYSW0LoqY5kCElXDrQkyeCCuh6WL0M4nIWQIyzqixdfKU1koFDKvyCA8NJMzU4xiD+b4kfHRpsIyKc6hBwjVptFHVY51EMAINNDFGJITKDNQcdpX74Hz0CQ3rY5qwMp4EIxrlafzrsYZ2Veb0DkRgfNCUok4Y1fqEijfyi2b8RE9beWqa48Y/uvCNMcH9btfUi+/CGLR1vhL6Zz9N/vBlaCU+7lwY/cmJ67Ryen/2tj23PLqJBodZH8vgj544vOL4pxfI5acrSFxi8hrkU9TSKr78ZpnL50A8KPJJEo+afBblwyqf5j/iGys5j6ScrST2AAAAAElFTkSuQmCC&amp;#34; } }, { &amp;#34;type&amp;#34;:&amp;#34;previous&amp;#34;, &amp;#34;width&amp;#34;:44, &amp;#34;align&amp;#34;:&amp;#34;right&amp;#34; }, { &amp;#34;type&amp;#34;:&amp;#34;play&amp;#34;, &amp;#34;width&amp;#34;:44, &amp;#34;align&amp;#34;:&amp;#34;right&amp;#34; }, { &amp;#34;type&amp;#34;:&amp;#34;next&amp;#34;, &amp;#34;width&amp;#34;:44, &amp;#34;align&amp;#34;:&amp;#34;right&amp;#34; }, { &amp;#34;type&amp;#34;:&amp;#34;mute&amp;#34;, &amp;#34;width&amp;#34;:40, &amp;#34;align&amp;#34;:&amp;#34;right&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;volumeDown&amp;#34;, &amp;#34;width&amp;#34;: 40, &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34; }, { &amp;#34;type&amp;#34;: &amp;#34;volumeUp&amp;#34;, &amp;#34;width&amp;#34;: 40, &amp;#34;align&amp;#34;: &amp;#34;right&amp;#34; } ] </description>
+    </item>
+    
+    <item>
+      <title>Grey_code</title>
+      <link>https://waterfall531.github.io/posts/grey_code/</link>
+      <pubDate>Fri, 02 Jul 2021 15:06:39 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/grey_code/</guid>
+      <description>Gray Code An n-bit gray code sequence is a sequence of 2n integers where:
+ Every integer is in the inclusive range [0, 2n - 1], The first integer is 0, An integer appears no more than once in the sequence, The binary representation of every pair of adjacent integers differs by exactly one bit, and The binary representation of the first and last integers differs by exactly one bit.  Given an integer n, return any valid n-bit gray code sequence.</description>
+    </item>
+    
+    <item>
+      <title>Lcd Guide</title>
+      <link>https://waterfall531.github.io/posts/lcd-guide/</link>
+      <pubDate>Wed, 16 Jun 2021 06:21:55 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/lcd-guide/</guid>
+      <description>size  24&amp;quot;(29.88 * 53.69) =&amp;gt; 1604cm^2 27&amp;quot;(33.62 * 59.77) =&amp;gt; 2009cm^2 32&amp;quot;(39.84 * 70.84) =&amp;gt; 2822cm^2  挑選對應主要是 解析度 等等談 其次是桌深
+最後是小Tips 是
+24&amp;quot; * 1.25 = 27&amp;quot; 24&amp;quot; * 1.75 = 32&amp;quot;
+解析度 / DPI Apple推出的retina 標準為 2560x1440 @ 27 Apple iMac 27 2880x1800 @ 15.4 Apple Retina MacBook Pro 15&amp;quot;
+其實主要就是螢幕尺寸對應的解析度
+1.(2560^2 * 1440^2)^-2 / 27&amp;quot; =&amp;gt; 108.79 PPI
+為何要這麼高的解析度?
+主要是為了解決像素點 如果解析低、螢幕太大就會看到小點點 不想看到點點 就要拉高解析、縮小螢幕 所以可以推論出  27&amp;quot;建議2k 24&amp;quot;建議1080p 32&amp;quot;建議4k  亮度 亮度主要影響兩點 一個是低、高光源下是否會變成 PWM 調光</description>
+    </item>
+    
+    <item>
+      <title>Nginx Conf</title>
+      <link>https://waterfall531.github.io/posts/nginx-conf/</link>
+      <pubDate>Thu, 10 Jun 2021 15:13:39 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/nginx-conf/</guid>
+      <description>setDeny server { listen 443 ssl; server_name somewhere.com; if ($isDeny = 1) { return 403; } } set isDeny map $remote_addr $isApiDeny { 1.1.1.1 0; # 模擬代理 default 0; } 感覺接近 arrayMapping $remoteAddr === &amp;lsquo;1.1.1.1&amp;rsquo; 時 return 0
+所以可以快速開關並且設定黑白名單
+area 由於有時候可能要關掉地區 所以要借助 geoip
+nginx http geoip2 module
+http { ... geoip2 /etc/maxmind-country.mmdb { auto_reload 5m; $geoip2_metadata_country_build metadata build_epoch; $geoip2_data_country_code default=US source=$variable_with_ip country iso_code; $geoip2_data_country_name country names en; } geoip2 /etc/maxmind-city.mmdb { $geoip2_data_city_name default=London city names en; } .</description>
+    </item>
+    
+    <item>
+      <title>Dev Nginx</title>
+      <link>https://waterfall531.github.io/posts/dev-nginx/</link>
+      <pubDate>Thu, 10 Jun 2021 11:55:15 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-nginx/</guid>
+      <description>Nginx Install yum -y install gcc gcc-c++ autoconf automake make yum -y install zlib zlib-devel openssl openssl-devel pcre pcre-devel wget http://nginx.org/download/nginx-1.19.0.tar.gz tar xf nginx-1.19.0.tar.gz cd nginx-1.19.0 groupadd -f nginx useradd -g nginx nginx ./configure --user=nginx --group=nginx --prefix=/usr/local/nginx --with-http_stub_status_module --with-http_ssl_module --with-stream --with-http_gzip_static_module --with-http_sub_module make &amp;amp;&amp;amp; make install start cd /usr/local/nginx/ sbin/nginx -t #nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok #nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful /usr/local/nginx/sbin/nginx ps aux | grep nginx check netstat -tnlp Active Internet connections (only servers) Proto Recv-Q Send-Q Local Address Foreign Address State PID/Program name tcp 0 0 0.</description>
+    </item>
+    
+    <item>
+      <title>Dev Mariadb</title>
+      <link>https://waterfall531.github.io/posts/dev-mysql-5-6/</link>
+      <pubDate>Wed, 09 Jun 2021 11:34:06 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-mysql-5-6/</guid>
+      <description>getMariadb yum install mariadb-server active systemctl enable mariadb systemctl start mariadb init mysql_secure_installaion deBug cd /var/lib; rm -rf mysql; yum remove mariadb-server </description>
+    </item>
+    
+    <item>
+      <title>Dev Redis</title>
+      <link>https://waterfall531.github.io/posts/dev-redis/</link>
+      <pubDate>Wed, 09 Jun 2021 10:17:51 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-redis/</guid>
+      <description>install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup  RDB  依據時間/key值變化數量去做快照
+AOF  依據每單位時間做的log
+優點  RDB 還原快 數據量小 AOF 時間節點多
+淘汰   有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
+  無設定時間 *. 依據使用量 *.</description>
+    </item>
+    
+    <item>
+      <title>Dev Ssh</title>
+      <link>https://waterfall531.github.io/posts/dev-ssh/</link>
+      <pubDate>Tue, 08 Jun 2021 17:52:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-ssh/</guid>
+      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no </description>
+    </item>
+    
+    <item>
+      <title>Dev Svn</title>
+      <link>https://waterfall531.github.io/posts/dev-svn/</link>
+      <pubDate>Tue, 08 Jun 2021 17:30:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/dev-svn/</guid>
+      <description>install sudo yum install subversion create repo cd /var; mkdir svn; sudo svnadmin create /var/svn/{$name} conf svnserve.conf anon-access = none / write / read auth-access = write / read / none password-db = passwd authz-db = authz realm = {$repoName} passwd [users] account = password authz [groups] #群組 = 帳號1,帳號2 admin = account tmp = tmp1,test2 [{$repoName}:/] @admin = rw [{$repoName}:/] $tmp = r service sudo svnserve -dr /var/svn #check ps aux|grep svnserve #firewall sudo firewall-cmd --permanent -add-port=3690/tcp sudo firewall-cmd --reload #123 sudo systemctl enable svnserve.</description>
+    </item>
+    
+    <item>
+      <title>Docker mysqldump</title>
+      <link>https://waterfall531.github.io/posts/docker-mysqldump/</link>
+      <pubDate>Tue, 08 Jun 2021 17:30:54 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/docker-mysqldump/</guid>
+      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;quot;[password]&amp;quot; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace  search latin1 replace to utf8 run  </description>
+    </item>
+    
+    <item>
+      <title>interview0508</title>
+      <link>https://waterfall531.github.io/posts/interview-0508/</link>
+      <pubDate>Sat, 08 May 2021 12:03:59 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview-0508/</guid>
+      <description>問題 1.[static](https://jaceju.net/php-static/) 2.Mongo vs Mysql 3.設計模式(單例)  Static static 會把變數存起來
+function getCount() { static $count = 0; $count ++; return $count; } for ($i = 0; $i &amp;lt; 10; $i ++) { echo getCount(), &amp;#34;\n&amp;#34;; } /* output: 1 2 3 4 5 6 7 8 9 10 */ ex
+function fibV2($n) { static $result = array(); if (!isset($result[$n])) { if ($n &amp;lt;= 2) { $result[$n] = 1; } else { $result[$n] = fibV2($n - 2) + fibV2($n - 1); } } return $result[$n]; } $result 會存所以不會遞迴下去太多次 O(n)?</description>
+    </item>
+    
+    <item>
+      <title>Selenium / ChromeDrive / PHP base / Html CSS selector</title>
+      <link>https://waterfall531.github.io/posts/selenium/</link>
+      <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/selenium/</guid>
+      <description>Selenium   有多版本
+ Python NodeJs Java Php    Selenium 需要 Browser 支援
+ Chrome Firefox    而中間需要 Driver 控制
+ Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
+  Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
+ 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
+ Mac/Linux  .</description>
+    </item>
+    
+    <item>
+      <title>f776: 方形數字</title>
+      <link>https://waterfall531.github.io/posts/f776/</link>
+      <pubDate>Sun, 02 May 2021 23:30:20 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/f776/</guid>
+      <description>原點在左下角。
+  x 方向左而右由 1 ~ N, y 方向下而上由 1 ~ N 的一個方形數字。
+  請算出每組 （x1, y1）to（x2, y2）的數字合計。
+           3 3 3   2 2 3   1 2 3    v0  一開始就想肯定有公式解
+  朝著F([x1,y1],[x2,y2])
+  去思考
+  後來發現有點難
+ v1  後來想到F(x,y)去return當下格子數字 但這樣O()會超級大 exF(7,5) =&amp;gt; F(3,2) O(20)
+ v2  後來的想法是F(n) 去算 NxN內的數字和</description>
+    </item>
+    
+    <item>
+      <title>1315_Sum of Nodes with Even-Valued Grandparent</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1315/</link>
+      <pubDate>Wed, 06 Jan 2021 17:59:39 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1315/</guid>
+      <description>Given a binary tree, return the sum of values of nodes with even-valued grandparent. (A grandparent of a node is the parent of its parent, if it exists.)
+If there are no nodes with an even-valued grandparent, return 0.
+ 翻譯 祖節點是偶數 則當前節點++
+class TreeNode { public $val = null; public $left = null; public $right = null; function __construct($val = 0, $left = null, $right = null) { $this-&amp;gt;val = $val; $this-&amp;gt;left = $left; $this-&amp;gt;right = $right; } } class Solution { /** * @param TreeNode $root * @return Integer */ public function sumEvenGrandparent($root) { $sum = 0; if (!</description>
+    </item>
+    
+    <item>
+      <title>1689_Partitioning Into Minimum Number Of Deci-Binary Numbers</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1689/</link>
+      <pubDate>Wed, 06 Jan 2021 11:05:03 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1689/</guid>
+      <description>Question  A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros. For example, 101 and 1100 are deci-binary, while 112 and 3001 are not.
+Given a string n that represents a positive decimal integer, return the minimum number of positive deci-binary numbers needed so that they sum up to n.
+ 白話就是  用最少的次數 加到 題目的 n
+加上的數字 不能有2~9</description>
+    </item>
+    
+    <item>
+      <title>Interview1217</title>
+      <link>https://waterfall531.github.io/posts/interview-1217/</link>
+      <pubDate>Thu, 17 Dec 2020 14:50:21 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview-1217/</guid>
+      <description>面試 寫出純api  不需要介面 只需要收傳參
+  userLogin 帳號/手機號 + 密碼 &amp;gt; token userRegister 帳號/手機號 + 密碼 + email &amp;gt; token userMessage token + 訊息 userReply token + 訊息ID + 訊息  演算法  一維陣列 n元素 轉n維陣列 並設置值
+ class Solution { function toArray($list, $value = &amp;#39;value&amp;#39;) { $list = array_reverse($list); return $this-&amp;gt;add($list, $value); } function add(&amp;amp;$list, $setValue = &amp;#39;value&amp;#39;) { if (empty($list)) { return $setValue; } $value = array_pop($list); $output[$value] = $this-&amp;gt;add($list, $setValue); return $output; } } 後記  當下怎樣想怎樣怪</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1673 Widest Vertical Area Between Two Points Containing No Points</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1673/</link>
+      <pubDate>Mon, 14 Dec 2020 17:28:44 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1673/</guid>
+      <description>題目  Given n points on a 2D plane where points[i] = [xi, yi], Return the widest vertical area between two points such that no points are inside the area.
+A vertical area is an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The widest vertical area is the one with the maximum width.
+Note that points on the edge of a vertical area are not considered included in the area.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1282 Group the People Given the Group Size They Belong To</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1282/</link>
+      <pubDate>Fri, 11 Dec 2020 18:18:19 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1282/</guid>
+      <description>There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0 to n - 1.
+You are given an integer array groupSizes, where groupSizes[i] is the size of the group that person i is in. For example, if groupSizes[1] = 3, then person 1 must be in a group of size 3.
+Return a list of groups such that each person i is in a group of size groupSizes[i].</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1476. Subrectangle Queries</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1476/</link>
+      <pubDate>Thu, 10 Dec 2020 16:58:52 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1476/</guid>
+      <description>Implement the class SubrectangleQueries which receives a rows x cols rectangle as a matrix of integers in the constructor and supports two methods:
+   updateSubrectangle(int row1, int col1, int row2, int col2, int newValue)
+ Updates all values with newValue in the subrectangle whose upper left coordinate is (row1,col1) and bottom right coordinate is (row2,col2).    getValue(int row, int col)
+ Returns the current value of the coordinate (row,col) from the rectangle.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1603</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1603/</link>
+      <pubDate>Mon, 07 Dec 2020 17:35:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1603/</guid>
+      <description>Design a parking system for a parking lot. The parking lot has three kinds of parking spaces: big, medium, and small, with a fixed number of slots for each size.
+ Implement the ParkingSystem class:
+ ParkingSystem(int big, int medium, int small) Initializes object of the ParkingSystem class. The number of slots for each parking space are given as part of the constructor. bool addCar(int carType) Checks whether there is a parking space of carType for the car that wants to get into the parking lot.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1672.Richest Customer Wealth</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1672/</link>
+      <pubDate>Mon, 07 Dec 2020 17:06:52 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1672/</guid>
+      <description>You are given an m x n integer grid accounts where accounts[i][j] is the amount of money the *i​​​​​​​​​​​th*​​​​ customer has in the *j​​​​​​​​​​​th*​​​​ bank. Return the wealth that the richest customer has.
+A customer&amp;rsquo;s wealth is the amount of money they have in all their bank accounts. The richest customer is the customer that has the maximum wealth.
+ v0 class Solution { /** * @param Integer[][] $accounts * @return Integer */ function maximumWealth($accounts) { $max = 0; foreach ($accounts as $list) { $tmpSum = array_sum($list); $max = $max &amp;gt; $tmpSum ?</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1221</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1221/</link>
+      <pubDate>Fri, 11 Sep 2020 17:13:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1221/</guid>
+      <description> Balanced strings are those who have equal quantity of &amp;lsquo;L&amp;rsquo; and &amp;lsquo;R&amp;rsquo; characters.
+Given a balanced string s split it in the maximum amount of balanced strings.
+Return the maximum amount of splitted balanced strings.
+ Input: s = &amp;ldquo;RLRRLLRLRL&amp;rdquo;
+Output: 4
+Explanation: s can be split into &amp;ldquo;RL&amp;rdquo;, &amp;ldquo;RRLL&amp;rdquo;, &amp;ldquo;RL&amp;rdquo;, &amp;ldquo;RL&amp;rdquo;,each substring contains same number of &amp;lsquo;L&amp;rsquo; and &amp;lsquo;R&amp;rsquo;.
+v0 class Solution { /** * @param String $s * @return Integer */ function balancedStringSplit($s) { $start = &amp;#39;&amp;#39;; $tmp = 0; $tmpCount = 0; for ($i = 0, $iMax = strlen($s); $i &amp;lt; $iMax; $i++) { if ($start === &amp;#39;&amp;#39;) { $start = $s[$i]; $tmpCount++; }else{ if ($s[$i] === $start) { $tmpCount++; } else { $tmpCount--; } } if ($tmpCount === 0) { $tmp++; $start = &amp;#39;&amp;#39;; } } return $tmp; } } </description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1365</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1365/</link>
+      <pubDate>Fri, 11 Sep 2020 17:13:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1365/</guid>
+      <description>Given the array nums, for each nums[i] find out how many numbers in the array are smaller than it. That is, for each nums[i] you have to count the number of valid j&amp;rsquo;s such that j != i and nums[j] &amp;lt; nums[i].
+Return the answer in an array.
+ v0 class Solution { /** * @param Integer[] $nums * @return Integer[] */ function smallerNumbersThanCurrent($nums) { $sortArray = $nums; sort($sortArray); $resultC = []; foreach ($sortArray as $i =&amp;gt; $iValue) { $resultC[$iValue] = !</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1614</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1614/</link>
+      <pubDate>Fri, 11 Sep 2020 17:13:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1614/</guid>
+      <description>A string is a valid parentheses string (denoted VPS) if it meets one of the following:
+  It is an empty string &amp;ldquo;&amp;rdquo;, or a single character not equal to &amp;ldquo;(&amp;rdquo; or &amp;ldquo;)&amp;rdquo;, It can be written as AB (A concatenated with B), where A and B are VPS&amp;rsquo;s, or It can be written as (A), where A is a VPS.   We can similarly define the nesting depth depth(S) of any VPS S as follows:</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1389</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1389/</link>
+      <pubDate>Fri, 11 Sep 2020 16:51:59 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1389/</guid>
+      <description>Given two arrays of integers nums and index. Your task is to create target array under the following rules:
+  Initially target array is empty. From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array. Repeat the previous step until there are no elements to read in nums and index.   Return the target array.
+  It is guaranteed that the insertion operations will be valid.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1486. XOR Operation in an Array</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1486/</link>
+      <pubDate>Mon, 07 Sep 2020 11:55:57 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1486/</guid>
+      <description>Given an integer n and an integer start. Define an array nums where nums[i] = start + 2*i (0-indexed) and n == nums.length. Return the bitwise XOR of all elements of nums.
+ v0 $tmpNum算出當下的n
+再算$tmp
+^ 是運算 xor
+xor 是邏輯 xor
+class Solution { /** * @param Integer $n * @param Integer $start * @return Integer */ function xorOperation($n, $start) { $tmp = $start; for($i = 1 ; $i &amp;lt; $n ; $i++){ $tmpNum = $start + 2 * $i; $tmp = $tmp ^ $tmpNum; } return $tmp; } } #v1</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1431</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</link>
+      <pubDate>Thu, 03 Sep 2020 17:30:44 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</guid>
+      <description>Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
+  For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
+ ##v0 test 1000 times with 0.28ms</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1528</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</link>
+      <pubDate>Thu, 03 Sep 2020 17:00:16 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</guid>
+      <description> Given a string s and an integer array indices of the same length.
+  The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
+  Return the shuffled string.
+ v1
+class Solution { function restoreString($s, $indices) { $list = []; foreach ($indices as $index=&amp;gt;$item){ $list[$item] = $s[$index]; } ksort($list); return join(&amp;#39;&amp;#39;,$list); } } v2
+class Solution { /** * @param String $s * @param Integer[] $indices * @return array */ function restoreString($s, $indices) { $list = &amp;#39;&amp;#39;; foreach ($indices as $index=&amp;gt;$item){ $list[$item] = $s[$index]; } return $list; } } </description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1512. Number of Good Pairs</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</link>
+      <pubDate>Thu, 03 Sep 2020 16:56:51 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</guid>
+      <description> Given an array of integers nums.
+  A pair (i,j) is called good if nums[i] == nums[j] and i &amp;lt; j.
+  Return the number of good pairs.
+ class Solution { /** * @param Integer[] $nums * @return Integer */ function numIdenticalPairs($nums) { $ans = 0; for($i = 0; $i &amp;lt; count($nums) - 1 ; $i++){ for($j = $i+1 ; $j &amp;lt; count($nums);$j++){ if ($nums[$i] === $nums[$j]){ $ans++; } } } return $ans; } } </description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1470 Shuffle_the_Array</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</link>
+      <pubDate>Tue, 01 Sep 2020 16:43:16 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</guid>
+      <description>#1470. Shuffle the Array
+ Given the array nums consisting of 2n elements in the form [x1,x2,&amp;hellip;,xn,y1,y2,&amp;hellip;,yn].
+  Return the array in the form [x1,y1,x2,y2,&amp;hellip;,xn,yn].
+ 首先
+ 1 &amp;lt;= n &amp;lt;= 500
+nums.length == 2n
+1 &amp;lt;= nums[i] &amp;lt;= 10^3
+ 2n 一定等於長度
+也就是說
+可以藉由循序 先插入 &amp;lt; n 的 再處理 &amp;gt;= n的
+class Solution { /** * @param Integer[] $nums * @param Integer $n * @return Integer[] */ function shuffle($nums, $n) { $list = []; foreach($nums as $index =&amp;gt; $num){ if ($index &amp;lt; $n){ $newIndex = $index * 2; }else{ $newIndex = ($index - $n) * 2 + 1; } $list[$newIndex] = $num; } ksort($list); return $list; } } 可這樣的做法問題在於 還要處理 array sort 又多花一點時間</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 1480</title>
+      <link>https://waterfall531.github.io/posts/leetcode-1480/</link>
+      <pubDate>Tue, 01 Sep 2020 16:36:33 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-1480/</guid>
+      <description>#1480. Running Sum of 1d Array
+ Given an array nums.
+  We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
+  Return the running sum of nums.
+ 這是道簡單的題目 第一個想法是 foreach 就好 但要略過 index = 0 或是去判斷
+判斷的所需秒數 12ms
+` class Solution {
+/** * @param Integer[] $nums * @return Integer[] */ function runningSum($nums) { $ans = []; foreach($nums as $index =&amp;gt; $num){ if($index === 0){ $ans[$index] = $num; }else{ $ans[$index] = $ans[$index - 1] + $num; } } return $ans; }  } `</description>
+    </item>
+    
+    <item>
+      <title>Mysql Alter Column</title>
+      <link>https://waterfall531.github.io/posts/mysql-alter-column/</link>
+      <pubDate>Tue, 18 Aug 2020 17:16:02 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/mysql-alter-column/</guid>
+      <description>前情提要 1400w Rows的表 不停機情況下增加欄位
+  mysql 5.6(含) 使用innoDb 可以線上改欄位格式 不鎖表
+  若為 5.6以下(不含) 可考慮使用 pt-online-schema-change
+  或考慮土法煉鋼
+ 複製表結構後產新表 移除key 複製資料 加key 停機 同步第二次 rename &amp;amp;&amp;amp; del oldTable    </description>
+    </item>
+    
+    <item>
+      <title>GitHub &#43; Hugo</title>
+      <link>https://waterfall531.github.io/posts/hugo-github/</link>
+      <pubDate>Tue, 18 Aug 2020 16:31:11 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/hugo-github/</guid>
+      <description>setting github page change to /docs
+add publishdir = &amp;lsquo;docs&amp;rsquo; to config.toml
+then hugo -d output to docs and it can be push to git and also auto commit github page</description>
+    </item>
+    
   </channel>
 </rss>
