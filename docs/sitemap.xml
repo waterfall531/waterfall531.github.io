@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://waterfall531.github.io/categories/1126/</loc>
-    <lastmod>2021-11-30T11:24:49+08:00</lastmod>
-  </url><url>
     <loc>https://waterfall531.github.io/series/2021/</loc>
     <lastmod>2021-11-30T11:24:49+08:00</lastmod>
   </url><url>
@@ -12,6 +9,9 @@
     <lastmod>2021-11-30T11:24:49+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/tags/interview/</loc>
+    <lastmod>2021-11-30T11:24:49+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/categories/interview/</loc>
     <lastmod>2021-11-30T11:24:49+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/interview-1126/</loc>
@@ -41,13 +41,19 @@
     <loc>https://waterfall531.github.io/series/rsync/</loc>
     <lastmod>2021-10-28T11:22:47+08:00</lastmod>
   </url><url>
+    <loc>https://waterfall531.github.io/posts/ha-failover/</loc>
+    <lastmod>2021-10-25T15:12:19+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/sre/</loc>
+    <lastmod>2021-10-25T15:12:19+08:00</lastmod>
+  </url><url>
     <loc>https://waterfall531.github.io/series/centos/</loc>
     <lastmod>2021-09-29T14:19:49+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/linux_command/</loc>
+    <loc>https://waterfall531.github.io/posts/linux-command/</loc>
     <lastmod>2021-09-29T14:19:49+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/get_nth_highest_salary/</loc>
+    <loc>https://waterfall531.github.io/posts/get-nth-highest-salary/</loc>
     <lastmod>2021-09-23T17:50:18+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/series/leetcode/</loc>
@@ -62,10 +68,10 @@
     <loc>https://waterfall531.github.io/tags/node/</loc>
     <lastmod>2021-09-23T11:45:05+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/node_axios/</loc>
+    <loc>https://waterfall531.github.io/posts/node-axios/</loc>
     <lastmod>2021-09-23T11:45:05+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/second_highest_salary/</loc>
+    <loc>https://waterfall531.github.io/posts/second-highest-salary/</loc>
     <lastmod>2021-09-23T11:45:05+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/canary/</loc>
@@ -80,7 +86,7 @@
     <loc>https://waterfall531.github.io/tags/algorithm/</loc>
     <lastmod>2021-07-02T15:06:39+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/grey_code/</loc>
+    <loc>https://waterfall531.github.io/posts/grey-code/</loc>
     <lastmod>2021-07-02T15:06:39+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/categories/solve/</loc>
@@ -131,9 +137,6 @@
     <loc>https://waterfall531.github.io/series/svn/</loc>
     <lastmod>2021-06-08T17:30:54+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/categories/0508/</loc>
-    <lastmod>2021-05-08T12:03:59+08:00</lastmod>
-  </url><url>
     <loc>https://waterfall531.github.io/posts/interview-0508/</loc>
     <lastmod>2021-05-08T12:03:59+08:00</lastmod>
   </url><url>
@@ -157,9 +160,6 @@
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1689/</loc>
     <lastmod>2021-01-06T11:05:03+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/categories/1217/</loc>
-    <lastmod>2020-12-17T14:50:21+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/series/2020/</loc>
     <lastmod>2020-12-17T14:50:21+08:00</lastmod>
@@ -197,16 +197,16 @@
     <loc>https://waterfall531.github.io/posts/leetcode-1486/</loc>
     <lastmod>2020-09-07T11:55:57+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</loc>
+    <loc>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest-number-of-candies/</loc>
     <lastmod>2020-09-03T17:30:44+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</loc>
+    <loc>https://waterfall531.github.io/posts/leetcode-1528.shuffle-string/</loc>
     <lastmod>2020-09-03T17:00:16+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</loc>
+    <loc>https://waterfall531.github.io/posts/leetcode-1512.number-of-good-pairs/</loc>
     <lastmod>2020-09-03T16:56:51+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</loc>
+    <loc>https://waterfall531.github.io/posts/leetcode-1470.shuffle-the-array/</loc>
     <lastmod>2020-09-01T16:43:16+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/leetcode-1480/</loc>

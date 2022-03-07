@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>interview on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/categories/interview/</link>
+    <description>Recent content in interview on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Tue, 30 Nov 2021 11:24:49 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/categories/interview/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interview 1126</title>
+      <link>https://waterfall531.github.io/posts/interview-1126/</link>
+      <pubDate>Tue, 30 Nov 2021 11:24:49 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview-1126/</guid>
+      <description>問題 1.兩數相加 2.數字反轉  Two Sum  簡單的給一陣列 找出陣列中能加總到對應的 target 數值之 index
+ 問題點
+ 兩數相同時取的 index  function fineComper($list,$target){ foreach($list as $index =&amp;gt; $item){ $tmpIndex = $index; $nextTarget = $target - $item; //find  $tmpList = $list; unset($tmpList[$index]); $tmpIndex2 = array_search($nextTarget, $tmpList); if ($tmpIndex2 != false) { return [$index,$tmpIndex2]; } } } $list = [2,7,11,15]; $target = 9; print_r(fineComper($list,$target)); $list = [3,2,4]; $target = 6; print_r(fineComper($list,$target)); $list = [3,3]; $target = 6; print_r(fineComper($list,$target)); Reverse Integer  簡單的給一數 反轉數字 補上千分位 補上正負</description>
+    </item>
+    
+    <item>
+      <title>interview0508</title>
+      <link>https://waterfall531.github.io/posts/interview-0508/</link>
+      <pubDate>Sat, 08 May 2021 12:03:59 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview-0508/</guid>
+      <description>問題 1.[static](https://jaceju.net/php-static/) 2.Mongo vs Mysql 3.設計模式(單例)  Static static 會把變數存起來
+function getCount() { static $count = 0; $count ++; return $count; } for ($i = 0; $i &amp;lt; 10; $i ++) { echo getCount(), &amp;#34;\n&amp;#34;; } /* output: 1 2 3 4 5 6 7 8 9 10 */ ex
+function fibV2($n) { static $result = array(); if (!isset($result[$n])) { if ($n &amp;lt;= 2) { $result[$n] = 1; } else { $result[$n] = fibV2($n - 2) + fibV2($n - 1); } } return $result[$n]; } $result 會存所以不會遞迴下去太多次 O(n)?</description>
+    </item>
+    
+    <item>
+      <title>Interview1217</title>
+      <link>https://waterfall531.github.io/posts/interview-1217/</link>
+      <pubDate>Thu, 17 Dec 2020 14:50:21 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/interview-1217/</guid>
+      <description>面試 寫出純 api  不需要介面 只需要收傳參
+  userLogin 帳號/手機號 + 密碼 &amp;gt; token userRegister 帳號/手機號 + 密碼 + email &amp;gt; token userMessage token + 訊息 userReply token + 訊息 ID + 訊息  演算法  一維陣列 n 元素 轉 n 維陣列 並設置值
+ class Solution { function toArray($list, $value = &amp;#39;value&amp;#39;) { $list = array_reverse($list); return $this-&amp;gt;add($list, $value); } function add(&amp;amp;$list, $setValue = &amp;#39;value&amp;#39;) { if (empty($list)) { return $setValue; } $value = array_pop($list); $output[$value] = $this-&amp;gt;add($list, $setValue); return $output; } } 後記  當下怎樣想怎樣怪</description>
+    </item>
+    
+  </channel>
+</rss>

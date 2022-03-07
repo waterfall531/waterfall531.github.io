@@ -13,9 +13,9 @@
       <pubDate>Tue, 30 Nov 2021 11:24:49 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/interview-1126/</guid>
-      <description>問題 1.兩數相加 2.數字反轉  Two Sum  簡單的給一陣列 找出陣列中能加總到對應的target數值之index
+      <description>問題 1.兩數相加 2.數字反轉  Two Sum  簡單的給一陣列 找出陣列中能加總到對應的 target 數值之 index
  問題點
- 兩數相同時取的index  function fineComper($list,$target){ foreach($list as $index =&amp;gt; $item){ $tmpIndex = $index; $nextTarget = $target - $item; //find  $tmpList = $list; unset($tmpList[$index]); $tmpIndex2 = array_search($nextTarget, $tmpList); if ($tmpIndex2 != false) { return [$index,$tmpIndex2]; } } } $list = [2,7,11,15]; $target = 9; print_r(fineComper($list,$target)); $list = [3,2,4]; $target = 6; print_r(fineComper($list,$target)); $list = [3,3]; $target = 6; print_r(fineComper($list,$target)); Reverse Integer  簡單的給一數 反轉數字 補上千分位 補上正負</description>
+ 兩數相同時取的 index  function fineComper($list,$target){ foreach($list as $index =&amp;gt; $item){ $tmpIndex = $index; $nextTarget = $target - $item; //find  $tmpList = $list; unset($tmpList[$index]); $tmpIndex2 = array_search($nextTarget, $tmpList); if ($tmpIndex2 != false) { return [$index,$tmpIndex2]; } } } $list = [2,7,11,15]; $target = 9; print_r(fineComper($list,$target)); $list = [3,2,4]; $target = 6; print_r(fineComper($list,$target)); $list = [3,3]; $target = 6; print_r(fineComper($list,$target)); Reverse Integer  簡單的給一數 反轉數字 補上千分位 補上正負</description>
     </item>
     
     <item>

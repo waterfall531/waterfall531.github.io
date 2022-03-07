@@ -17,11 +17,21 @@
     </item>
     
     <item>
+      <title>Ha failover</title>
+      <link>https://waterfall531.github.io/posts/ha-failover/</link>
+      <pubDate>Mon, 25 Oct 2021 15:12:19 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/ha-failover/</guid>
+      <description>HAProxy  HA(High Availability) Load Balance 自動加密 聽 tcp socket，連 server，然後把 socket 接在一起讓雙向流通 可做 Http reverse-proxy (Http gateway)，自己作為代理 server，把接受到的 connection 傳到後端的 server。 SSL 終端，可支援 client-side 與 server-side 的 ssl/tls 當 tcp/http normalizer 更改 http 的 request 與 response 當 switch，決定 request 後送的目標 做 load balancer，為後端 server 做負載均衡 調節流量，設定 rate limit，或是根據內容調整流量  ref:link
+failover cluster  主次明顯 一個掛掉另一個馬上接手  docker swarm  Load Balance 可斷線後重連 可復原 可以設定主次  </description>
+    </item>
+    
+    <item>
       <title>Linux Command</title>
-      <link>https://waterfall531.github.io/posts/linux_command/</link>
+      <link>https://waterfall531.github.io/posts/linux-command/</link>
       <pubDate>Wed, 29 Sep 2021 14:19:49 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/linux_command/</guid>
+      <guid>https://waterfall531.github.io/posts/linux-command/</guid>
       <description>check  top htop df -h free -h pm2 start index.js --node-args=&amp;quot;--max-old-space-size=1024&amp;quot;  </description>
     </item>
     

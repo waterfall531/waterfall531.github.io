@@ -4,7 +4,7 @@ date: 2021-11-30T11:24:49+08:00
 draft: true
 tags: ["interview"]
 series: ["2021"]
-categories: ["1126"]
+categories: ["interview"]
 ---
 
 ## 問題
@@ -15,10 +15,11 @@ categories: ["1126"]
 ## Two Sum
 
 > 簡單的給一陣列
-> 找出陣列中能加總到對應的target數值之index
+> 找出陣列中能加總到對應的 target 數值之 index
 
 問題點
-1. 兩數相同時取的index
+
+1. 兩數相同時取的 index
 
 ```php
 function fineComper($list,$target){
@@ -55,14 +56,15 @@ print_r(fineComper($list,$target));
 > 反轉數字 補上千分位 補上正負
 
 問題點
+
 1. 負號
 2. 千分位
 3. 反轉
 
-> 這邊一開始不知道有number_format
+> 這邊一開始不知道有 number_format
 > 卡在千分位一段時間
 > 後面再思考負號/反轉
-> 卡太久(*20min*)
+> 卡太久(_20min_)
 
 ```php
 <?php
@@ -102,14 +104,10 @@ if ($status){
 
 ## Alb /Nlb / GLB (L7 / L4 / L3+L4)
 
->   當下不會
+> 當下不會
 
-
-
-1.   https://qazwsxedccsqzse.blogspot.com/2018/06/blog-post.html
-2.   https://aws.amazon.com/tw/elasticloadbalancing/features/?nc=sn&loc=2&dn=1
-
-
+1.  https://qazwsxedccsqzse.blogspot.com/2018/06/blog-post.html
+2.  https://aws.amazon.com/tw/elasticloadbalancing/features/?nc=sn&loc=2&dn=1
 
 -   ALB
     -   默認不保留 client ip
@@ -117,18 +115,18 @@ if ($status){
     -   DNS /IP
     -   Https
     -   功能更多
-    -   可轉發相同domain到不同主機
-        -   主機1
+    -   可轉發相同 domain 到不同主機
+        -   主機 1
             -   domain/1
-        -   主機2
+        -   主機 2
             -   domain/2
 -   NLB
-    -   直連目標ip
-    -   DNS 
+    -   直連目標 ip
+    -   DNS
     -   TCP
     -   速度更快
-    -   只能切domain到不同主機
-        -   主機1
+    -   只能切 domain 到不同主機
+        -   主機 1
             -   domain1/
-        -   主機2
+        -   主機 2
             -   domain2/

@@ -5,7 +5,6 @@ draft: true
 tags: ["devops"]
 series: ["docker"]
 categories: ["init"]
-
 ---
 
 ## script
@@ -16,6 +15,6 @@ docker exec [mysql] mysqldump -u [root] -p"[password]" --default-character-set=l
 
 ## Replace
 
-1.   search `latin1`
-2.   replace to `utf8`
-3.   run
+1.  search `latin1`
+2.  replace to `utf8`
+3.  run

@@ -4,7 +4,7 @@ date: 2021-05-08T12:03:59+08:00
 draft: true
 tags: ["interview"]
 series: ["2021"]
-categories: ["0508"]
+categories: ["interview"]
 ---
 
 ## 問題

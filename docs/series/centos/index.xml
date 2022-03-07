@@ -9,10 +9,10 @@
     <lastBuildDate>Wed, 29 Sep 2021 14:19:49 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/centos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Linux Command</title>
-      <link>https://waterfall531.github.io/posts/linux_command/</link>
+      <link>https://waterfall531.github.io/posts/linux-command/</link>
       <pubDate>Wed, 29 Sep 2021 14:19:49 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/linux_command/</guid>
+      <guid>https://waterfall531.github.io/posts/linux-command/</guid>
       <description>check  top htop df -h free -h pm2 start index.js --node-args=&amp;quot;--max-old-space-size=1024&amp;quot;  </description>
     </item>
     

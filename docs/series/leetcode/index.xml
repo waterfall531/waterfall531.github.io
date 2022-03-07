@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 23 Sep 2021 17:50:18 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Get Nth Highest Salary</title>
-      <link>https://waterfall531.github.io/posts/get_nth_highest_salary/</link>
+      <link>https://waterfall531.github.io/posts/get-nth-highest-salary/</link>
       <pubDate>Thu, 23 Sep 2021 17:50:18 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/get_nth_highest_salary/</guid>
+      <guid>https://waterfall531.github.io/posts/get-nth-highest-salary/</guid>
       <description> Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
 The query result format is in the following example.
  CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  </description>
@@ -20,10 +20,10 @@ The query result format is in the following example.
     
     <item>
       <title>Second Highest Salary</title>
-      <link>https://waterfall531.github.io/posts/second_highest_salary/</link>
+      <link>https://waterfall531.github.io/posts/second-highest-salary/</link>
       <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/second_highest_salary/</guid>
+      <guid>https://waterfall531.github.io/posts/second-highest-salary/</guid>
       <description> Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
 The query result format is in the following example.
  錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1  先去除重複排序 排rank 加null  SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1  去掉rank 後排序更快  SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &amp;lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary;  最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個)  SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary  distinct後 排序 後limit 1 offset 1 在包成select  </description>
@@ -31,10 +31,10 @@ The query result format is in the following example.
     
     <item>
       <title>Grey_code</title>
-      <link>https://waterfall531.github.io/posts/grey_code/</link>
+      <link>https://waterfall531.github.io/posts/grey-code/</link>
       <pubDate>Fri, 02 Jul 2021 15:06:39 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/grey_code/</guid>
+      <guid>https://waterfall531.github.io/posts/grey-code/</guid>
       <description>Gray Code An n-bit gray code sequence is a sequence of 2n integers where:
  Every integer is in the inclusive range [0, 2n - 1], The first integer is 0, An integer appears no more than once in the sequence, The binary representation of every pair of adjacent integers differs by exactly one bit, and The binary representation of the first and last integers differs by exactly one bit.  Given an integer n, return any valid n-bit gray code sequence.</description>
     </item>
@@ -182,10 +182,10 @@ class Solution { /** * @param Integer $n * @param Integer $start * @return Integ
     
     <item>
       <title>Leetcode 1431</title>
-      <link>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</link>
+      <link>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest-number-of-candies/</link>
       <pubDate>Thu, 03 Sep 2020 17:30:44 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest_number_of_candies/</guid>
+      <guid>https://waterfall531.github.io/posts/leetcode-1431.kids_with_the_greatest-number-of-candies/</guid>
       <description>Given the array candies and the integer extraCandies, where candies[i] represents the number of candies that the ith kid has.
   For each kid check if there is a way to distribute extraCandies among the kids such that he or she can have the greatest number of candies among them. Notice that multiple kids can have the greatest number of candies.
  ##v0 test 1000 times with 0.28ms</description>
@@ -193,10 +193,10 @@ class Solution { /** * @param Integer $n * @param Integer $start * @return Integ
     
     <item>
       <title>Leetcode 1528</title>
-      <link>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</link>
+      <link>https://waterfall531.github.io/posts/leetcode-1528.shuffle-string/</link>
       <pubDate>Thu, 03 Sep 2020 17:00:16 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/leetcode-1528.shuffle_string/</guid>
+      <guid>https://waterfall531.github.io/posts/leetcode-1528.shuffle-string/</guid>
       <description> Given a string s and an integer array indices of the same length.
   The string s will be shuffled such that the character at the ith position moves to indices[i] in the shuffled string.
   Return the shuffled string.
@@ -207,10 +207,10 @@ class Solution { /** * @param String $s * @param Integer[] $indices * @return ar
     
     <item>
       <title>Leetcode 1512. Number of Good Pairs</title>
-      <link>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</link>
+      <link>https://waterfall531.github.io/posts/leetcode-1512.number-of-good-pairs/</link>
       <pubDate>Thu, 03 Sep 2020 16:56:51 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/leetcode-1512.number_of_good_pairs/</guid>
+      <guid>https://waterfall531.github.io/posts/leetcode-1512.number-of-good-pairs/</guid>
       <description> Given an array of integers nums.
   A pair (i,j) is called good if nums[i] == nums[j] and i &amp;lt; j.
   Return the number of good pairs.
@@ -219,10 +219,10 @@ class Solution { /** * @param String $s * @param Integer[] $indices * @return ar
     
     <item>
       <title>Leetcode 1470 Shuffle_the_Array</title>
-      <link>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</link>
+      <link>https://waterfall531.github.io/posts/leetcode-1470.shuffle-the-array/</link>
       <pubDate>Tue, 01 Sep 2020 16:43:16 +0800</pubDate>
       
-      <guid>https://waterfall531.github.io/posts/leetcode-1470.shuffle_the_array/</guid>
+      <guid>https://waterfall531.github.io/posts/leetcode-1470.shuffle-the-array/</guid>
       <description>#1470. Shuffle the Array
  Given the array nums consisting of 2n elements in the form [x1,x2,&amp;hellip;,xn,y1,y2,&amp;hellip;,yn].
   Return the array in the form [x1,y1,x2,y2,&amp;hellip;,xn,yn].
