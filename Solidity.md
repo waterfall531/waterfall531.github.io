@@ -50,3 +50,12 @@
         1. 在這場景下
             1. zombieToOwner 是指 原主人
             2. zombieApprovals 指給予權限之人
+    3. 之後在erc721.sol內還有驗證對於from的require
+10. oracle的必要性
+    1. 合約內部無法獲取外部資訊
+    2. 若要交易eth / usd交易對
+    3. 那是必須要實時報價
+    4. 而外部資訊會讓交易陷入報價錯誤的危機
+11. remix
+     1. Solidity 版本
+     2. 
