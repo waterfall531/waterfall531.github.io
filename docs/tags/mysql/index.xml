@@ -15,7 +15,7 @@
       <guid>https://waterfall531.github.io/posts/get-nth-highest-salary/</guid>
       <description> Write an SQL query to report the nth highest salary from the Employee table. If there is no nth highest salary, the query should report null.
 The query result format is in the following example.
- CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 );  由前一題改變而來 OFFSET 改 var  </description>
+CREATE FUNCTION getNthHighestSalary ( N INT ) RETURNS INT BEGIN DECLARE var INT; SET var = N - 1; RETURN ( SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET var ) AS SecondHighestSalary ); END; SELECT getNthHighestSalary ( 2 ); 由前一題改變而來 OFFSET 改 var </description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@ The query result format is in the following example.
       <guid>https://waterfall531.github.io/posts/second-highest-salary/</guid>
       <description> Write an SQL query to report the second highest salary from the Employee table. If there is no second highest salary, the query should report null.
 The query result format is in the following example.
- 錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1  先去除重複排序 排rank 加null  SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1  去掉rank 後排序更快  SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &amp;lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary;  最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個)  SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary  distinct後 排序 後limit 1 offset 1 在包成select  </description>
+錯誤解法 SELECT SecondHighestSalary FROM ( SELECT rank() over ( ORDER BY salary DESC ) AS rr, `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL , NULL FROM `Employee` ) a LIMIT 1, 1 先去除重複排序 排rank 加null SELECT SecondHighestSalary FROM ( SELECT `salary` AS SecondHighestSalary FROM ( SELECT DISTINCT salary FROM Employee ) a UNION ALL SELECT NULL FROM `Employee` ) a LIMIT 1, 1 去掉rank 後排序更快 SELECT IFNULL ( (SELECT MAX(Salary) FROM Employee WHERE Salary &amp;lt; (SELECT MAX(Salary) FROM Employee)), NULL ) as SecondHighestSalary; 最佳解 選擇max 但 排除掉max (選擇去掉跑最快的最快那一個) SELECT ( SELECT DISTINCT Salary FROM Employee ORDER BY Salary DESC LIMIT 1 OFFSET 1 ) AS SecondHighestSalary distinct後 排序 後limit 1 offset 1 在包成select </description>
     </item>
     
     <item>
@@ -36,10 +36,10 @@ The query result format is in the following example.
       
       <guid>https://waterfall531.github.io/posts/mysql-alter-column/</guid>
       <description>前情提要 1400w Rows的表 不停機情況下增加欄位
-  mysql 5.6(含) 使用innoDb 可以線上改欄位格式 不鎖表
-  若為 5.6以下(不含) 可考慮使用 pt-online-schema-change
-  或考慮土法煉鋼
- 複製表結構後產新表 移除key 複製資料 加key 停機 同步第二次 rename &amp;amp;&amp;amp; del oldTable    </description>
+mysql 5.6(含) 使用innoDb 可以線上改欄位格式 不鎖表
+若為 5.6以下(不含) 可考慮使用 pt-online-schema-change
+或考慮土法煉鋼
+複製表結構後產新表 移除key 複製資料 加key 停機 同步第二次 rename &amp;amp;&amp;amp; del oldTable </description>
     </item>
     
   </channel>

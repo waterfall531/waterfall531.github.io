@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solidity on Randy&#39;s Blog</title>
+    <link>https://waterfall531.github.io/series/solidity/</link>
+    <description>Recent content in Solidity on Randy&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Thu, 24 Mar 2022 13:48:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/solidity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>220324writeup</title>
+      <link>https://waterfall531.github.io/posts/solidity/</link>
+      <pubDate>Thu, 24 Mar 2022 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/solidity/</guid>
+      <description>合約 memory，storage和calldata link uint unsing Integer msg.sender 合約發起人 function function name (string private _name) private view returns (uint){} private 要加前置底線 Private 就是合約內才能call 但後面加上view 就變成可以看 Interface 不需要function內容 可以call 外部合約 Returns 可以知道回傳的values 使用時init 合約 KittyInterface(kittyAddress); Save Gas Gas很貴 合約內操作也都需要錢 引申出view function view 只能看資料like etherscan 但不能更動數據 所以可以撰寫出看數據的function 同理更動數據皆需要花錢才能改變 升級 數據變化 外觀變化 獲得裝備 Function type private 合約內調用 internal 除合約外還有被繼承的項目 external 只能在合約外 public 任何地方 view 運行數據但就是只能看 通过运行函数，不会保存/改变数据 不花費gas pure 函数不仅不会向区块链保存任何数据 而且也不会从区块链中读取任何数据 不花費gas msg.sender 指發出合約請求的人 zombieToOwner[_tokenId] == msg.</description>
+    </item>
+    
+    <item>
+      <title>220321writeup</title>
+      <link>https://waterfall531.github.io/posts/220321/</link>
+      <pubDate>Mon, 21 Mar 2022 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/220321/</guid>
+      <description>0321晚 IL 無常損失 v2 漲幅提高的話 可能會造成滿手shitCoin v3 MEV （miner-extractable value） 礦工 Flashbots 起因 機器人發現套利機會 藉由較高gas 進而提前打包交易 完成套利 結果 藉由競價方式降低普通交易手續費用 避免交易策略洩漏 機器人找不到套利機會 進而減少交易 礦工獲得額外的bundle tip 彌補降低的gas </description>
+    </item>
+    
+  </channel>
+</rss>

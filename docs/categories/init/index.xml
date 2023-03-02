@@ -6,14 +6,61 @@
     <description>Recent content in init on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 07 Mar 2022 17:30:54 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/categories/init/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 13:48:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/categories/init/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>230302writeup</title>
+      <link>https://waterfall531.github.io/posts/230302writeup/</link>
+      <pubDate>Thu, 02 Mar 2023 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/230302writeup/</guid>
+      <description>mysql对外开放 edit /etc/mysql/mysql.conf.d/mysqld.cnf 注释掉 #bind-address = 127.0.0.1
+service mysql restart
+Mysql User Login ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;password&#39;; host 改 % flush privileges;更新權限 auth_socket 首先，这种验证方式不要求输入密码，即使输入了密码也不验证。这个特点让很多人觉得很不安全，实际仔细研究一下这种方式，发现还是相当安全的，因为它有另外两个限制； 只能用 UNIX 的 socket 方式登陆，这就保证了只能本地登陆，用户在使用这种登陆方式时已经通过了操作系统的安全验证； 操作系统的用户和 MySQL 数据库的用户名必须一致，例如你要登陆 MySQL 的 root 用户，必须用操作系统的 root 用户登陆。 </description>
+    </item>
+    
+    <item>
+      <title>220324writeup</title>
+      <link>https://waterfall531.github.io/posts/solidity/</link>
+      <pubDate>Thu, 24 Mar 2022 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/solidity/</guid>
+      <description>合約 memory，storage和calldata link uint unsing Integer msg.sender 合約發起人 function function name (string private _name) private view returns (uint){} private 要加前置底線 Private 就是合約內才能call 但後面加上view 就變成可以看 Interface 不需要function內容 可以call 外部合約 Returns 可以知道回傳的values 使用時init 合約 KittyInterface(kittyAddress); Save Gas Gas很貴 合約內操作也都需要錢 引申出view function view 只能看資料like etherscan 但不能更動數據 所以可以撰寫出看數據的function 同理更動數據皆需要花錢才能改變 升級 數據變化 外觀變化 獲得裝備 Function type private 合約內調用 internal 除合約外還有被繼承的項目 external 只能在合約外 public 任何地方 view 運行數據但就是只能看 通过运行函数，不会保存/改变数据 不花費gas pure 函数不仅不会向区块链保存任何数据 而且也不会从区块链中读取任何数据 不花費gas msg.sender 指發出合約請求的人 zombieToOwner[_tokenId] == msg.</description>
+    </item>
+    
+    <item>
+      <title>220321writeup</title>
+      <link>https://waterfall531.github.io/posts/220321/</link>
+      <pubDate>Mon, 21 Mar 2022 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/220321/</guid>
+      <description>0321晚 IL 無常損失 v2 漲幅提高的話 可能會造成滿手shitCoin v3 MEV （miner-extractable value） 礦工 Flashbots 起因 機器人發現套利機會 藉由較高gas 進而提前打包交易 完成套利 結果 藉由競價方式降低普通交易手續費用 避免交易策略洩漏 機器人找不到套利機會 進而減少交易 礦工獲得額外的bundle tip 彌補降低的gas </description>
+    </item>
+    
+    <item>
+      <title>220317writeup</title>
+      <link>https://waterfall531.github.io/posts/difi/</link>
+      <pubDate>Thu, 17 Mar 2022 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/difi/</guid>
+      <description>ZK(零知識證明) Tornado 匿名傳送代幣 Lending compoud 借貸模型 $$ 兌換率 = \frac{未被借走的數量+應償還的數量-保留金額}{總額} $$ 使用率 ＝ $$ \frac{總借款}{總金額+傯借款}$$ 借款年利率 = 基礎利率 + (使用率 x 加給利率) 放貸年利率 ≈ 借款年利率 x 使用率 x (1-保留利率) 借款越多 / 未被借走數量越多利息越高 雖然使用者年利率會是以每小時計價但存入DAI 後拿到的代幣cDAI 卻不一定能換取更多的DAI回來 DAI to cDAI =&amp;gt; 1:40 放貸一段時間 DAI to cDAI =&amp;gt; 1:50 等同於憑空消失 1/4的本金 Maker DAO，穩定幣模式，類比當舖，只貸不借 Compound，流動池交易模式，類比銀行，隨存隨取 Dharma，P2P 撮合模式，類 P2P 貸款，無法隨借隨還 Aave，閃貸，無抵押貸款，轉為套利而準備。 Deri dydx perp Oracle chainLink MEV uniswap 錢包 status 加速 react seal DAO 分散式自治組織 MK 合約審計 提前計算合約失敗後能賺多少錢 房地產碎片化投資 Lofty.</description>
+    </item>
+    
     <item>
       <title>Docker mysqldump</title>
       <link>https://waterfall531.github.io/posts/docker-mysqldump/</link>
       <pubDate>Mon, 07 Mar 2022 17:30:54 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/docker-mysqldump/</guid>
-      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;quot;[password]&amp;quot; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace  search latin1 replace to utf8 run  </description>
+      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;#34;[password]&amp;#34; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace search latin1 replace to utf8 run </description>
+    </item>
+    
+    <item>
+      <title>210921writeup</title>
+      <link>https://waterfall531.github.io/posts/funding-rate/</link>
+      <pubDate>Tue, 21 Sep 2021 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/funding-rate/</guid>
+      <description>資金費率 作多的人 多於 做空的人時 作多的人要給予做空的資金費率 做空的人 多餘 作多的人 做空的人要給予作多的資金費率 多頭市場 作多的人多 空資金費率哪取利息 但是資金費率虧損 所以要買現貨 現貨賺錢理論上==資金費率虧損 但是有拿到每小時的資金費率 空頭市場 做空的人多 買資金費率拿利息 空現貨 </description>
     </item>
     
     <item>
@@ -22,7 +69,7 @@
       <pubDate>Mon, 02 Aug 2021 13:46:09 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/canary/</guid>
-      <description>發布  金絲雀(灰度) 滾動 藍綠  金絲雀  有n台 先更新一台 確定沒問題 直到更新完n台  滾動  有n台 先更新一台 直到更新完n台  藍綠  有2n台 先移出n台 更新n台 切換到新的n台  金絲雀+藍綠  有2n台 n台更新 陸續切換到新版本  功能開關  有n台 更新 用開關切換  A/B測試  有2n台 n台Ａ n台b  </description>
+      <description>發布 金絲雀(灰度) 滾動 藍綠 金絲雀 有n台 先更新一台 確定沒問題 直到更新完n台 滾動 有n台 先更新一台 直到更新完n台 藍綠 有2n台 先移出n台 更新n台 切換到新的n台 金絲雀+藍綠 有2n台 n台更新 陸續切換到新版本 功能開關 有n台 更新 用開關切換 A/B測試 有2n台 n台Ａ n台b </description>
     </item>
     
     <item>
@@ -49,11 +96,12 @@
       <pubDate>Wed, 09 Jun 2021 10:17:51 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/dev-redis/</guid>
-      <description>install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup  RDB  依據時間/key值變化數量去做快照
-AOF  依據每單位時間做的log
-優點  RDB 還原快 數據量小 AOF 時間節點多
-淘汰   有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
-  無設定時間 *. 依據使用量 *.</description>
+      <description>install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup RDB 依據時間/key值變化數量去做快照
+AOF 依據每單位時間做的log
+優點 RDB 還原快 數據量小 AOF 時間節點多
+淘汰 有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
+無設定時間 *. 依據使用量 *. 隨機 *. 不刪除
+主從架構 start server 0 掛掉 搜尋最快的 推舉出新master 其他的改地址</description>
     </item>
     
     <item>
@@ -62,7 +110,7 @@ AOF  依據每單位時間做的log
       <pubDate>Tue, 08 Jun 2021 17:52:54 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/dev-ssh/</guid>
-      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no </description>
+      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &amp;#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&amp;#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no </description>
     </item>
     
     <item>
@@ -80,14 +128,16 @@ AOF  依據每單位時間做的log
       <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/selenium/</guid>
-      <description>Selenium   有多版本
- Python NodeJs Java Php    Selenium 需要 Browser 支援
- Chrome Firefox    而中間需要 Driver 控制
- Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
-  Linux
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
- 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
- Mac/Linux  .</description>
+      <description>Selenium 有多版本
+Python NodeJs Java Php Selenium 需要 Browser 支援
+Chrome Firefox 而中間需要 Driver 控制
+Chrome Linux Mac Mac_M1 Windows Firefox Geckodriver 而執行端需要 Chrome / Firefox
+Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm Mac
+我相信你有裝Chrome 執行Selenium 前必須啟動 Driver
+Mac/Linux ./chromedriver_mac &amp;ndash;port=4444 執行Selenium
+若在Linux/Docker環境下須先執行變數定義
+&amp;lsquo;&amp;ndash;disable-dev-shm-usage&amp;rsquo; docker上必備 &amp;lsquo;&amp;ndash;headless&amp;rsquo; 無畫面系統下必備 &amp;lsquo;blink-settings=imagesEnabled=false&amp;rsquo; &amp;lsquo;&amp;ndash;disable-gpu&amp;rsquo; &amp;lsquo;&amp;ndash;no-sandbox&amp;rsquo; 無畫面系統下必備 </description>
     </item>
     
     <item>

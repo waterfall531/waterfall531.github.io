@@ -13,7 +13,7 @@
       <pubDate>Mon, 07 Mar 2022 17:30:54 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/docker-mysqldump/</guid>
-      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;quot;[password]&amp;quot; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace  search latin1 replace to utf8 run  </description>
+      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;#34;[password]&amp;#34; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace search latin1 replace to utf8 run </description>
     </item>
     
   </channel>

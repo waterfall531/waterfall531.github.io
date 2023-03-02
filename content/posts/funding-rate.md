@@ -1,3 +1,12 @@
+---
+title: "210921writeup"
+date: 2021-09-21T13:48:25+08:00
+draft: true
+tags: ["invest"]
+series: ["Funding Rate"]
+categories: ["init"]
+---
+
 # 資金費率
 
 1. 作多的人 多於 做空的人時

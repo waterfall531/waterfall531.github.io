@@ -13,7 +13,7 @@
       <pubDate>Thu, 23 Sep 2021 11:45:05 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/node-axios/</guid>
-      <description>Axios  node 那件是異步 所以要用Async / Await / Promise 處理 Async function / Await 深度介紹 axios async function 內加return await      </description>
+      <description>Axios node 那件是異步 所以要用Async / Await / Promise 處理 Async function / Await 深度介紹 axios async function 內加return await </description>
     </item>
     
   </channel>

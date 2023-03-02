@@ -3,7 +3,7 @@ title: "Rsync"
 date: 2021-10-28T11:22:47+08:00
 draft: true
 tags: ["Devops"]
-series: ["rsync"]
+series: ["Rsync"]
 categories: ["Base"]
 ---
 

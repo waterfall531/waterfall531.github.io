@@ -6,14 +6,25 @@
     <description>Recent content in devops on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Mon, 07 Mar 2022 17:30:54 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 13:48:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>230302writeup</title>
+      <link>https://waterfall531.github.io/posts/230302writeup/</link>
+      <pubDate>Thu, 02 Mar 2023 13:48:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/230302writeup/</guid>
+      <description>mysql对外开放 edit /etc/mysql/mysql.conf.d/mysqld.cnf 注释掉 #bind-address = 127.0.0.1
+service mysql restart
+Mysql User Login ALTER USER &#39;root&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;password&#39;; host 改 % flush privileges;更新權限 auth_socket 首先，这种验证方式不要求输入密码，即使输入了密码也不验证。这个特点让很多人觉得很不安全，实际仔细研究一下这种方式，发现还是相当安全的，因为它有另外两个限制； 只能用 UNIX 的 socket 方式登陆，这就保证了只能本地登陆，用户在使用这种登陆方式时已经通过了操作系统的安全验证； 操作系统的用户和 MySQL 数据库的用户名必须一致，例如你要登陆 MySQL 的 root 用户，必须用操作系统的 root 用户登陆。 </description>
+    </item>
+    
     <item>
       <title>Docker mysqldump</title>
       <link>https://waterfall531.github.io/posts/docker-mysqldump/</link>
       <pubDate>Mon, 07 Mar 2022 17:30:54 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/docker-mysqldump/</guid>
-      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;quot;[password]&amp;quot; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace  search latin1 replace to utf8 run  </description>
+      <description>script docker exec [mysql] mysqldump -u [root] -p&amp;#34;[password]&amp;#34; --default-character-set=latin1 [database] &amp;gt; bak.sql Replace search latin1 replace to utf8 run </description>
     </item>
     
     <item>
@@ -22,7 +33,7 @@
       <pubDate>Thu, 28 Oct 2021 11:22:47 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/rsync/</guid>
-      <description>Rsync  增量同步 rsync -avz --delete --progress &amp;quot;${SRC}&amp;quot; &amp;quot;/backup/$(hostname)&amp;quot; &amp;ndash;progress 會顯示有進行同步的檔案 &amp;ndash;delete 會刪除來源也刪除的檔案 -a  封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD   -v  verbose 模式，輸出比較詳細的訊息   -z  啟用壓縮   -r  遞迴   -t  preserve modification times 保留修改時間   -o  preserve owner   -p  preserve permissions   -g  preserve group   -l  copy symlinks as symlinks   -D  是&amp;quot;&amp;ndash;device &amp;ndash;specials&amp;quot;選項的組合，即也拷貝裝置檔案和特殊檔案。    </description>
+      <description>Rsync 增量同步 rsync -avz --delete --progress &amp;quot;${SRC}&amp;quot; &amp;quot;/backup/$(hostname)&amp;quot; &amp;ndash;progress 會顯示有進行同步的檔案 &amp;ndash;delete 會刪除來源也刪除的檔案 -a 封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD -v verbose 模式，輸出比較詳細的訊息 -z 啟用壓縮 -r 遞迴 -t preserve modification times 保留修改時間 -o preserve owner -p preserve permissions -g preserve group -l copy symlinks as symlinks -D 是&amp;quot;&amp;ndash;device &amp;ndash;specials&amp;quot;選項的組合，即也拷貝裝置檔案和特殊檔案。 </description>
     </item>
     
     <item>
@@ -31,8 +42,8 @@
       <pubDate>Mon, 25 Oct 2021 15:12:19 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/ha-failover/</guid>
-      <description>HAProxy  HA(High Availability) Load Balance 自動加密 聽 tcp socket，連 server，然後把 socket 接在一起讓雙向流通 可做 Http reverse-proxy (Http gateway)，自己作為代理 server，把接受到的 connection 傳到後端的 server。 SSL 終端，可支援 client-side 與 server-side 的 ssl/tls 當 tcp/http normalizer 更改 http 的 request 與 response 當 switch，決定 request 後送的目標 做 load balancer，為後端 server 做負載均衡 調節流量，設定 rate limit，或是根據內容調整流量  ref:link
-failover cluster  主次明顯 一個掛掉另一個馬上接手  docker swarm  Load Balance 可斷線後重連 可復原 可以設定主次  </description>
+      <description>HAProxy HA(High Availability) Load Balance 自動加密 聽 tcp socket，連 server，然後把 socket 接在一起讓雙向流通 可做 Http reverse-proxy (Http gateway)，自己作為代理 server，把接受到的 connection 傳到後端的 server。 SSL 終端，可支援 client-side 與 server-side 的 ssl/tls 當 tcp/http normalizer 更改 http 的 request 與 response 當 switch，決定 request 後送的目標 做 load balancer，為後端 server 做負載均衡 調節流量，設定 rate limit，或是根據內容調整流量 ref:link
+failover cluster 主次明顯 一個掛掉另一個馬上接手 docker swarm Load Balance 可斷線後重連 可復原 可以設定主次 </description>
     </item>
     
     <item>
@@ -41,7 +52,7 @@ failover cluster  主次明顯 一個掛掉另一個馬上接手  docker swarm  
       <pubDate>Wed, 29 Sep 2021 14:19:49 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/linux-command/</guid>
-      <description>check  top htop df -h free -h pm2 start index.js --node-args=&amp;quot;--max-old-space-size=1024&amp;quot;  </description>
+      <description>check top htop df -h free -h pm2 start index.js --node-args=&amp;quot;--max-old-space-size=1024&amp;quot; </description>
     </item>
     
     <item>
@@ -50,7 +61,7 @@ failover cluster  主次明顯 一個掛掉另一個馬上接手  docker swarm  
       <pubDate>Mon, 02 Aug 2021 13:46:09 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/canary/</guid>
-      <description>發布  金絲雀(灰度) 滾動 藍綠  金絲雀  有n台 先更新一台 確定沒問題 直到更新完n台  滾動  有n台 先更新一台 直到更新完n台  藍綠  有2n台 先移出n台 更新n台 切換到新的n台  金絲雀+藍綠  有2n台 n台更新 陸續切換到新版本  功能開關  有n台 更新 用開關切換  A/B測試  有2n台 n台Ａ n台b  </description>
+      <description>發布 金絲雀(灰度) 滾動 藍綠 金絲雀 有n台 先更新一台 確定沒問題 直到更新完n台 滾動 有n台 先更新一台 直到更新完n台 藍綠 有2n台 先移出n台 更新n台 切換到新的n台 金絲雀+藍綠 有2n台 n台更新 陸續切換到新版本 功能開關 有n台 更新 用開關切換 A/B測試 有2n台 n台Ａ n台b </description>
     </item>
     
     <item>
@@ -90,11 +101,12 @@ http { ... geoip2 /etc/maxmind-country.mmdb { auto_reload 5m; $geoip2_metadata_c
       <pubDate>Wed, 09 Jun 2021 10:17:51 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/dev-redis/</guid>
-      <description>install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup  RDB  依據時間/key值變化數量去做快照
-AOF  依據每單位時間做的log
-優點  RDB 還原快 數據量小 AOF 時間節點多
-淘汰   有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
-  無設定時間 *. 依據使用量 *.</description>
+      <description>install redis yum install wget gcc wget http://download.redis.io/releases/redis-5.0.3.tar.gz tar -zxvf redis-5.0.3.tar.gz cd redis-5.0.3 make install #test echo $? setup mkdir -p /usr/local/redis cp redis-benchmark redis-check-aof redis-check-rdb redis-cli redis -sentinel redis-server /usr/local/redis/ cp /root/redis-5.0.3/redis.conf /usr/local/redis/ cp /root/redis-5.0.3/sentinel.conf /usr/local/redis/ #test redis-server /usr/local/redis/redis.conf backup RDB 依據時間/key值變化數量去做快照
+AOF 依據每單位時間做的log
+優點 RDB 還原快 數據量小 AOF 時間節點多
+淘汰 有設定時間 *. 依據使用量 *. 靠近過期時間 *. 隨機
+無設定時間 *. 依據使用量 *. 隨機 *. 不刪除
+主從架構 start server 0 掛掉 搜尋最快的 推舉出新master 其他的改地址</description>
     </item>
     
     <item>
@@ -103,7 +115,7 @@ AOF  依據每單位時間做的log
       <pubDate>Tue, 08 Jun 2021 17:52:54 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/dev-ssh/</guid>
-      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no </description>
+      <description>install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &amp;#39;cat &amp;gt;&amp;gt; .ssh/authorized_keys&amp;#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no </description>
     </item>
     
     <item>

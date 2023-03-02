@@ -1,3 +1,12 @@
+---
+title: "220324writeup"
+date: 2022-03-24T13:48:25+08:00
+draft: true
+tags: ["cryptocurrency"]
+series: ["Solidity"]
+categories: ["init"]
+---
+
 # 合約
 
 1. memory，storage和calldata

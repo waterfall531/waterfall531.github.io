@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>rsync on Randy&#39;s Blog</title>
+    <title>Rsync on Randy&#39;s Blog</title>
     <link>https://waterfall531.github.io/series/rsync/</link>
-    <description>Recent content in rsync on Randy&#39;s Blog</description>
+    <description>Recent content in Rsync on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
     <lastBuildDate>Thu, 28 Oct 2021 11:22:47 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/rsync/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Thu, 28 Oct 2021 11:22:47 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/rsync/</guid>
-      <description>Rsync  增量同步 rsync -avz --delete --progress &amp;quot;${SRC}&amp;quot; &amp;quot;/backup/$(hostname)&amp;quot; &amp;ndash;progress 會顯示有進行同步的檔案 &amp;ndash;delete 會刪除來源也刪除的檔案 -a  封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD   -v  verbose 模式，輸出比較詳細的訊息   -z  啟用壓縮   -r  遞迴   -t  preserve modification times 保留修改時間   -o  preserve owner   -p  preserve permissions   -g  preserve group   -l  copy symlinks as symlinks   -D  是&amp;quot;&amp;ndash;device &amp;ndash;specials&amp;quot;選項的組合，即也拷貝裝置檔案和特殊檔案。    </description>
+      <description>Rsync 增量同步 rsync -avz --delete --progress &amp;quot;${SRC}&amp;quot; &amp;quot;/backup/$(hostname)&amp;quot; &amp;ndash;progress 會顯示有進行同步的檔案 &amp;ndash;delete 會刪除來源也刪除的檔案 -a 封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD -v verbose 模式，輸出比較詳細的訊息 -z 啟用壓縮 -r 遞迴 -t preserve modification times 保留修改時間 -o preserve owner -p preserve permissions -g preserve group -l copy symlinks as symlinks -D 是&amp;quot;&amp;ndash;device &amp;ndash;specials&amp;quot;選項的組合，即也拷貝裝置檔案和特殊檔案。 </description>
     </item>
     
   </channel>

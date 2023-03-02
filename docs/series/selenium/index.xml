@@ -13,14 +13,16 @@
       <pubDate>Fri, 07 May 2021 00:49:47 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/posts/selenium/</guid>
-      <description>Selenium   有多版本
- Python NodeJs Java Php    Selenium 需要 Browser 支援
- Chrome Firefox    而中間需要 Driver 控制
- Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
-  Linux
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
- 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
- Mac/Linux  .</description>
+      <description>Selenium 有多版本
+Python NodeJs Java Php Selenium 需要 Browser 支援
+Chrome Firefox 而中間需要 Driver 控制
+Chrome Linux Mac Mac_M1 Windows Firefox Geckodriver 而執行端需要 Chrome / Firefox
+Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm Mac
+我相信你有裝Chrome 執行Selenium 前必須啟動 Driver
+Mac/Linux ./chromedriver_mac &amp;ndash;port=4444 執行Selenium
+若在Linux/Docker環境下須先執行變數定義
+&amp;lsquo;&amp;ndash;disable-dev-shm-usage&amp;rsquo; docker上必備 &amp;lsquo;&amp;ndash;headless&amp;rsquo; 無畫面系統下必備 &amp;lsquo;blink-settings=imagesEnabled=false&amp;rsquo; &amp;lsquo;&amp;ndash;disable-gpu&amp;rsquo; &amp;lsquo;&amp;ndash;no-sandbox&amp;rsquo; 無畫面系統下必備 </description>
     </item>
     
   </channel>
