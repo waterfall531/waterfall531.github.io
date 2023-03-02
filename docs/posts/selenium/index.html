@@ -4,7 +4,7 @@
     <title>Selenium / ChromeDrive / PHP base / Html CSS selector // Randy&#39;s Blog</title>
     <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.111.0">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Randy" />
     <meta name="description" content="" />
@@ -13,28 +13,32 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Selenium / ChromeDrive / PHP base / Html CSS selector"/>
-<meta name="twitter:description" content="Selenium   有多版本
- Python NodeJs Java Php    Selenium 需要 Browser 支援
- Chrome Firefox    而中間需要 Driver 控制
- Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
-  Linux
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
- 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
- Mac/Linux  ."/>
+<meta name="twitter:description" content="Selenium 有多版本
+Python NodeJs Java Php Selenium 需要 Browser 支援
+Chrome Firefox 而中間需要 Driver 控制
+Chrome Linux Mac Mac_M1 Windows Firefox Geckodriver 而執行端需要 Chrome / Firefox
+Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm Mac
+我相信你有裝Chrome 執行Selenium 前必須啟動 Driver
+Mac/Linux ./chromedriver_mac &ndash;port=4444 執行Selenium
+若在Linux/Docker環境下須先執行變數定義
+&lsquo;&ndash;disable-dev-shm-usage&rsquo; docker上必備 &lsquo;&ndash;headless&rsquo; 無畫面系統下必備 &lsquo;blink-settings=imagesEnabled=false&rsquo; &lsquo;&ndash;disable-gpu&rsquo; &lsquo;&ndash;no-sandbox&rsquo; 無畫面系統下必備 "/>
 
     <meta property="og:title" content="Selenium / ChromeDrive / PHP base / Html CSS selector" />
-<meta property="og:description" content="Selenium   有多版本
- Python NodeJs Java Php    Selenium 需要 Browser 支援
- Chrome Firefox    而中間需要 Driver 控制
- Chrome  Linux Mac Mac_M1 Windows   Firefox  Geckodriver      而執行端需要 Chrome / Firefox
-  Linux
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm   Mac
- 我相信你有裝Chrome      執行Selenium 前必須啟動 Driver
- Mac/Linux  ." />
+<meta property="og:description" content="Selenium 有多版本
+Python NodeJs Java Php Selenium 需要 Browser 支援
+Chrome Firefox 而中間需要 Driver 控制
+Chrome Linux Mac Mac_M1 Windows Firefox Geckodriver 而執行端需要 Chrome / Firefox
+Linux
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm sudo yum install ./google-chrome-stable_current_*.rpm Mac
+我相信你有裝Chrome 執行Selenium 前必須啟動 Driver
+Mac/Linux ./chromedriver_mac &ndash;port=4444 執行Selenium
+若在Linux/Docker環境下須先執行變數定義
+&lsquo;&ndash;disable-dev-shm-usage&rsquo; docker上必備 &lsquo;&ndash;headless&rsquo; 無畫面系統下必備 &lsquo;blink-settings=imagesEnabled=false&rsquo; &lsquo;&ndash;disable-gpu&rsquo; &lsquo;&ndash;no-sandbox&rsquo; 無畫面系統下必備 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://waterfall531.github.io/posts/selenium/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-05-07T00:49:47&#43;08:00" />
-<meta property="article:modified_time" content="2021-05-07T00:49:47&#43;08:00" />
+<meta property="article:published_time" content="2021-05-07T00:49:47+08:00" />
+<meta property="article:modified_time" content="2021-05-07T00:49:47+08:00" />
 
 
 
@@ -65,43 +69,35 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm 
     </header>
     <main class="app-container">
       
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">Selenium / ChromeDrive / PHP base / Html CSS selector</h1>
-    <div class="post-meta">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Selenium / ChromeDrive / PHP base / Html CSS selector</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg> 2021-05-07
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+</svg>
+          May 7, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
 </svg>
-        <a class="tag" href="https://waterfall531.github.io/tags/crawler/">crawler</a>
+              <a class="tag" href="https://waterfall531.github.io/tags/crawler/">crawler</a>
+        </div>
       </div>
-    </div>
-    
-    <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        Array.from(document.getElementsByClassName("language-mermaid")).forEach(
-          (el) => {
-            el.parentElement.outerHTML = `<div class="mermaid" align="center">${el.innerText}</div>`;
-          }
-        );
-      });
-    </script>
-  </header>
-  <div class="post-content"><h2 id="selenium">Selenium</h2>
+    </header>
+    <div class="post-content">
+      <h2 id="selenium">Selenium</h2>
 <ol>
 <li>
 <p>有多版本</p>
@@ -142,9 +138,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm 
 <ol>
 <li>
 <p>Linux</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
-sudo yum install ./google-chrome-stable_current_*.rpm
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>wget https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+</span></span><span style="display:flex;"><span>sudo yum install ./google-chrome-stable_current_*.rpm
+</span></span></code></pre></div></li>
 <li>
 <p>Mac</p>
 <ol>
@@ -189,9 +185,12 @@ sudo yum install ./google-chrome-stable_current_*.rpm
 </ol>
 </li>
 </ol>
-</div>
-  <div class="post-footer"></div>
-</article>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
 
     </main>
   </body>

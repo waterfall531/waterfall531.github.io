@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>220317writeup // Randy&#39;s Blog</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Randy" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="220317writeup"/>
+<meta name="twitter:description" content="ZK(零知識證明) Tornado 匿名傳送代幣 Lending compoud 借貸模型 $$ 兌換率 = \frac{未被借走的數量&#43;應償還的數量-保留金額}{總額} $$ 使用率 ＝ $$ \frac{總借款}{總金額&#43;傯借款}$$ 借款年利率 = 基礎利率 &#43; (使用率 x 加給利率) 放貸年利率 ≈ 借款年利率 x 使用率 x (1-保留利率) 借款越多 / 未被借走數量越多利息越高 雖然使用者年利率會是以每小時計價但存入DAI 後拿到的代幣cDAI 卻不一定能換取更多的DAI回來 DAI to cDAI =&gt; 1:40 放貸一段時間 DAI to cDAI =&gt; 1:50 等同於憑空消失 1/4的本金 Maker DAO，穩定幣模式，類比當舖，只貸不借 Compound，流動池交易模式，類比銀行，隨存隨取 Dharma，P2P 撮合模式，類 P2P 貸款，無法隨借隨還 Aave，閃貸，無抵押貸款，轉為套利而準備。 Deri dydx perp Oracle chainLink MEV uniswap 錢包 status 加速 react seal DAO 分散式自治組織 MK 合約審計 提前計算合約失敗後能賺多少錢 房地產碎片化投資 Lofty."/>
+
+    <meta property="og:title" content="220317writeup" />
+<meta property="og:description" content="ZK(零知識證明) Tornado 匿名傳送代幣 Lending compoud 借貸模型 $$ 兌換率 = \frac{未被借走的數量&#43;應償還的數量-保留金額}{總額} $$ 使用率 ＝ $$ \frac{總借款}{總金額&#43;傯借款}$$ 借款年利率 = 基礎利率 &#43; (使用率 x 加給利率) 放貸年利率 ≈ 借款年利率 x 使用率 x (1-保留利率) 借款越多 / 未被借走數量越多利息越高 雖然使用者年利率會是以每小時計價但存入DAI 後拿到的代幣cDAI 卻不一定能換取更多的DAI回來 DAI to cDAI =&gt; 1:40 放貸一段時間 DAI to cDAI =&gt; 1:50 等同於憑空消失 1/4的本金 Maker DAO，穩定幣模式，類比當舖，只貸不借 Compound，流動池交易模式，類比銀行，隨存隨取 Dharma，P2P 撮合模式，類 P2P 貸款，無法隨借隨還 Aave，閃貸，無抵押貸款，轉為套利而準備。 Deri dydx perp Oracle chainLink MEV uniswap 錢包 status 加速 react seal DAO 分散式自治組織 MK 合約審計 提前計算合約失敗後能賺多少錢 房地產碎片化投資 Lofty." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/difi/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-17T13:48:25+08:00" />
+<meta property="article:modified_time" content="2022-03-17T13:48:25+08:00" />
+
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.png" alt="Randy" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein 
+ 頭貼為貓貓蟲咖波</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/waterfall531" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">220317writeup</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 17, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://waterfall531.github.io/tags/cryptocurrency/">cryptocurrency</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <ol>
+<li>ZK(零知識證明)
+<ol>
+<li>Tornado
+<ol>
+<li>匿名傳送代幣</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Lending
+<ol>
+<li>compoud
+<ol>
+<li>借貸模型
+<ol>
+<li>$$ 兌換率 = \frac{未被借走的數量+應償還的數量-保留金額}{總額} $$</li>
+<li>使用率 ＝ $$ \frac{總借款}{總金額+傯借款}$$</li>
+<li>借款年利率 = 基礎利率 + (使用率 x 加給利率)
+<ol>
+<li><img src="https://miro.medium.com/max/1400/1*Cra1_66PfGVNPBWdk47Yrw.png" alt="img"></li>
+</ol>
+</li>
+<li>放貸年利率 ≈ 借款年利率 x 使用率 x (1-保留利率)</li>
+<li>借款越多 / 未被借走數量越多利息越高</li>
+</ol>
+</li>
+<li>雖然使用者年利率會是以每小時計價但存入DAI 後拿到的代幣cDAI 卻不一定能換取更多的DAI回來
+<ol>
+<li>DAI to cDAI =&gt; 1:40</li>
+<li>放貸一段時間</li>
+<li>DAI to cDAI =&gt; 1:50</li>
+<li>等同於憑空消失 1/4的本金</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Maker DAO，穩定幣模式，類比當舖，只貸不借</li>
+<li>Compound，流動池交易模式，類比銀行，隨存隨取</li>
+<li>Dharma，P2P 撮合模式，類 P2P 貸款，無法隨借隨還</li>
+<li>Aave，閃貸，無抵押貸款，轉為套利而準備。</li>
+</ol>
+</li>
+<li>Deri
+<ol>
+<li>dydx</li>
+<li>perp</li>
+</ol>
+</li>
+<li>Oracle
+<ol>
+<li>chainLink</li>
+</ol>
+</li>
+<li>MEV</li>
+<li>uniswap
+<ol>
+<li>錢包</li>
+<li>status</li>
+<li>加速</li>
+<li>react</li>
+</ol>
+</li>
+<li>seal</li>
+<li>DAO
+<ol>
+<li>分散式自治組織</li>
+<li>MK</li>
+<li>合約審計
+<ol>
+<li>提前計算合約失敗後能賺多少錢</li>
+</ol>
+</li>
+</ol>
+</li>
+<li></li>
+</ol>
+<h2 id="房地產碎片化投資">房地產碎片化投資</h2>
+<h3 id="loftyai">Lofty.ai</h3>
+<h3 id="realtco">realt.co</h3>
+<h3 id="erc1155--erc721">ERC1155 / ERC721</h3>
+<h4 id="polygol--erc--trc">Polygol / ERC / TRC</h4>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

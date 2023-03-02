@@ -4,7 +4,7 @@
     <title>Dev Ssh // Randy&#39;s Blog</title>
     <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.111.0">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Randy" />
     <meta name="description" content="" />
@@ -19,8 +19,8 @@
 <meta property="og:description" content="install yum install openssh openssh-server yum install policycoreutils-python yum install vim-enhanced -y yum install net-tools conf sshd vim /etc/ssh/sshd_config Port 2222 PermitRootLogin yes semanage port -a -t ssh_port_t -p tcp 2222 systemctl restart sshd.service firewall firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp firewall-cmd —-reload SSH Key mkdir -p .ssh; exit; cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &gt;&gt; .ssh/authorized_keys&#39; ssh -p 2222 root@192.168.183.50 chmod 700 .ssh; chmod 640 .ssh/authorized_keys vim /etc/ssh/sshd_config PermitRootLogin no " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://waterfall531.github.io/posts/dev-ssh/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-08T17:52:54&#43;08:00" />
-<meta property="article:modified_time" content="2021-06-08T17:52:54&#43;08:00" />
+<meta property="article:published_time" content="2021-06-08T17:52:54+08:00" />
+<meta property="article:modified_time" content="2021-06-08T17:52:54+08:00" />
 
 
 
@@ -51,61 +51,53 @@
     </header>
     <main class="app-container">
       
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">Dev Ssh</h1>
-    <div class="post-meta">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Dev Ssh</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg> 2021-06-08
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+</svg>
+          Jun 8, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
 </svg>
-        <a class="tag" href="https://waterfall531.github.io/tags/devops/">devops</a>
+              <a class="tag" href="https://waterfall531.github.io/tags/devops/">devops</a>
+        </div>
       </div>
-    </div>
-    
-    <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        Array.from(document.getElementsByClassName("language-mermaid")).forEach(
-          (el) => {
-            el.parentElement.outerHTML = `<div class="mermaid" align="center">${el.innerText}</div>`;
-          }
-        );
-      });
-    </script>
-  </header>
-  <div class="post-content"><h2 id="install">install</h2>
-<pre><code>yum install openssh openssh-server
+    </header>
+    <div class="post-content">
+      <h2 id="install">install</h2>
+<pre tabindex="0"><code>yum install openssh openssh-server
 yum install policycoreutils-python
 yum install vim-enhanced -y
 yum install net-tools
 </code></pre><h2 id="conf-sshd">conf sshd</h2>
-<pre><code>vim /etc/ssh/sshd_config
-</code></pre><pre><code>Port 2222
+<pre tabindex="0"><code>vim /etc/ssh/sshd_config
+</code></pre><pre tabindex="0"><code>Port 2222
 PermitRootLogin yes
-</code></pre><pre><code>semanage port -a -t ssh_port_t -p tcp 2222
+</code></pre><pre tabindex="0"><code>semanage port -a -t ssh_port_t -p tcp 2222
 systemctl restart sshd.service
 </code></pre><h2 id="firewall">firewall</h2>
-<pre><code>firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp
+<pre tabindex="0"><code>firewall-cmd -—permanent —-zone=public —-add-port=2222/tcp
 firewall-cmd —-reload
 </code></pre><h2 id="ssh-key">SSH Key</h2>
-<pre><code>mkdir -p .ssh;
+<pre tabindex="0"><code>mkdir -p .ssh;
 exit;
 
-cat .ssh/id_rsa.pub | ssh root@192.168.183.50 'cat &gt;&gt; .ssh/authorized_keys'
+cat .ssh/id_rsa.pub | ssh root@192.168.183.50 &#39;cat &gt;&gt; .ssh/authorized_keys&#39;
 
 ssh -p 2222 root@192.168.183.50
 chmod 700 .ssh;
@@ -113,9 +105,12 @@ chmod 640 .ssh/authorized_keys
 
 vim /etc/ssh/sshd_config
 PermitRootLogin no
-</code></pre></div>
-  <div class="post-footer"></div>
-</article>
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
 
     </main>
   </body>

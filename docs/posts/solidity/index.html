@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>220324writeup // Randy&#39;s Blog</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Randy" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="220324writeup"/>
+<meta name="twitter:description" content="合約 memory，storage和calldata link uint unsing Integer msg.sender 合約發起人 function function name (string private _name) private view returns (uint){} private 要加前置底線 Private 就是合約內才能call 但後面加上view 就變成可以看 Interface 不需要function內容 可以call 外部合約 Returns 可以知道回傳的values 使用時init 合約 KittyInterface(kittyAddress); Save Gas Gas很貴 合約內操作也都需要錢 引申出view function view 只能看資料like etherscan 但不能更動數據 所以可以撰寫出看數據的function 同理更動數據皆需要花錢才能改變 升級 數據變化 外觀變化 獲得裝備 Function type private 合約內調用 internal 除合約外還有被繼承的項目 external 只能在合約外 public 任何地方 view 運行數據但就是只能看 通过运行函数，不会保存/改变数据 不花費gas pure 函数不仅不会向区块链保存任何数据 而且也不会从区块链中读取任何数据 不花費gas msg.sender 指發出合約請求的人 zombieToOwner[_tokenId] == msg."/>
+
+    <meta property="og:title" content="220324writeup" />
+<meta property="og:description" content="合約 memory，storage和calldata link uint unsing Integer msg.sender 合約發起人 function function name (string private _name) private view returns (uint){} private 要加前置底線 Private 就是合約內才能call 但後面加上view 就變成可以看 Interface 不需要function內容 可以call 外部合約 Returns 可以知道回傳的values 使用時init 合約 KittyInterface(kittyAddress); Save Gas Gas很貴 合約內操作也都需要錢 引申出view function view 只能看資料like etherscan 但不能更動數據 所以可以撰寫出看數據的function 同理更動數據皆需要花錢才能改變 升級 數據變化 外觀變化 獲得裝備 Function type private 合約內調用 internal 除合約外還有被繼承的項目 external 只能在合約外 public 任何地方 view 運行數據但就是只能看 通过运行函数，不会保存/改变数据 不花費gas pure 函数不仅不会向区块链保存任何数据 而且也不会从区块链中读取任何数据 不花費gas msg.sender 指發出合約請求的人 zombieToOwner[_tokenId] == msg." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/solidity/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-03-24T13:48:25+08:00" />
+<meta property="article:modified_time" content="2022-03-24T13:48:25+08:00" />
+<meta property="og:see_also" content="https://waterfall531.github.io/posts/220321/" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.png" alt="Randy" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein 
+ 頭貼為貓貓蟲咖波</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/waterfall531" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">220324writeup</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 24, 2022
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://waterfall531.github.io/tags/cryptocurrency/">cryptocurrency</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="合約">合約</h1>
+<ol>
+<li>memory，storage和calldata
+<ol>
+<li><a href="https://www.cnblogs.com/wanghui-garcia/p/9587937.html">link</a></li>
+</ol>
+</li>
+<li>uint
+<ol>
+<li>unsing Integer</li>
+</ol>
+</li>
+<li>msg.sender
+<ol>
+<li>合約發起人</li>
+</ol>
+</li>
+<li>function <em><em>function name</em></em> (string private _name) private view returns (uint){}
+<ol>
+<li>private 要加前置底線</li>
+<li>Private 就是合約內才能call 但後面加上view 就變成可以看</li>
+</ol>
+</li>
+<li>Interface
+<ol>
+<li>不需要function內容</li>
+<li>可以call 外部合約</li>
+<li>Returns 可以知道回傳的values</li>
+<li>使用時init 合約
+<ol>
+<li>KittyInterface(kittyAddress);</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>Save Gas
+<ol>
+<li>Gas很貴</li>
+<li>合約內操作也都需要錢</li>
+<li>引申出view function</li>
+<li>view 只能看資料like <a href="https://etherscan.io/">etherscan</a></li>
+<li>但不能更動數據</li>
+<li>所以可以撰寫出看數據的function</li>
+</ol>
+</li>
+<li>同理更動數據皆需要花錢才能改變
+<ol>
+<li>升級</li>
+<li>數據變化</li>
+<li>外觀變化</li>
+<li>獲得裝備</li>
+</ol>
+</li>
+<li>Function type
+<ol>
+<li>private
+<ol>
+<li>合約內調用</li>
+</ol>
+</li>
+<li>internal
+<ol>
+<li>除合約外還有被繼承的項目</li>
+</ol>
+</li>
+<li>external
+<ol>
+<li>只能在合約外</li>
+</ol>
+</li>
+<li>public
+<ol>
+<li>任何地方</li>
+</ol>
+</li>
+<li>view
+<ol>
+<li>運行數據但就是只能看</li>
+<li>通过运行函数，不会保存/改变数据</li>
+<li>不花費gas</li>
+</ol>
+</li>
+<li>pure
+<ol>
+<li>函数不仅不会向区块链保存任何数据</li>
+<li>而且也不会从区块链中读取任何数据</li>
+<li>不花費gas</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>msg.sender
+<ol>
+<li>指發出合約請求的人</li>
+<li><code>zombieToOwner[_tokenId] == msg.sender || zombieApprovals[_tokenId] == msg.sender</code>
+<ol>
+<li>在這場景下
+<ol>
+<li>zombieToOwner 是指 原主人</li>
+<li>zombieApprovals 指給予權限之人</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>之後在erc721.sol內還有驗證對於from的require</li>
+</ol>
+</li>
+<li>oracle的必要性
+<ol>
+<li>合約內部無法獲取外部資訊</li>
+<li>若要交易eth / usd交易對</li>
+<li>那是必須要實時報價</li>
+<li>而外部資訊會讓交易陷入報價錯誤的危機</li>
+</ol>
+</li>
+<li>remix
+<ol>
+<li>Solidity 版本</li>
+<li></li>
+</ol>
+</li>
+</ol>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

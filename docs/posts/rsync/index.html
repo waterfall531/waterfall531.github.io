@@ -4,7 +4,7 @@
     <title>Rsync // Randy&#39;s Blog</title>
     <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
-    <meta name="generator" content="Hugo 0.83.1" />
+    <meta name="generator" content="Hugo 0.111.0">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Randy" />
     <meta name="description" content="" />
@@ -13,14 +13,14 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rsync"/>
-<meta name="twitter:description" content="Rsync  增量同步 rsync -avz --delete --progress &quot;${SRC}&quot; &quot;/backup/$(hostname)&quot; &ndash;progress 會顯示有進行同步的檔案 &ndash;delete 會刪除來源也刪除的檔案 -a  封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD   -v  verbose 模式，輸出比較詳細的訊息   -z  啟用壓縮   -r  遞迴   -t  preserve modification times 保留修改時間   -o  preserve owner   -p  preserve permissions   -g  preserve group   -l  copy symlinks as symlinks   -D  是&quot;&ndash;device &ndash;specials&quot;選項的組合，即也拷貝裝置檔案和特殊檔案。    "/>
+<meta name="twitter:description" content="Rsync 增量同步 rsync -avz --delete --progress &quot;${SRC}&quot; &quot;/backup/$(hostname)&quot; &ndash;progress 會顯示有進行同步的檔案 &ndash;delete 會刪除來源也刪除的檔案 -a 封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD -v verbose 模式，輸出比較詳細的訊息 -z 啟用壓縮 -r 遞迴 -t preserve modification times 保留修改時間 -o preserve owner -p preserve permissions -g preserve group -l copy symlinks as symlinks -D 是&quot;&ndash;device &ndash;specials&quot;選項的組合，即也拷貝裝置檔案和特殊檔案。 "/>
 
     <meta property="og:title" content="Rsync" />
-<meta property="og:description" content="Rsync  增量同步 rsync -avz --delete --progress &quot;${SRC}&quot; &quot;/backup/$(hostname)&quot; &ndash;progress 會顯示有進行同步的檔案 &ndash;delete 會刪除來源也刪除的檔案 -a  封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD   -v  verbose 模式，輸出比較詳細的訊息   -z  啟用壓縮   -r  遞迴   -t  preserve modification times 保留修改時間   -o  preserve owner   -p  preserve permissions   -g  preserve group   -l  copy symlinks as symlinks   -D  是&quot;&ndash;device &ndash;specials&quot;選項的組合，即也拷貝裝置檔案和特殊檔案。    " />
+<meta property="og:description" content="Rsync 增量同步 rsync -avz --delete --progress &quot;${SRC}&quot; &quot;/backup/$(hostname)&quot; &ndash;progress 會顯示有進行同步的檔案 &ndash;delete 會刪除來源也刪除的檔案 -a 封裝備份模式 遞迴備份所有子目錄下的目錄與檔案，保留連結檔、檔案的擁有者、群組、權限以及時間戳記 -rlptgoD -v verbose 模式，輸出比較詳細的訊息 -z 啟用壓縮 -r 遞迴 -t preserve modification times 保留修改時間 -o preserve owner -p preserve permissions -g preserve group -l copy symlinks as symlinks -D 是&quot;&ndash;device &ndash;specials&quot;選項的組合，即也拷貝裝置檔案和特殊檔案。 " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://waterfall531.github.io/posts/rsync/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-10-28T11:22:47&#43;08:00" />
-<meta property="article:modified_time" content="2021-10-28T11:22:47&#43;08:00" />
+<meta property="article:published_time" content="2021-10-28T11:22:47+08:00" />
+<meta property="article:modified_time" content="2021-10-28T11:22:47+08:00" />
 
 
 
@@ -51,43 +51,35 @@
     </header>
     <main class="app-container">
       
-<article class="post">
-  <header class="post-header">
-    <h1 class="post-title">Rsync</h1>
-    <div class="post-meta">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Rsync</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
-</svg> 2021-10-28
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+</svg>
+          Oct 28, 2021
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
   <title>clock</title>
   <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
-</svg> 1 min read
-      </div>
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
   <title>tag</title>
   <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
 </svg>
-        <a class="tag" href="https://waterfall531.github.io/tags/devops/">devops</a>
+              <a class="tag" href="https://waterfall531.github.io/tags/devops/">devops</a>
+        </div>
       </div>
-    </div>
-    
-    <script src="https://cdn.bootcss.com/mermaid/8.0.0-rc.8/mermaid.min.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        Array.from(document.getElementsByClassName("language-mermaid")).forEach(
-          (el) => {
-            el.parentElement.outerHTML = `<div class="mermaid" align="center">${el.innerText}</div>`;
-          }
-        );
-      });
-    </script>
-  </header>
-  <div class="post-content"><h1 id="rsync">Rsync</h1>
+    </header>
+    <div class="post-content">
+      <h1 id="rsync">Rsync</h1>
 <ol>
 <li>增量同步</li>
 <li><code>rsync -avz --delete --progress &quot;${SRC}&quot; &quot;/backup/$(hostname)&quot;</code></li>
@@ -147,9 +139,12 @@
 </ol>
 </li>
 </ol>
-</div>
-  <div class="post-footer"></div>
-</article>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
 
     </main>
   </body>
