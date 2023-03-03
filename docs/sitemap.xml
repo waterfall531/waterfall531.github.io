@@ -2,10 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://waterfall531.github.io/posts/230302writeup/</loc>
-    <lastmod>2023-03-02T13:48:25+08:00</lastmod>
+    <loc>https://waterfall531.github.io/categories/altercolumn/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/categories/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/mysql/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/mysqlx/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/optimization/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/series/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/tags/</loc>
+    <lastmod>2023-03-03T15:50:44+08:00</lastmod>
+  </url><url>
+    <loc>https://waterfall531.github.io/posts/230302writeup/</loc>
     <lastmod>2023-03-02T13:48:25+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/tags/devops/</loc>
@@ -15,18 +39,6 @@
     <lastmod>2023-03-02T13:48:25+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/series/mariadb/</loc>
-    <lastmod>2023-03-02T13:48:25+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/posts/</loc>
-    <lastmod>2023-03-02T13:48:25+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/</loc>
-    <lastmod>2023-03-02T13:48:25+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/series/</loc>
-    <lastmod>2023-03-02T13:48:25+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/tags/</loc>
     <lastmod>2023-03-02T13:48:25+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/solidity/</loc>
@@ -90,9 +102,6 @@
     <lastmod>2021-09-23T17:50:18+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/series/leetcode/</loc>
-    <lastmod>2021-09-23T17:50:18+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/tags/mysql/</loc>
     <lastmod>2021-09-23T17:50:18+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/series/base/</loc>
@@ -242,13 +251,7 @@
     <loc>https://waterfall531.github.io/posts/leetcode-1480/</loc>
     <lastmod>2020-09-01T16:36:33+08:00</lastmod>
   </url><url>
-    <loc>https://waterfall531.github.io/categories/altercolumn/</loc>
-    <lastmod>2020-08-18T17:16:02+08:00</lastmod>
-  </url><url>
     <loc>https://waterfall531.github.io/posts/mysql-alter-column/</loc>
-    <lastmod>2020-08-18T17:16:02+08:00</lastmod>
-  </url><url>
-    <loc>https://waterfall531.github.io/series/optimization/</loc>
     <lastmod>2020-08-18T17:16:02+08:00</lastmod>
   </url><url>
     <loc>https://waterfall531.github.io/posts/hugo-github/</loc>

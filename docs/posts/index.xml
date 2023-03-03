@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 02 Mar 2023 13:48:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2023 15:50:44 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mysqlx</title>
+      <link>https://waterfall531.github.io/posts/mysqlx/</link>
+      <pubDate>Fri, 03 Mar 2023 15:50:44 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/mysqlx/</guid>
+      <description>Mysql Json Import 想以json格式匯入資料到mysql
+Setup 預設應該是開啟的可以先藉由show pluginssql語句了解有沒有開啟mysqlx 可以先安裝mysqlsh 詳情看ref_mysqlsh install 若沒有開啟可執行mysqlsh -u user -h localhost --classic --dba enableXProtocol 若無法連線可以嘗試 看port有沒有通telnet localhost 33060 ufw(防火牆)有沒有擋 select @@mysqlx_port 看port開在哪 檢驗 mysqlx 有沒有綁host /etc/mysql/mysql.conf.d/mysqld.cnf mysqlsh user@localhost:33060/database --import file.json table 成功後發現只能匯入field type 為json的一欄tableQQ ref mysql setting up mysqlsh install mysqlsh port mysqlsh port2 json data error </description>
+    </item>
+    
     <item>
       <title>230302writeup</title>
       <link>https://waterfall531.github.io/posts/230302writeup/</link>

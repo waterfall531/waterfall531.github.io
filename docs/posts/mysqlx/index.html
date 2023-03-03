@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-tw">
+  <head>
+    <title>Mysqlx // Randy&#39;s Blog</title>
+    <link rel="shortcut icon" href="favicon.png" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Randy" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://waterfall531.github.io/css/main.min.4a7ec8660f9a44b08c4da97c5f2e31b1192df1d4d0322e65c0dbbc6ecb1b863f.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mysqlx"/>
+<meta name="twitter:description" content="Mysql Json Import 想以json格式匯入資料到mysql
+Setup 預設應該是開啟的可以先藉由show pluginssql語句了解有沒有開啟mysqlx 可以先安裝mysqlsh 詳情看ref_mysqlsh install 若沒有開啟可執行mysqlsh -u user -h localhost --classic --dba enableXProtocol 若無法連線可以嘗試 看port有沒有通telnet localhost 33060 ufw(防火牆)有沒有擋 select @@mysqlx_port 看port開在哪 檢驗 mysqlx 有沒有綁host /etc/mysql/mysql.conf.d/mysqld.cnf mysqlsh user@localhost:33060/database --import file.json table 成功後發現只能匯入field type 為json的一欄tableQQ ref mysql setting up mysqlsh install mysqlsh port mysqlsh port2 json data error "/>
+
+    <meta property="og:title" content="Mysqlx" />
+<meta property="og:description" content="Mysql Json Import 想以json格式匯入資料到mysql
+Setup 預設應該是開啟的可以先藉由show pluginssql語句了解有沒有開啟mysqlx 可以先安裝mysqlsh 詳情看ref_mysqlsh install 若沒有開啟可執行mysqlsh -u user -h localhost --classic --dba enableXProtocol 若無法連線可以嘗試 看port有沒有通telnet localhost 33060 ufw(防火牆)有沒有擋 select @@mysqlx_port 看port開在哪 檢驗 mysqlx 有沒有綁host /etc/mysql/mysql.conf.d/mysqld.cnf mysqlsh user@localhost:33060/database --import file.json table 成功後發現只能匯入field type 為json的一欄tableQQ ref mysql setting up mysqlsh install mysqlsh port mysqlsh port2 json data error " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/mysqlx/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-03T15:50:44+08:00" />
+<meta property="article:modified_time" content="2023-03-03T15:50:44+08:00" />
+<meta property="og:see_also" content="https://waterfall531.github.io/posts/mysql-alter-column/" />
+
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://waterfall531.github.io/"><img class="app-header-avatar" src="/avatar.png" alt="Randy" /></a>
+      <h1>Randy&#39;s Blog</h1>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Home</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Tags</a>
+      </nav>
+      <p>Life is like riding a bicycle. To keep your balance, you must keep moving. – Albert Einstein 
+ 頭貼為貓貓蟲咖波</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/waterfall531" target="_blank" rel="noreferrer noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Mysqlx</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Mar 3, 2023
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tag">
+  <title>tag</title>
+  <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line>
+</svg>
+              <a class="tag" href="https://waterfall531.github.io/tags/mysql/">Mysql</a>
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h1 id="mysql-json-import">Mysql Json Import</h1>
+<blockquote>
+<p>想以json格式匯入資料到mysql</p>
+</blockquote>
+<h2 id="setup">Setup</h2>
+<ol>
+<li>預設應該是開啟的可以先藉由<code>show plugins</code>sql語句了解有沒有開啟mysqlx</li>
+<li>可以先安裝mysqlsh 詳情看<a href="#ref">ref_mysqlsh install</a></li>
+<li>若沒有開啟可執行<code>mysqlsh -u user -h localhost --classic --dba enableXProtocol</code></li>
+<li>若無法連線可以嘗試
+<ol>
+<li>看port有沒有通<code>telnet localhost 33060</code></li>
+<li>ufw(防火牆)有沒有擋</li>
+<li><code>select @@mysqlx_port</code> 看port開在哪</li>
+<li>檢驗 mysqlx 有沒有綁host <code>/etc/mysql/mysql.conf.d/mysqld.cnf</code></li>
+</ol>
+</li>
+<li><code>mysqlsh user@localhost:33060/database --import file.json table</code></li>
+<li>成功後發現只能匯入field type 為json的一欄tableQQ</li>
+</ol>
+<h2 id="ref">ref</h2>
+<ul>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/document-store-setting-up.html">mysql setting up</a></li>
+<li><a href="https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html">mysqlsh install</a></li>
+<li><a href="https://stackoverflow.com/questions/64326446/how-to-enable-x-protocol-for-mysql-8-docker-container">mysqlsh port</a></li>
+<li><a href="https://blog.csdn.net/qq_36171645/article/details/89321492">mysqlsh port2</a></li>
+<li><a href="https://python.plainenglish.io/mysql-document-store-json-import-error-72b790e0ccb0">json data error</a></li>
+</ul>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

@@ -6,7 +6,16 @@
     <description>Recent content in Series on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 02 Mar 2023 13:48:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2023 15:50:44 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimization</title>
+      <link>https://waterfall531.github.io/series/optimization/</link>
+      <pubDate>Fri, 03 Mar 2023 15:50:44 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/series/optimization/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Mariadb</title>
       <link>https://waterfall531.github.io/series/mariadb/</link>
@@ -166,15 +175,6 @@
       <pubDate>Thu, 17 Dec 2020 14:50:21 +0800</pubDate>
       
       <guid>https://waterfall531.github.io/series/2020/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Optimization</title>
-      <link>https://waterfall531.github.io/series/optimization/</link>
-      <pubDate>Tue, 18 Aug 2020 17:16:02 +0800</pubDate>
-      
-      <guid>https://waterfall531.github.io/series/optimization/</guid>
       <description></description>
     </item>
     
