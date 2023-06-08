@@ -17,8 +17,8 @@
 這題很簡單的題意, 檢驗陣列內是否有重複 就依照python dist 的方向去思考
 Approach 一開始其實是想寫成 do-while loop但發現 跳脫的條件
 status 變化的時後 index 抵達陣列最大長度 想說好像沒必要就換回for-loop
-Complexity Time complexity: $$O(n)$$
-Space complexity: $$O(n)$$
+Complexity Time complexity: $O(n)$
+Space complexity: $O(n)$
 Code function containsDuplicate(nums: number[]): boolean { let dist = []; let status = false; for (let index = 0 ; index &amp;lt; nums.</description>
     </item>
     
