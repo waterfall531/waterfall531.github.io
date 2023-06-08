@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="zh-tw">
   <head>
-    <title>Leetcode 1480 // Randy&#39;s Blog</title>
+    <title>Leetcode 217 // Randy&#39;s Blog</title>
     <link rel="shortcut icon" href="favicon.png" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.111.0">
@@ -12,30 +12,28 @@
 
     
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Leetcode 1480"/>
-<meta name="twitter:description" content="#1480. Running Sum of 1d Array
-Given an array nums.
-We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
-Return the running sum of nums.
-這是道簡單的題目 第一個想法是 foreach 就好 但要略過 index = 0 或是去判斷
-判斷的所需秒數 12ms
-` class Solution {
-/** * @param Integer[] $nums * @return Integer[] */ function runningSum($nums) { $ans = []; foreach($nums as $index =&gt; $num){ if($index === 0){ $ans[$index] = $num; }else{ $ans[$index] = $ans[$index - 1] &#43; $num; } } return $ans; } } `"/>
+<meta name="twitter:title" content="Leetcode 217"/>
+<meta name="twitter:description" content="Intuition Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+這題很簡單的題意, 檢驗陣列內是否有重複 就依照python dist 的方向去思考
+Approach 一開始其實是想寫成 do-while loop但發現 跳脫的條件
+status 變化的時後 index 抵達陣列最大長度 想說好像沒必要就換回for-loop
+Complexity Time complexity: $$O(n)$$
+Space complexity: $$O(n)$$
+Code function containsDuplicate(nums: number[]): boolean { let dist = []; let status = false; for (let index = 0 ; index &lt; nums."/>
 
-    <meta property="og:title" content="Leetcode 1480" />
-<meta property="og:description" content="#1480. Running Sum of 1d Array
-Given an array nums.
-We define a running sum of an array as runningSum[i] = sum(nums[0]…nums[i]).
-Return the running sum of nums.
-這是道簡單的題目 第一個想法是 foreach 就好 但要略過 index = 0 或是去判斷
-判斷的所需秒數 12ms
-` class Solution {
-/** * @param Integer[] $nums * @return Integer[] */ function runningSum($nums) { $ans = []; foreach($nums as $index =&gt; $num){ if($index === 0){ $ans[$index] = $num; }else{ $ans[$index] = $ans[$index - 1] &#43; $num; } } return $ans; } } `" />
+    <meta property="og:title" content="Leetcode 217" />
+<meta property="og:description" content="Intuition Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+這題很簡單的題意, 檢驗陣列內是否有重複 就依照python dist 的方向去思考
+Approach 一開始其實是想寫成 do-while loop但發現 跳脫的條件
+status 變化的時後 index 抵達陣列最大長度 想說好像沒必要就換回for-loop
+Complexity Time complexity: $$O(n)$$
+Space complexity: $$O(n)$$
+Code function containsDuplicate(nums: number[]): boolean { let dist = []; let status = false; for (let index = 0 ; index &lt; nums." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-1480/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2020-09-01T16:36:33+08:00" />
-<meta property="article:modified_time" content="2020-09-01T16:36:33+08:00" />
-<meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-217/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-121/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/get-nth-highest-salary/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/second-highest-salary/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/grey-code/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1315/" />
+<meta property="og:url" content="https://waterfall531.github.io/posts/leetcode-217/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-08T10:10:25+08:00" />
+<meta property="article:modified_time" content="2023-06-08T10:10:25+08:00" />
+<meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-121/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/get-nth-highest-salary/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/second-highest-salary/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/grey-code/" /><meta property="og:see_also" content="https://waterfall531.github.io/posts/leetcode-1315/" />
 
 
 
@@ -67,14 +65,14 @@ Return the running sum of nums.
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Leetcode 1480</h1>
+      <h1 class ="post-title">Leetcode 217</h1>
       <div class="post-meta">
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
   <title>calendar</title>
   <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
 </svg>
-          Sep 1, 2020
+          Jun 8, 2023
         </div>
         <div>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
@@ -93,59 +91,50 @@ Return the running sum of nums.
       </div>
     </header>
     <div class="post-content">
-      <p>#1480. Running Sum of 1d Array</p>
+      <h1 id="intuition">Intuition</h1>
+<!-- raw HTML omitted -->
 <blockquote>
-<p>Given an array <em>nums</em>.</p>
+<p>Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.</p>
 </blockquote>
-<blockquote>
-<p>We define a <em>running sum of an array as runningSum[i] = sum(nums[0]…nums[i])</em>.</p>
-</blockquote>
-<blockquote>
-<p>Return the running sum of <em>nums</em>.</p>
-</blockquote>
-<p>這是道簡單的題目
-第一個想法是 <em>foreach</em> 就好
-但要略過 index = 0 或是去判斷</p>
-<p>判斷的所需秒數 12ms</p>
-<p>`
-class Solution {</p>
-<pre><code>/**
- * @param Integer[] $nums
- * @return Integer[]
- */
-function runningSum($nums) {
-    $ans = [];
-    foreach($nums as $index =&gt; $num){
-        if($index === 0){
-            $ans[$index] = $num;
+<p>這題很簡單的題意, 檢驗陣列內是否有重複
+就依照python dist 的方向去思考</p>
+<h1 id="approach">Approach</h1>
+<!-- raw HTML omitted -->
+<p>一開始其實是想寫成 do-while loop但發現
+跳脫的條件</p>
+<ol>
+<li>status 變化的時後</li>
+<li>index 抵達陣列最大長度</li>
+</ol>
+<p>想說好像沒必要就換回for-loop</p>
+<h1 id="complexity">Complexity</h1>
+<ul>
+<li>Time complexity:</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>$$O(n)$$</p>
+<ul>
+<li>Space complexity:</li>
+</ul>
+<!-- raw HTML omitted -->
+<p>$$O(n)$$</p>
+<h1 id="code">Code</h1>
+<pre tabindex="0"><code>function containsDuplicate(nums: number[]): boolean {
+    let dist = [];
+    let status = false;
+
+    for (let index = 0 ; index &lt; nums.length ; index++){
+        if (!dist[nums[index]]){
+            dist[nums[index]] = true;
         }else{
-            $ans[$index] = $ans[$index - 1] + $num;
+            status = true
+            break;
         }
     }
-    return $ans;
-}
-</code></pre>
-<p>}
-`</p>
-<p>for迴圈略過為 4ms</p>
-<p>`
-class Solution {</p>
-<pre><code>/**
- * @param Integer[] $nums
- * @return Integer[]
- */
-function runningSum($nums) {
-    $result[] = $nums[0];
-    for ($i = 1; $i &lt; count($nums); $i++) {
-        $result[$i] = $nums[$i] + $result[$i - 1];
-    }
-    
-    return $result;
-}
-</code></pre>
-<p>}
-`</p>
 
+    return status;
+};
+</code></pre>
     </div>
     <div class="post-footer">
       

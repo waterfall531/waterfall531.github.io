@@ -6,7 +6,35 @@
     <description>Recent content in algorithm on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Fri, 02 Jul 2021 15:06:39 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jun 2023 10:10:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 217</title>
+      <link>https://waterfall531.github.io/posts/leetcode-217/</link>
+      <pubDate>Thu, 08 Jun 2023 10:10:25 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-217/</guid>
+      <description>Intuition Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+這題很簡單的題意, 檢驗陣列內是否有重複 就依照python dist 的方向去思考
+Approach 一開始其實是想寫成 do-while loop但發現 跳脫的條件
+status 變化的時後 index 抵達陣列最大長度 想說好像沒必要就換回for-loop
+Complexity Time complexity: $$O(n)$$
+Space complexity: $$O(n)$$
+Code function containsDuplicate(nums: number[]): boolean { let dist = []; let status = false; for (let index = 0 ; index &amp;lt; nums.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 121</title>
+      <link>https://waterfall531.github.io/posts/leetcode-121/</link>
+      <pubDate>Tue, 06 Jun 2023 15:44:30 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/leetcode-121/</guid>
+      <description>You are given an array prices where prices[i] is the price of a given stock on the ith day.
+You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.
+Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0.
+V0 當下看完題目就覺得這樣想 但實際上會造成 O(N2/2)
+function maxProfit(prices: number[]): number { let maxProfit = 0; for(let i = 0 ; i &amp;lt; prices.</description>
+    </item>
+    
     <item>
       <title>Grey_code</title>
       <link>https://waterfall531.github.io/posts/grey-code/</link>
