@@ -25,11 +25,11 @@ categories: ["Curated List of Top 75"]
 # Complexity
 - Time complexity:
 <!-- Add your time complexity here, e.g. $$O(n)$$ -->
-$O(n)$
+$$O(n)$$
 
 - Space complexity:
 <!-- Add your space complexity here, e.g. $$O(n)$$ -->
-$O(n)$
+$$O(n)$$
 
 
 # Code
