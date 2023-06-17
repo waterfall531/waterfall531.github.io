@@ -6,7 +6,23 @@
     <description>Recent content in devops on Randy&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Thu, 02 Mar 2023 13:48:25 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Jun 2023 15:51:29 +0800</lastBuildDate><atom:link href="https://waterfall531.github.io/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Http_login</title>
+      <link>https://waterfall531.github.io/posts/http_login/</link>
+      <pubDate>Sat, 17 Jun 2023 15:51:29 +0800</pubDate>
+      
+      <guid>https://waterfall531.github.io/posts/http_login/</guid>
+      <description>登入
+git clone https:// username @github.com/ username /repository**.git**
+這樣的話會詢問password 且不會記錄在 history
+如果貪圖方便
+可以弄成
+actual URL: https://usern@me:p@ssword@git/reponame.git
+Solution URL to use: https://usern%40me:p%40ssword@git/reponame.git
+實際上跑的是 encodeURIComponent</description>
+    </item>
+    
     <item>
       <title>230302writeup</title>
       <link>https://waterfall531.github.io/posts/230302writeup/</link>
